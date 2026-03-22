@@ -1,0 +1,2072 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ping An — HMO & Integrated Finance: Nghiên Cứu Chiến Lược 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080a0f;--bg2:#0d1018;--surface:#111520;--surface2:#161b27;
+  --border:rgba(255,255,255,0.06);--border2:rgba(255,255,255,0.12);
+  --text:#dde0ec;--muted:#ced2da;--hint:#e1c296;
+  --gold:#c9975a;--gold2:#e8b97a;
+  --blue:#3a7fd4;--blue2:#5fa0e8;
+  --teal:#1a9e75;--teal2:#3dc9a0;
+  --coral:#c04a28;--coral2:#e87050;
+  --purple:#6b5fc4;--purple2:#9b8fe8;
+  --orange:#e06030;--orange2:#f08050;
+  --ff-d:'Playfair Display',Georgia,serif;
+  --ff-b:'IBM Plex Sans',system-ui,sans-serif;
+  --ff-m:'IBM Plex Mono',monospace;
+  --max:960px;--g:clamp(20px,5vw,60px);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--ff-b);font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased;}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-track{background:var(--bg);}
+::-webkit-scrollbar-thumb{background:var(--hint);border-radius:2px;}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,10,15,.95);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);padding:0 var(--g);height:56px;display:flex;align-items:center;justify-content:space-between;}
+.nav-brand{font-family:var(--ff-m);font-size:11px;font-weight:500;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;}
+.nav-links{display:flex;gap:20px;list-style:none;}
+.nav-links a{font-size:11px;color:var(--muted);text-decoration:none;letter-spacing:.04em;transition:color .2s;}
+.nav-links a:hover{color:var(--text);}
+.nav-badge{background:rgba(201,151,90,.15);color:var(--gold);font-family:var(--ff-m);font-size:9px;padding:2px 7px;border-radius:10px;letter-spacing:.06em;}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 var(--g) 80px;position:relative;overflow:hidden;}
+.hero-bg-img{position:absolute;inset:0;background-image:url('https://group.pingan.com/dam/jcr:51203b21-e6b9-494f-8dab-684006b56476/pingan-financial-center-2101-thumbnail.jpg');background-size:cover;background-position:center 30%;filter:brightness(.18) saturate(.6);}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,10,15,1) 0%,rgba(8,10,15,.6) 50%,rgba(8,10,15,.3) 100%);}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 60% at 50% 40%,black 30%,transparent 100%);}
+.hero-content{position:relative;z-index:2;}
+.hero-eyebrow{font-family:var(--ff-m);font-size:11px;font-weight:500;color:var(--gold);letter-spacing:.16em;text-transform:uppercase;margin-bottom:20px;opacity:0;animation:fadeUp .6s .2s forwards;}
+.hero-title{font-family:var(--ff-d);font-size:clamp(38px,7vw,84px);font-weight:900;line-height:1.05;letter-spacing:-.02em;margin-bottom:24px;max-width:820px;opacity:0;animation:fadeUp .7s .35s forwards;}
+.hero-title em{font-style:italic;color:var(--gold2);}
+.hero-sub{font-size:16px;color:var(--muted);max-width:540px;line-height:1.7;margin-bottom:36px;opacity:0;animation:fadeUp .7s .5s forwards;}
+.hero-meta{display:flex;gap:28px;flex-wrap:wrap;opacity:0;animation:fadeUp .7s .65s forwards;}
+.meta-item{display:flex;flex-direction:column;gap:3px;}
+.meta-label{font-family:var(--ff-m);font-size:10px;color:var(--hint);letter-spacing:.1em;text-transform:uppercase;}
+.meta-value{font-size:13px;color:var(--muted);}
+.meta-value strong{color:var(--gold2);font-weight:600;}
+.hero-sources{position:relative;z-index:2;margin-top:36px;display:flex;gap:12px;flex-wrap:wrap;}
+.source-badge{font-family:var(--ff-m);font-size:10px;color:var(--hint);background:rgba(255,255,255,.04);border:1px solid var(--border);padding:4px 10px;border-radius:4px;letter-spacing:.05em;}
+.hero-line{position:absolute;bottom:0;left:var(--g);right:var(--g);height:1px;background:var(--border);z-index:2;}
+
+/* ── LAYOUT ── */
+main{max-width:var(--max);margin:0 auto;padding:0 var(--g);}
+section{padding:76px 0;border-bottom:1px solid var(--border);}
+section:last-child{border-bottom:none;}
+.section-tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--ff-m);font-size:10px;color:var(--gold);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px;}
+.section-tag::before{content:'';display:inline-block;width:18px;height:1px;background:var(--gold);}
+.section-h{font-family:var(--ff-d);font-size:clamp(24px,4vw,40px);font-weight:700;line-height:1.15;margin-bottom:18px;letter-spacing:-.01em;}
+.section-lead{font-size:17px;color:var(--muted);line-height:1.8;max-width:700px;margin-bottom:32px;}
+
+/* ── KPI GRID ── */
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:28px 0;}
+.kpi{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px;position:relative;overflow:hidden;}
+.kpi::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;}
+.kpi.k-blue::before{background:var(--blue2);}
+.kpi.k-teal::before{background:var(--teal2);}
+.kpi.k-gold::before{background:var(--gold2);}
+.kpi.k-coral::before{background:var(--coral2);}
+.kpi.k-purple::before{background:var(--purple2);}
+.kpi.k-orange::before{background:var(--orange2);}
+.kpi-num{font-family:var(--ff-d);font-size:28px;font-weight:700;line-height:1;margin-bottom:5px;}
+.kpi.k-blue .kpi-num{color:var(--blue2);}
+.kpi.k-teal .kpi-num{color:var(--teal2);}
+.kpi.k-gold .kpi-num{color:var(--gold2);}
+.kpi.k-coral .kpi-num{color:var(--coral2);}
+.kpi.k-purple .kpi-num{color:var(--purple2);}
+.kpi.k-orange .kpi-num{color:var(--orange2);}
+.kpi-label{font-size:12px;color:var(--muted);line-height:1.4;}
+.kpi-sub{font-size:10px;color:var(--hint);margin-top:3px;font-family:var(--ff-m);}
+
+/* ── DATA TABLE ── */
+.data-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:13px;}
+.data-table th{padding:10px 14px;text-align:left;font-family:var(--ff-m);font-size:10px;font-weight:500;letter-spacing:.08em;color:var(--muted);border-bottom:1px solid var(--border2);background:var(--surface);}
+.data-table td{padding:12px 14px;border-bottom:1px solid var(--border);color:var(--muted);vertical-align:top;}
+.data-table td:first-child{color:var(--text);font-weight:500;}
+.data-table .up{color:var(--teal2);font-weight:600;}
+.data-table .down{color:var(--coral2);font-weight:600;}
+.data-table tr:hover td{background:rgba(255,255,255,.02);}
+
+/* ── CALLOUT ── */
+.callout{border-left:2px solid var(--gold);padding:18px 22px;background:rgba(201,151,90,.04);border-radius:0 8px 8px 0;margin:28px 0;}
+.callout p{color:var(--text);font-size:15px;line-height:1.75;margin:0;}
+.callout strong{color:var(--gold2);}
+.callout.blue{border-color:var(--blue2);background:rgba(58,127,212,.04);}
+.callout.blue p{color:var(--text);}
+.callout.blue strong{color:var(--blue2);}
+.callout.teal{border-color:var(--teal2);background:rgba(26,158,117,.04);}
+.callout.teal strong{color:var(--teal2);}
+.callout.orange{border-color:var(--orange2);background:rgba(224,96,48,.04);}
+.callout.orange strong{color:var(--orange2);}
+
+/* ── PROSE ── */
+.prose p{margin-bottom:16px;color:var(--muted);line-height:1.85;}
+.prose p:last-child{margin-bottom:0;}
+.prose strong{color:var(--text);font-weight:500;}
+
+/* ── IMAGES ── */
+.img-cinematic{width:100%;margin:36px 0;border-radius:14px;overflow:hidden;position:relative;}
+.img-cinematic img{width:100%;height:360px;object-fit:cover;display:block;filter:brightness(.55) saturate(.7);}
+.img-cinematic-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:36px 42px;background:linear-gradient(to top,rgba(8,10,15,.95) 0%,rgba(8,10,15,.3) 60%,transparent 100%);}
+.img-cinematic-label{font-family:var(--ff-m);font-size:10px;color:var(--gold);letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px;}
+.img-cinematic-h{font-family:var(--ff-d);font-size:26px;font-weight:700;color:var(--text);line-height:1.2;max-width:520px;}
+.img-cinematic-sub{font-size:13px;color:var(--muted);margin-top:8px;max-width:460px;}
+.img-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:28px 0;}
+.img-strip-item{position:relative;border-radius:10px;overflow:hidden;}
+.img-strip-item img{width:100%;height:170px;object-fit:cover;display:block;filter:brightness(.65) saturate(.8);transition:filter .3s;}
+.img-strip-item:hover img{filter:brightness(.8) saturate(.9);}
+.img-strip-item span{position:absolute;bottom:10px;left:12px;font-family:var(--ff-m);font-size:10px;color:rgba(255,255,255,.6);letter-spacing:.05em;}
+.img-text{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin:32px 0;}
+.img-text.reverse{direction:rtl;}
+.img-text.reverse>*{direction:ltr;}
+.img-text img{width:100%;height:230px;object-fit:cover;border-radius:10px;filter:brightness(.75) saturate(.85);}
+.img-text-body{display:flex;flex-direction:column;gap:12px;}
+.img-text-tag{font-family:var(--ff-m);font-size:10px;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;}
+.img-text-h{font-family:var(--ff-d);font-size:19px;font-weight:700;color:var(--text);line-height:1.3;}
+.img-text-p{font-size:13px;color:var(--muted);line-height:1.75;}
+.img-text-p strong{color:var(--text);font-weight:500;}
+.img-banner{width:100%;border-radius:12px;overflow:hidden;margin:28px 0;position:relative;}
+.img-banner img{width:100%;height:280px;object-fit:cover;display:block;filter:brightness(.7) saturate(.8);}
+.img-banner-caption{position:absolute;bottom:0;left:0;right:0;padding:18px 22px;background:linear-gradient(transparent,rgba(8,10,15,.92));font-family:var(--ff-m);font-size:11px;color:var(--muted);letter-spacing:.05em;}
+
+/* ── PHASE / LAYER / INSIGHT CARDS ── */
+.phase-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:28px 0;}
+.phase-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;}
+.phase-num{font-family:var(--ff-m);font-size:10px;font-weight:500;letter-spacing:.1em;color:var(--hint);margin-bottom:7px;}
+.phase-year{font-family:var(--ff-d);font-size:17px;font-weight:700;margin-bottom:9px;}
+.phase-title{font-size:13px;font-weight:600;margin-bottom:9px;color:var(--text);}
+.phase-body{font-size:12px;color:var(--muted);line-height:1.7;}
+.g1{border-top:2px solid #444441;}.g1 .phase-year{color:#888780;}
+.g2{border-top:2px solid var(--teal);}.g2 .phase-year{color:var(--teal2);}
+.g3{border-top:2px solid var(--purple);}.g3 .phase-year{color:var(--purple2);}
+.g4{border-top:2px solid var(--orange);}.g4 .phase-year{color:var(--orange2);}
+
+.layer-stack{display:flex;flex-direction:column;gap:10px;margin:28px 0;}
+.layer-card{border-radius:12px;padding:20px 22px;border:1px solid var(--border);}
+.layer-card.l1{background:#080f1e;border-color:rgba(58,127,212,.25);}
+.layer-card.l2{background:#0a160f;border-color:rgba(26,158,117,.2);}
+.layer-card.l3{background:#170d08;border-color:rgba(192,74,40,.2);}
+.layer-badge{display:inline-block;font-family:var(--ff-m);font-size:10px;padding:3px 10px;border-radius:4px;margin-bottom:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;}
+.l1 .layer-badge{background:rgba(58,127,212,.15);color:var(--blue2);}
+.l2 .layer-badge{background:rgba(26,158,117,.12);color:var(--teal2);}
+.l3 .layer-badge{background:rgba(192,74,40,.12);color:var(--coral2);}
+.layer-title{font-size:14px;font-weight:600;color:var(--text);margin-bottom:7px;}
+.layer-body{font-size:13px;color:var(--muted);line-height:1.75;}
+.l1 .layer-body strong{color:var(--blue2);}
+.l2 .layer-body strong{color:var(--teal2);}
+.l3 .layer-body strong{color:var(--coral2);}
+
+.insights-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:28px 0;}
+.insight-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;position:relative;overflow:hidden;}
+.insight-card.full{grid-column:1/-1;}
+.insight-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;}
+.ic-blue::before{background:linear-gradient(90deg,var(--blue),var(--blue2));}
+.ic-teal::before{background:linear-gradient(90deg,var(--teal),var(--teal2));}
+.ic-coral::before{background:linear-gradient(90deg,var(--coral),var(--coral2));}
+.ic-purple::before{background:linear-gradient(90deg,var(--purple),var(--purple2));}
+.ic-gold::before{background:linear-gradient(90deg,var(--gold),var(--gold2));}
+.ic-num{font-family:var(--ff-m);font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;margin-bottom:9px;}
+.ic-blue .ic-num{color:var(--blue2);}.ic-teal .ic-num{color:var(--teal2);}
+.ic-coral .ic-num{color:var(--coral2);}.ic-purple .ic-num{color:var(--purple2);}
+.ic-gold .ic-num{color:var(--gold2);}
+.ic-title{font-size:14px;font-weight:600;margin-bottom:10px;line-height:1.4;color:var(--text);}
+.ic-body{font-size:13px;color:var(--muted);line-height:1.75;}
+.ic-blue .ic-body strong{color:var(--blue2);}.ic-teal .ic-body strong{color:var(--teal2);}
+.ic-coral .ic-body strong{color:var(--coral2);}.ic-purple .ic-body strong{color:var(--purple2);}
+.ic-gold .ic-body strong{color:var(--gold2);}
+
+/* ── CHART SECTION ── */
+.chart-section{margin:36px 0;background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;}
+.chart-header{padding:16px 22px 12px;border-bottom:1px solid var(--border);display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;}
+.chart-title{font-family:var(--ff-m);font-size:11px;font-weight:500;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;}
+.chart-desc{font-size:13px;color:var(--muted);}
+.chart-body{padding:22px;}
+.chart-body svg text{font-family:'IBM Plex Sans',system-ui,sans-serif;}
+
+/* ── SOURCE TAG ── */
+.source-note{font-family:var(--ff-m);font-size:10px;color:var(--hint);margin-top:8px;letter-spacing:.04em;}
+.source-note strong{color:var(--muted);}
+
+/* ── DIVIDER WITH LABEL ── */
+.section-divider{display:flex;align-items:center;gap:14px;margin:36px 0;}
+.section-divider span{font-family:var(--ff-m);font-size:10px;color:var(--hint);letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;}
+.section-divider::before,.section-divider::after{content:'';flex:1;height:1px;background:var(--border);}
+
+/* ── TWIN COLUMNS ── */
+.twin{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:24px 0;}
+.twin-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:22px;}
+.twin-card-head{font-family:var(--ff-m);font-size:10px;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;}
+.twin-card-title{font-size:15px;font-weight:600;color:var(--text);margin-bottom:10px;}
+.twin-card-body{font-size:13px;color:var(--muted);line-height:1.75;}
+.twin-card-body strong{color:var(--text);font-weight:500;}
+
+/* ── LESSON CARD ── */
+.lesson-card{background:var(--surface);border:1px solid var(--border2);border-radius:14px;padding:28px;margin-top:28px;position:relative;overflow:hidden;}
+.lesson-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--hint),var(--muted));}
+.lesson-tag{font-family:var(--ff-m);font-size:10px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;}
+.lesson-title{font-size:15px;font-weight:600;color:var(--text);margin-bottom:12px;}
+.lesson-body{font-size:13px;color:var(--muted);line-height:1.8;}
+.lesson-body strong{color:var(--text);font-weight:500;}
+
+/* ── FOOTER ── */
+footer{border-top:1px solid var(--border);padding:44px var(--g);max-width:var(--max);margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;}
+.footer-brand{font-family:var(--ff-d);font-size:20px;font-weight:700;color:var(--text);}
+.footer-brand span{color:var(--gold);}
+.footer-meta{font-size:11px;color:var(--hint);line-height:1.7;}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease;}
+.reveal.visible{opacity:1;transform:none;}
+
+@media(max-width:640px){
+  .phase-grid,.insights-grid,.twin,.img-text{grid-template-columns:1fr;}
+  .insights-grid .full{grid-column:1;}
+  .img-strip{grid-template-columns:1fr 1fr;}
+  .nav-links{display:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">daotuankhai@gmail.com · +84901740904</div>
+  <ul class="nav-links">
+    <li><a href="#hmo">HMO Model</a></li>
+    
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="padding-top:56px;">
+  <div class="hero-bg-img"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">2026</div>
+    <h1 class="hero-title">Ping An &amp;<br>Mô hình <em>HMO</em><br>Tích Hợp Tài Chính</h1>
+    <p class="hero-sub">Từ công ty bảo hiểm truyền thống đến hệ điều hành quản lý vòng đời tài chính và sức khỏe của 242 triệu người. Net profit tăng 47.8% YoY — kiến trúc không thể sao chép đang được chứng minh qua từng con số.</p>
+    <div class="hero-meta">
+      <div class="meta-item"><span class="meta-label">Net Profit 2024</span><span class="meta-value"><strong>RMB 126.6 tỷ</strong> (+47.8%)</span></div>
+      <div class="meta-item"><span class="meta-label">Khách hàng bán lẻ</span><span class="meta-value"><strong>242 triệu</strong> (+4.7%)</span></div>
+      <div class="meta-item"><span class="meta-label">Good Doctor Revenue 1H25</span><span class="meta-value"><strong>RMB 2.5 tỷ</strong> (+19.5%)</span></div>
+      <div class="meta-item"><span class="meta-label">AI Patent toàn cầu</span><span class="meta-value"><strong>55,080</strong> (No.1 fintech)</span></div>
+      <div class="meta-item"><span class="meta-label">NBV tăng trưởng</span><span class="meta-value"><strong>+28.8%</strong> YoY</span></div>
+    </div>
+    <div class="hero-sources">
+      <span class="source-badge">Ping An 2024 Annual Results · March 2025</span>
+      <span class="source-badge">Good Doctor 2025 Interim Results</span>
+      <span class="source-badge">Ping An Group Website · group.pingan.com</span>
+    </div>
+  </div>
+  <div class="hero-line"></div>
+</section>
+
+<main>
+
+<!-- ══════════ PHẦN 1: HMO ══════════ -->
+<section id="hmo">
+  <div class="section-tag reveal">Phần 01</div>
+  <h2 class="section-h reveal">HMO là gì và tại sao<br>Ping An tái kiến trúc nó?</h2>
+  <p class="section-lead reveal">Health Maintenance Organization — mô hình chiếm hơn 90% thị trường bảo hiểm thương mại Mỹ. Nhưng Ping An không copy — họ tái kiến trúc hoàn toàn, đặt chiến lược "Integrated Finance + Health and Senior Care" làm tuyên ngôn cốt lõi của tập đoàn.</p>
+
+  <div class="img-cinematic reveal">
+    <img src="https://group.pingan.com/dam/jcr:65e7686b-0beb-4ebe-b709-4fc35b41da79/pingan-financial-center-2101.jpg" alt="Ping An Finance Center" loading="lazy">
+    <div class="img-cinematic-overlay">
+      <div class="img-cinematic-label">Ping An Finance Center · Thâm Quyến</div>
+      <div class="img-cinematic-h">"A world-leading integrated finance, health and senior care services group"</div>
+      <div class="img-cinematic-sub">Tuyên ngôn chính thức từ Ping An 2024 Annual Results — đây không còn là tập đoàn bảo hiểm</div>
+    </div>
+  </div>
+
+  <div class="prose reveal">
+    <p>Theo tài liệu chính thức từ báo cáo kết quả 2024, Ping An định nghĩa mình là một "world-leading integrated finance, health and senior care services group" — không còn đơn thuần là công ty bảo hiểm. Chiến lược tập trung vào hai trụ cột song song: <strong>Integrated Finance</strong> (bảo hiểm, ngân hàng, quản lý tài sản) và <strong>Health and Senior Care</strong> (y tế, chăm sóc người cao tuổi, công nghệ y tế). Technology enablement là nền tảng chung.</p>
+    <p>Điểm khởi phát khác hoàn toàn so với UnitedHealth. Ping An bắt đầu là công ty tài chính bán lẻ tổng hợp với 242 triệu khách hàng sẵn có — healthcare không phải ngành chính, nó là <strong>công cụ differentiating</strong> để giữ và tăng giá trị khách hàng tài chính.</p>
+  </div>
+
+  <div class="callout reveal">
+    <p>Từ báo cáo 2024: <strong>"Customers entitled to service benefits in the health & senior care ecosystem contribute about 70% of Ping An Life's NBV."</strong> — Đây là con số xác nhận chính thức: health ecosystem không phải chi phí — nó là nguồn NBV chính.</p>
+  </div>
+
+  <div class="section-divider reveal"><span>So sánh mô hình</span></div>
+
+  <div class="twin reveal">
+    <div class="twin-card">
+      <div class="twin-card-head">UnitedHealth — HMO cổ điển</div>
+      <div class="twin-card-title">Xuất phát từ bảo hiểm y tế</div>
+      <div class="twin-card-body">M&amp;A bệnh viện để kiểm soát chi phí → Optum là data layer thêm vào sau. KPI cốt lõi: Medical Loss Ratio. <strong>Lợi nhuận đến trực tiếp từ bảo hiểm y tế.</strong></div>
+    </div>
+    <div class="twin-card">
+      <div class="twin-card-head">Ping An — HMO tái kiến trúc</div>
+      <div class="twin-card-title">Xuất phát từ 242M khách hàng tài chính</div>
+      <div class="twin-card-body">Healthcare xây từ đầu như ecosystem, không phải M&amp;A. Technology enablement là nền tảng. <strong>Lợi nhuận đến gián tiếp: Health users có AUM cao hơn 3x, số HĐ nhiều hơn 2.3x.</strong></div>
+    </div>
+  </div>
+
+  <div class="chart-section reveal">
+    <div class="chart-header"><span class="chart-title">Biểu đồ 01</span><span class="chart-desc">Chiến lược 3 giai đoạn xây dựng lợi thế cạnh tranh bền vững</span></div>
+    <div class="chart-body">
+<svg width="100%" viewBox="0 0 780 220" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="a1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#3d4255" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<!-- Phase 1 -->
+<rect x="10" y="20" width="228" height="180" rx="10" fill="#0a0c12" stroke="#2c3444" stroke-width="0.7"/>
+<text font-size="10" font-weight="500" fill="#888780" x="24" y="42" font-family="'IBM Plex Mono',monospace">PHASE I</text>
+<text font-size="13" font-weight="600" fill="#B4B2A9" x="24" y="64" font-family="'IBM Plex Sans',sans-serif">Sustainable cost advantages</text>
+<text font-size="11" fill="#888780" x="24" y="88" font-family="'IBM Plex Sans',sans-serif">↓ Acquisition cost</text>
+<text font-size="11" fill="#888780" x="24" y="108" font-family="'IBM Plex Sans',sans-serif">↓ Operating cost</text>
+<text font-size="11" fill="#888780" x="24" y="128" font-family="'IBM Plex Sans',sans-serif">↓ Cost of risk</text>
+<!-- Arrow -->
+<line x1="240" y1="110" x2="268" y2="110" stroke="#2c3444" stroke-width="1" marker-end="url(#a1)"/>
+<!-- Phase 2 -->
+<rect x="270" y="20" width="228" height="180" rx="10" fill="#071820" stroke="#0F6E56" stroke-width="0.7"/>
+<text font-size="10" font-weight="500" fill="#1D9E75" x="284" y="42" font-family="'IBM Plex Mono',monospace">PHASE II</text>
+<text font-size="13" font-weight="600" fill="#9FE1CB" x="284" y="64" font-family="'IBM Plex Sans',sans-serif">Quality growth of financial</text>
+<text font-size="11" fill="#5DCAA5" x="284" y="88" font-family="'IBM Plex Sans',sans-serif">↑ Customer value</text>
+<text font-size="11" fill="#5DCAA5" x="284" y="108" font-family="'IBM Plex Sans',sans-serif">↑ Payor-provider synergies</text>
+<!-- Arrow -->
+<line x1="500" y1="110" x2="528" y2="110" stroke="#534AB7" stroke-width="1" marker-end="url(#a1)"/>
+<!-- Phase 3 -->
+<rect x="530" y="20" width="240" height="180" rx="10" fill="#1a1030" stroke="#534AB7" stroke-width="0.7"/>
+<text font-size="10" font-weight="500" fill="#7F77DD" x="544" y="42" font-family="'IBM Plex Mono',monospace">PHASE III — HIỆN TẠI</text>
+<text font-size="13" font-weight="600" fill="#CECBF6" x="544" y="64" font-family="'IBM Plex Sans',sans-serif">Dual-driver model</text>
+<text font-size="11" fill="#AFA9EC" x="544" y="86" font-family="'IBM Plex Sans',sans-serif">"Integrated finance +</text>
+<text font-size="11" fill="#AFA9EC" x="544" y="104" font-family="'IBM Plex Sans',sans-serif"> health &amp; senior care"</text>
+<text font-size="11" fill="#AFA9EC" x="544" y="124" font-family="'IBM Plex Sans',sans-serif">↑ Revenue mix</text>
+<text font-size="11" fill="#AFA9EC" x="544" y="144" font-family="'IBM Plex Sans',sans-serif">↑ Capital efficiency</text>
+<text font-size="11" fill="#7F77DD" x="544" y="168" font-family="'IBM Plex Sans',sans-serif">Net profit 2024: +47.8% YoY</text>
+</svg>
+    </div>
+    <div class="source-note" style="padding:0 22px 16px;">Nguồn: Ping An 2024 Annual Results — Strategy Update, slide 27</div>
+  </div>
+</section>
+
+<!-- ══════════ PHẦN 2: GOOD DOCTOR ══════════ -->
+<section id="good-doctor">
+  <div class="section-tag reveal">Phần 02</div>
+  <h2 class="section-h reveal">Ping An Good Doctor:<br>Từ Traffic Play sang Managed Care — và lần đầu có lãi</h2>
+  <p class="section-lead reveal">1H 2025 là cột mốc lịch sử: doanh thu RMB 2.5 tỷ (+19.5%), net profit RMB 134 triệu (+136.8%), gross margin 33.6%. Mô hình đã được "validated" sau 11 năm kiên nhẫn.</p>
+
+  <div class="kpi-grid reveal">
+    <div class="kpi k-orange"><div class="kpi-num">RMB 2.5B</div><div class="kpi-label">Revenue 1H 2025</div><div class="kpi-sub">+19.5% YoY</div></div>
+    <div class="kpi k-teal"><div class="kpi-num">RMB 134M</div><div class="kpi-label">Net profit (parent)</div><div class="kpi-sub">+136.8% YoY</div></div>
+    <div class="kpi k-blue"><div class="kpi-num">33.6%</div><div class="kpi-label">Gross margin</div><div class="kpi-sub">+1.4 pps YoY</div></div>
+    <div class="kpi k-gold"><div class="kpi-num">~24M</div><div class="kpi-label">Paying users</div><div class="kpi-sub">+35.1% YoY</div></div>
+    <div class="kpi k-purple"><div class="kpi-num">3,500+</div><div class="kpi-label">B-end corporate clients</div><div class="kpi-sub">+37.2% YoY</div></div>
+    <div class="kpi k-coral"><div class="kpi-num">RMB 64M</div><div class="kpi-label">Operating cash inflow</div><div class="kpi-sub">Dương liên tiếp</div></div>
+  </div>
+  <div class="source-note reveal">Nguồn: Good Doctor 2025 Interim Results — Appendix: Income Statement</div>
+
+  <!-- COVID image -->
+  <div class="img-text reveal" style="margin-top:32px;">
+    <img src="https://group.pingan.com/dam/jcr:ecebac98-e467-455c-91a3-aea8fdbee467/FT24-3-article.jpg" alt="Ping An COVID consultations" loading="lazy">
+    <div class="img-text-body">
+      <div class="img-text-tag">Phép thử hạ tầng · 2020</div>
+      <div class="img-text-h">COVID-19 biến Good Doctor thành hạ tầng quốc gia</div>
+      <div class="img-text-p">Trong đỉnh dịch, Good Doctor ghi nhận hơn <strong>3 triệu lượt tư vấn miễn phí trong một ngày</strong>, tư vấn tăng 9×, users mới tăng 10×. Hợp tác với gần 60 chính quyền địa phương. Khoảnh khắc này chuyển Ping An từ "startup y tế" thành "đối tác hạ tầng quốc gia thiết yếu".</div>
+    </div>
+  </div>
+
+  <!-- Strategic Panorama diagram -->
+  <div class="chart-section reveal">
+    <div class="chart-header"><span class="chart-title">Strategic Panorama</span><span class="chart-desc">Acting for Payers · Integrating Providers · Most Cost-Effective Services — Good Doctor 2025 IR</span></div>
+    <div class="chart-body">
+<svg width="100%" viewBox="0 0 820 430" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <marker id="arrowP" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="#c04a28" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  <marker id="arrowG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="#3d4255" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+
+<!-- ── VALUE PROPOSITION ROOF ── -->
+<line x1="24" y1="62" x2="410" y2="18" stroke="#c04a28" stroke-width="1.2" fill="none"/>
+<line x1="796" y1="62" x2="410" y2="18" stroke="#c04a28" stroke-width="1.2" fill="none"/>
+<text font-size="10" fill="#6b7180" x="10" y="58" font-family="'IBM Plex Sans',sans-serif">Value</text>
+<text font-size="10" fill="#6b7180" x="10" y="70" font-family="'IBM Plex Sans',sans-serif">proposition</text>
+<text font-size="13" font-weight="600" fill="#e87050" x="410" y="40" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Expertise ensures a healthier and longer life</text>
+<text font-size="11" fill="#6b7180" x="410" y="56" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Worry-free, time-saving, and money-saving</text>
+
+<!-- ── COLUMN HEADERS ── -->
+<text font-size="12" font-weight="600" fill="#dde0ec" x="160" y="90" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Payers</text>
+<text font-size="12" font-weight="600" fill="#dde0ec" x="408" y="90" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Service/operational hubs</text>
+<text font-size="12" font-weight="600" fill="#dde0ec" x="656" y="90" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Providers</text>
+
+<!-- ── PAYERS BOX ── -->
+<rect x="14" y="98" width="292" height="246" rx="8" fill="#0e0c0a" stroke="#c04a28" stroke-width="0.8"/>
+
+<!-- Business models label -->
+<text font-size="10" fill="#6b7180" x="10" y="166" font-family="'IBM Plex Sans',sans-serif">Business</text>
+<text font-size="10" fill="#6b7180" x="10" y="178" font-family="'IBM Plex Sans',sans-serif">models</text>
+
+<!-- F-end -->
+<rect x="28" y="110" width="82" height="64" rx="6" fill="#1a0e08" stroke="#c04a28" stroke-width="0.7"/>
+<text font-size="12" font-weight="600" fill="#e87050" x="69" y="133" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">F-end</text>
+<text font-size="10" fill="#6b7180" x="69" y="148" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">(Integrated</text>
+<text font-size="10" fill="#6b7180" x="69" y="161" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">finance biz)</text>
+<!-- F-end product box -->
+<rect x="124" y="116" width="168" height="52" rx="6" fill="#161310" stroke="#3d4255" stroke-width="0.5"/>
+<text font-size="11" fill="#b4b2a9" x="208" y="146" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Insurance + service</text>
+
+<!-- B-end -->
+<rect x="28" y="188" width="82" height="64" rx="6" fill="#1a0e08" stroke="#c04a28" stroke-width="0.7"/>
+<text font-size="12" font-weight="600" fill="#e87050" x="69" y="211" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">B-end</text>
+<text font-size="10" fill="#6b7180" x="69" y="226" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">(Enterprises)</text>
+<!-- B-end product box -->
+<rect x="124" y="194" width="168" height="52" rx="6" fill="#161310" stroke="#3d4255" stroke-width="0.5"/>
+<text font-size="11" fill="#b4b2a9" x="208" y="218" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Corporate health</text>
+<text font-size="11" fill="#b4b2a9" x="208" y="234" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">management</text>
+
+<!-- C-end -->
+<rect x="28" y="266" width="82" height="64" rx="6" fill="#1a0e08" stroke="#c04a28" stroke-width="0.7"/>
+<text font-size="12" font-weight="600" fill="#e87050" x="69" y="289" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">C-end</text>
+<text font-size="10" fill="#6b7180" x="69" y="304" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">(Individuals)</text>
+<!-- C-end product box -->
+<rect x="124" y="272" width="168" height="52" rx="6" fill="#161310" stroke="#3d4255" stroke-width="0.5"/>
+<text font-size="11" fill="#b4b2a9" x="208" y="302" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">B2C / F2C</text>
+
+<!-- ── FLOW ARROWS payers → hubs ── -->
+<line x1="308" y1="185" x2="328" y2="185" stroke="#c04a28" stroke-width="1.2" marker-end="url(#arrowP)"/>
+<text font-size="9" fill="#c04a28" x="316" y="178" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Traffic</text>
+<text font-size="9" fill="#c04a28" x="316" y="188" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">consol.</text>
+<line x1="328" y1="260" x2="308" y2="260" stroke="#c04a28" stroke-width="1.2" marker-end="url(#arrowP)"/>
+<text font-size="9" fill="#6b7180" x="316" y="252" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Service</text>
+<text font-size="9" fill="#6b7180" x="316" y="262" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">enable.</text>
+
+<!-- ── SERVICE HUBS BOX ── -->
+<rect x="330" y="98" width="156" height="246" rx="8" fill="#0e1008" stroke="#3d4255" stroke-width="0.8"/>
+
+<!-- Family doctors -->
+<rect x="344" y="112" width="128" height="80" rx="6" fill="#131a10" stroke="#3d4255" stroke-width="0.5"/>
+<text font-size="14" font-weight="600" fill="#dde0ec" x="408" y="148" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Family</text>
+<text font-size="14" font-weight="600" fill="#dde0ec" x="408" y="166" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">doctors</text>
+
+<!-- Senior care concierges -->
+<rect x="344" y="210" width="128" height="80" rx="6" fill="#131a10" stroke="#3d4255" stroke-width="0.5"/>
+<text font-size="13" font-weight="600" fill="#dde0ec" x="408" y="243" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Senior care</text>
+<text font-size="13" font-weight="600" fill="#dde0ec" x="408" y="260" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">concierges</text>
+
+<!-- ── FLOW ARROWS hubs → providers ── -->
+<line x1="488" y1="185" x2="508" y2="185" stroke="#c04a28" stroke-width="1.2" marker-end="url(#arrowP)"/>
+<text font-size="9" fill="#6b7180" x="496" y="178" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Integrated</text>
+<text font-size="9" fill="#6b7180" x="496" y="188" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">mgmt</text>
+<line x1="508" y1="260" x2="488" y2="260" stroke="#c04a28" stroke-width="1.2" marker-end="url(#arrowP)"/>
+<text font-size="9" fill="#6b7180" x="496" y="252" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Product</text>
+<text font-size="9" fill="#6b7180" x="496" y="262" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">offering</text>
+
+<!-- ── PROVIDERS BOX ── -->
+<rect x="510" y="98" width="296" height="246" rx="8" fill="#0a0e14" stroke="#185FA5" stroke-width="0.8"/>
+
+<!-- Online/In-store/In-home/In-company labels -->
+<text font-size="10" fill="#6b7180" x="524" y="134" font-family="'IBM Plex Sans',sans-serif">Online</text>
+<text font-size="10" fill="#6b7180" x="524" y="172" font-family="'IBM Plex Sans',sans-serif">In-store</text>
+<text font-size="10" fill="#6b7180" x="524" y="210" font-family="'IBM Plex Sans',sans-serif">In-home</text>
+<text font-size="10" fill="#6b7180" x="524" y="248" font-family="'IBM Plex Sans',sans-serif">In-company</text>
+<!-- Horizontal dividers -->
+<line x1="524" y1="142" x2="796" y2="142" stroke="#1e2230" stroke-width="0.4"/>
+<line x1="524" y1="180" x2="796" y2="180" stroke="#1e2230" stroke-width="0.4"/>
+<line x1="524" y1="218" x2="796" y2="218" stroke="#1e2230" stroke-width="0.4"/>
+<!-- Medical services column -->
+<rect x="572" y="110" width="70" height="210" rx="6" fill="#180c08" stroke="#993C1D" stroke-width="0.5"/>
+<text font-size="11" font-weight="600" fill="#e87050" x="607" y="210" text-anchor="middle" transform="rotate(-90,607,210)" font-family="'IBM Plex Sans',sans-serif">Medical services</text>
+<!-- Health management column -->
+<rect x="654" y="110" width="70" height="210" rx="6" fill="#0a160f" stroke="#0F6E56" stroke-width="0.5"/>
+<text font-size="11" font-weight="600" fill="#3dc9a0" x="689" y="210" text-anchor="middle" transform="rotate(-90,689,210)" font-family="'IBM Plex Sans',sans-serif">Health management</text>
+<!-- Senior care services column -->
+<rect x="736" y="110" width="60" height="210" rx="6" fill="#1a1208" stroke="#854F0B" stroke-width="0.5"/>
+<text font-size="11" font-weight="600" fill="#FAC775" x="766" y="210" text-anchor="middle" transform="rotate(-90,766,210)" font-family="'IBM Plex Sans',sans-serif">Senior care services</text>
+<!-- Bottom bar standards -->
+<rect x="524" y="326" width="272" height="14" rx="4" fill="#111520" stroke="#2c3444" stroke-width="0.4"/>
+<text font-size="9" fill="#6b7180" x="660" y="337" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Set standards  |  Centralize procurement  |  Evaluate services</text>
+
+<!-- ── CORE CAPABILITIES ── -->
+<text font-size="10" fill="#6b7180" x="10" y="385" font-family="'IBM Plex Sans',sans-serif">Core</text>
+<text font-size="10" fill="#6b7180" x="10" y="397" font-family="'IBM Plex Sans',sans-serif">capabilities</text>
+<rect x="60" y="372" width="162" height="32" rx="6" fill="#111520" stroke="#2c3444" stroke-width="0.5"/>
+<text font-size="11" font-weight="500" fill="#b4b2a9" x="141" y="393" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Portal</text>
+<rect x="236" y="372" width="162" height="32" rx="6" fill="#111520" stroke="#2c3444" stroke-width="0.5"/>
+<text font-size="11" font-weight="500" fill="#b4b2a9" x="317" y="393" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Payment</text>
+<rect x="412" y="372" width="162" height="32" rx="6" fill="#111520" stroke="#2c3444" stroke-width="0.5"/>
+<text font-size="11" font-weight="500" fill="#b4b2a9" x="493" y="393" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Health records</text>
+<rect x="588" y="372" width="222" height="32" rx="6" fill="#1a1030" stroke="#534AB7" stroke-width="0.7"/>
+<text font-size="11" font-weight="600" fill="#CECBF6" x="699" y="393" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">AI</text>
+</svg>
+    </div>
+    <div class="source-note" style="padding:0 22px 16px;">Nguồn: Good Doctor 2025 Interim Results — Strategic Panorama, slide 4</div>
+  </div>
+
+  <div class="phase-grid reveal">
+    <div class="phase-card g1">
+      <div class="phase-num">Giai đoạn 01</div>
+      <div class="phase-year">2014–2019</div>
+      <div class="phase-title">Traffic Acquisition</div>
+      <div class="phase-body">Tư vấn miễn phí. 400M users đăng ký nhưng chuyển đổi thấp. IPO HK 2018 — HKD 8.8 tỷ. Lỗ có chủ ý — đúng như kế hoạch chiến lược.</div>
+    </div>
+    <div class="phase-card g2">
+      <div class="phase-num">Giai đoạn 02</div>
+      <div class="phase-year">2020–2022</div>
+      <div class="phase-title">Covid Catalyst · Pivot B2B</div>
+      <div class="phase-body">Tư vấn 9×, users mới 10×. Pivot sang F-end (bảo hiểm Ping An) và B-end (doanh nghiệp). HealthKonnect phủ 800M người. Đổi tên thành "Ping An Health".</div>
+    </div>
+    <div class="phase-card g3">
+      <div class="phase-num">Giai đoạn 03</div>
+      <div class="phase-year">2023–2025</div>
+      <div class="phase-title">Managed Care + GenAI</div>
+      <div class="phase-body">Lần đầu có lãi 1H 2024. 1H 2025 net profit +136.8%. Gross margin 33.6%. Senior care revenue +263.9%. "7+N+1" AI product matrix. Expense ratio giảm 6.3 pps YoY.</div>
+    </div>
+  </div>
+
+  <div class="section-divider reveal"><span>Revenue breakdown 1H 2025</span></div>
+
+  <div class="chart-section reveal">
+    <div class="chart-header"><span class="chart-title">Biểu đồ 02</span><span class="chart-desc">Cơ cấu doanh thu theo sản phẩm &amp; kênh — 1H 2024 vs 1H 2025</span></div>
+    <div class="chart-body">
+<svg width="100%" viewBox="0 0 780 200" xmlns="http://www.w3.org/2000/svg">
+<!-- By product -->
+<text font-size="12" font-weight="600" fill="#dde0ec" x="190" y="22" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Theo sản phẩm (RMB mn)</text>
+<!-- 1H2024 stack -->
+<rect x="60" y="35" width="60" height="64" rx="4" fill="#0C447C"/>
+<text font-size="10" fill="#B5D4F4" x="90" y="70" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">1,063</text>
+<rect x="60" y="101" width="60" height="32" rx="4" fill="#085041"/>
+<text font-size="10" fill="#9FE1CB" x="90" y="120" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">983</text>
+<rect x="60" y="135" width="60" height="3" rx="2" fill="#633806"/>
+<text font-size="10" fill="#dde0ec" x="90" y="158" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">1H24</text>
+<text font-size="11" font-weight="600" fill="#888780" x="90" y="178" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">2,093</text>
+<!-- 1H2025 stack -->
+<rect x="160" y="35" width="60" height="76" rx="4" fill="#185FA5"/>
+<text font-size="10" fill="#B5D4F4" x="190" y="76" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">1,278</text>
+<rect x="160" y="113" width="60" height="20" rx="4" fill="#0F6E56"/>
+<text font-size="10" fill="#9FE1CB" x="190" y="126" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">1,052</text>
+<rect x="160" y="135" width="60" height="10" rx="2" fill="#854F0B"/>
+<text font-size="10" fill="#FAC775" x="190" y="143" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">172</text>
+<text font-size="10" fill="#dde0ec" x="190" y="158" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">1H25</text>
+<text font-size="11" font-weight="600" fill="#EF9F27" x="190" y="178" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">2,502</text>
+<!-- Legend -->
+<rect x="260" y="60" width="10" height="10" rx="2" fill="#185FA5"/>
+<text font-size="11" fill="#6b7180" x="275" y="70" font-family="'IBM Plex Sans',sans-serif">Medical +20.2%</text>
+<rect x="260" y="80" width="10" height="10" rx="2" fill="#0F6E56"/>
+<text font-size="11" fill="#6b7180" x="275" y="90" font-family="'IBM Plex Sans',sans-serif">Health +7.0%</text>
+<rect x="260" y="100" width="10" height="10" rx="2" fill="#854F0B"/>
+<text font-size="11" fill="#FAC775" x="275" y="110" font-family="'IBM Plex Sans',sans-serif">Senior care +263.9% ★</text>
+
+<!-- Divider -->
+<line x1="390" y1="20" x2="390" y2="195" stroke="#1e2230" stroke-width="0.5" stroke-dasharray="4 4"/>
+
+<!-- By channel -->
+<text font-size="12" font-weight="600" fill="#dde0ec" x="580" y="22" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Theo kênh (RMB mn)</text>
+<!-- 1H2024 -->
+<rect x="450" y="35" width="60" height="67" rx="4" fill="#085041"/>
+<text font-size="10" fill="#9FE1CB" x="480" y="72" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">1,115</text>
+<rect x="450" y="104" width="60" height="24" rx="4" fill="#0C447C"/>
+<text font-size="10" fill="#B5D4F4" x="480" y="119" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">390</text>
+<rect x="450" y="130" width="60" height="8" rx="2" fill="#2C2C2A"/>
+<text font-size="10" fill="#dde0ec" x="480" y="158" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">1H24</text>
+<text font-size="11" font-weight="600" fill="#888780" x="480" y="178" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">2,093</text>
+<!-- 1H2025 -->
+<rect x="550" y="35" width="60" height="86" rx="4" fill="#0F6E56"/>
+<text font-size="10" fill="#9FE1CB" x="580" y="82" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">1,433</text>
+<rect x="550" y="123" width="60" height="32" rx="4" fill="#185FA5"/>
+<text font-size="10" fill="#B5D4F4" x="580" y="142" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">527</text>
+<text font-size="10" fill="#dde0ec" x="580" y="165" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">1H25</text>
+<text font-size="11" font-weight="600" fill="#EF9F27" x="580" y="180" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">2,502</text>
+<!-- Legend channels -->
+<rect x="640" y="60" width="10" height="10" rx="2" fill="#0F6E56"/>
+<text font-size="11" fill="#6b7180" x="655" y="70" font-family="'IBM Plex Sans',sans-serif">F-end +28.5%</text>
+<rect x="640" y="80" width="10" height="10" rx="2" fill="#185FA5"/>
+<text font-size="11" fill="#6b7180" x="655" y="90" font-family="'IBM Plex Sans',sans-serif">B-end Corp +35.2%</text>
+</svg>
+    </div>
+    <div class="source-note" style="padding:0 22px 16px;">Nguồn: Good Doctor 2025 Interim Results — Revenue Structure, slide 7</div>
+  </div>
+
+  <div class="callout teal reveal">
+    <p><strong>Key shift trong mô hình kinh doanh:</strong> AI giúp cắt giảm <strong>~52% chi phí dịch vụ bình quân/khách hàng của family doctor</strong>. Expense ratio tổng giảm 6.3 pps YoY xuống 30.1%. Khi cost structure cải thiện cùng với doanh thu tăng, đây là dấu hiệu "flywheel đang quay".</p>
+  </div>
+</section>
+
+<!-- ══════════ PHẦN 3: BA TẦNG ══════════ -->
+<section id="three-layers">
+  <div class="section-tag reveal">Phần 03</div>
+  <h2 class="section-h reveal">Ba tầng dịch vụ HMO:<br>Online · Offline · AI Layer</h2>
+  <p class="section-lead reveal">Mạng lưới "online, in-store, in-home, in-company" — 4 chiều tiếp cận đồng thời. Mỗi tầng giải quyết một "pain point" cụ thể mà healthcare truyền thống không thể giải quyết.</p>
+
+  <div class="img-strip reveal">
+    <div class="img-strip-item">
+      <img src="https://group.pingan.com/dam/jcr:68abaf50-17d1-482c-8467-4309a8a4d8ca/wsj-2-article.jpg" alt="Ping An Health online" loading="lazy">
+      <span>Tầng 1 — Online</span>
+    </div>
+    <div class="img-strip-item">
+      <img src="https://group.pingan.com/dam/jcr:a0837e29-dbdc-426f-9e77-519f11f2bf78/healthcare-wsj-half-banner.jpg" alt="Healthcare offline" loading="lazy">
+      <span>Tầng 2 — Offline</span>
+    </div>
+    <div class="img-strip-item">
+      <img src="https://group.pingan.com/dam/jcr:ba04a1ea-882f-47a9-a332-cc7ab0d1922f/ft24-3-image1.2024-11-28-18-10-06.jpg" alt="AI Layer" loading="lazy">
+      <span>Tầng 3 — AI &amp; Payer</span>
+    </div>
+  </div>
+
+  <div class="layer-stack reveal">
+    <div class="layer-card l1">
+      <div class="layer-badge">Tầng 1 — Online: Good Doctor / Family Doctor</div>
+      <div class="layer-title">Service Hubs: Family Doctors &amp; Senior Care Concierges</div>
+      <div class="layer-body">Hai trung tâm dịch vụ cốt lõi theo Good Doctor 2025 IR. <strong>Family Doctor:</strong> ~24M paying users (+35.1%), 35M+ users entitled to family doctor benefits (+150% YoY), tần suất sử dụng 5 lần/người/năm. Tư vấn với renowned doctor trong <strong>3 giờ</strong>. <strong>Senior Care Concierge:</strong> 85 thành phố (+10 từ cuối 2024), 83% YoY tăng users được hưởng lợi, Smart Guard response time 10 giây. <strong>~50,000</strong> bác sĩ nội bộ và đối tác. <strong>Nearly 106,000</strong> health service providers.</div>
+    </div>
+    <div class="layer-card l2">
+      <div class="layer-badge">Tầng 2 — Offline: PKU Healthcare + Networks</div>
+      <div class="layer-title">PKU Healthcare Group + 3,300+ checkup institutions</div>
+      <div class="layer-body">PKU Healthcare revenue đạt <strong>RMB 5.51 tỷ năm 2024</strong>, tăng mạnh kể từ Ping An tiếp quản 2021. Peking University International Hospital: <strong>revenue RMB 2.48 tỷ, 1.25M lượt khám, 1,306 giường</strong>. Đối tác với Mayo Clinic, Cleveland Clinic, UCLA Health. Mạng lưới: <strong>36,000+ bệnh viện</strong> (100% top 100 và 3A), <strong>235,000 nhà thuốc</strong> (35% toàn quốc), <strong>100K+ health management institutions</strong>. Quốc tế: <strong>1,300+ cơ sở y tế tại 35 quốc gia</strong> bao gồm 7/10 bệnh viện hàng đầu thế giới.</div>
+    </div>
+    <div class="layer-card l3">
+      <div class="layer-badge">Tầng 3 — AI &amp; Payer: HealthKonnect + Smart Healthcare</div>
+      <div class="layer-title">800 triệu người · 22 tỉnh BHXH · Đối tác hạ tầng NHSA</div>
+      <div class="layer-body">HealthKonnect phủ <strong>200+ thành phố, 800M người</strong>, kiểm toán <strong>RMB 300 tỷ claims/năm</strong>. Hỗ trợ ra quyết định vĩ mô cho NHSA. AI checkup report accuracy: <strong>98%</strong>. <strong>MDT critical illness treatment accuracy: nearly 80%</strong>. Ping An "AI Medical Master" được huấn luyện trên 1.44 tỷ+ consultation records và 200 tỷ+ medical tokens. HealthKonnect không chỉ phục vụ Ping An — nó phục vụ toàn hệ thống y tế quốc gia, tạo ra moat nhà nước không thể sao chép.</div>
+    </div>
+  </div>
+
+  <!-- F-end Business diagram -->
+  <div class="section-divider reveal"><span>F-end Business — Insurance + Health Care synergies</span></div>
+
+  <div class="chart-section reveal">
+    <div class="chart-header"><span class="chart-title">F-end Business</span><span class="chart-desc">Enhanced "Insurance + Health Care" Synergies — +28.5% Revenue, ~20M paying users</span></div>
+    <div class="chart-body">
+<svg width="100%" viewBox="0 0 860 390" xmlns="http://www.w3.org/2000/svg">
+
+<!-- ── TITLE ── -->
+<text font-size="13" font-weight="600" fill="#e87050" x="430" y="22" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">F-end Business: Enhanced "Insurance + Health Care" Synergies — Driving 28.5% YoY Revenue Growth</text>
+
+<!-- ── COLUMN HEADERS ── -->
+<text font-size="12" font-weight="600" fill="#dde0ec" x="100" y="48" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Business models and achievements</text>
+<text font-size="12" font-weight="600" fill="#dde0ec" x="698" y="48" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Highlights</text>
+<line x1="560" y1="36" x2="560" y2="370" stroke="#1e2230" stroke-width="0.5" stroke-dasharray="4 3"/>
+
+<!-- ── LEFT COLUMN: INSURERS ── -->
+<!-- PA Life -->
+<rect x="10" y="62" width="108" height="46" rx="6" fill="#1a0e08" stroke="#c04a28" stroke-width="0.6"/>
+<text font-size="10" font-weight="600" fill="#e87050" x="64" y="83" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Ping An Life</text>
+<text font-size="10" fill="#888780" x="64" y="98" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Insurance</text>
+<!-- PA Health -->
+<rect x="10" y="160" width="108" height="46" rx="6" fill="#1a0e08" stroke="#c04a28" stroke-width="0.6"/>
+<text font-size="10" font-weight="600" fill="#e87050" x="64" y="181" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Ping An Health</text>
+<text font-size="10" fill="#888780" x="64" y="196" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Insurance</text>
+<!-- PA P&C -->
+<rect x="10" y="254" width="108" height="46" rx="6" fill="#1a0e08" stroke="#c04a28" stroke-width="0.6"/>
+<text font-size="10" font-weight="600" fill="#e87050" x="64" y="272" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Ping An P&amp;C</text>
+<text font-size="10" fill="#888780" x="64" y="287" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Insurance</text>
+<!-- PA Bank -->
+<rect x="10" y="320" width="108" height="40" rx="6" fill="#1a0e08" stroke="#c04a28" stroke-width="0.6"/>
+<text font-size="10" font-weight="600" fill="#e87050" x="64" y="344" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Ping An Bank</text>
+
+<!-- ── ROW LABELS ── -->
+<text font-size="10" font-weight="600" fill="#b4b2a9" x="134" y="82" font-family="'IBM Plex Sans',sans-serif">Models/</text>
+<text font-size="10" font-weight="600" fill="#b4b2a9" x="134" y="94" font-family="'IBM Plex Sans',sans-serif">scenarios</text>
+<text font-size="10" font-weight="600" fill="#b4b2a9" x="134" y="192" font-family="'IBM Plex Sans',sans-serif">Product</text>
+<text font-size="10" font-weight="600" fill="#b4b2a9" x="134" y="204" font-family="'IBM Plex Sans',sans-serif">capability</text>
+<text font-size="10" font-weight="600" fill="#b4b2a9" x="134" y="216" font-family="'IBM Plex Sans',sans-serif">enhancement</text>
+<text font-size="10" font-weight="600" fill="#b4b2a9" x="134" y="338" font-family="'IBM Plex Sans',sans-serif">Operational</text>
+<text font-size="10" font-weight="600" fill="#b4b2a9" x="134" y="350" font-family="'IBM Plex Sans',sans-serif">enhancement</text>
+
+<!-- ── CENTER SECTION: TWO PRODUCT COLUMNS ── -->
+<!-- Insurance + membership box (rows 1-2) -->
+<rect x="180" y="58" width="170" height="108" rx="6" fill="#0e1510" stroke="#0F6E56" stroke-width="0.7"/>
+<text font-size="11" font-weight="600" fill="#3dc9a0" x="265" y="80" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Insurance + health and</text>
+<text font-size="11" font-weight="600" fill="#3dc9a0" x="265" y="94" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">senior care membership</text>
+<line x1="190" y1="103" x2="340" y2="103" stroke="#1e3020" stroke-width="0.4"/>
+<text font-size="10" fill="#6b7180" x="265" y="119" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Integrating health &amp; senior care</text>
+<text font-size="10" fill="#6b7180" x="265" y="133" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">benefits into policies to boost</text>
+<text font-size="10" fill="#6b7180" x="265" y="147" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">customer stickiness and value</text>
+<text font-size="9" fill="#3d4255" x="265" y="160" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Critical Illness Family Doctor · Zhen Xiang · Home Senior Care</text>
+
+<!-- Insurance + membership box row 3 (Product enhancement) -->
+<rect x="180" y="174" width="170" height="98" rx="6" fill="#0e1510" stroke="#0F6E56" stroke-width="0.5"/>
+<text font-size="11" font-weight="600" fill="#3dc9a0" x="265" y="198" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Tiered benefits</text>
+<text font-size="10" fill="#6b7180" x="265" y="213" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">by premium tier/customer profiling</text>
+<line x1="190" y1="222" x2="340" y2="222" stroke="#1e3020" stroke-width="0.4"/>
+<text font-size="11" font-weight="600" fill="#3dc9a0" x="265" y="241" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Service upgrades</text>
+<text font-size="10" fill="#6b7180" x="265" y="257" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Upgrading "An You Hu" benefits</text>
+
+<!-- Medical and health benefit box row 1-2 -->
+<rect x="364" y="58" width="180" height="108" rx="6" fill="#1a0e08" stroke="#c04a28" stroke-width="0.7"/>
+<text font-size="11" font-weight="600" fill="#e87050" x="454" y="80" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Medical and health</text>
+<text font-size="11" font-weight="600" fill="#e87050" x="454" y="94" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">benefit services</text>
+<line x1="374" y1="103" x2="534" y2="103" stroke="#2a1208" stroke-width="0.4"/>
+<text font-size="10" fill="#6b7180" x="454" y="119" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Enabling insurance</text>
+<text font-size="10" fill="#c04a28" x="454" y="133" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">scenario-based marketing</text>
+<text font-size="10" fill="#6b7180" x="454" y="147" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">and customer acquisition</text>
+<text font-size="10" fill="#6b7180" x="454" y="161" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">with diverse/high-quality services</text>
+
+<!-- Medical and health row 3 (Product innovation) -->
+<rect x="364" y="174" width="180" height="98" rx="6" fill="#1a0e08" stroke="#c04a28" stroke-width="0.5"/>
+<text font-size="11" font-weight="600" fill="#e87050" x="454" y="198" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Product innovation</text>
+<text font-size="10" fill="#6b7180" x="454" y="216" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Innovative services including</text>
+<text font-size="10" fill="#6b7180" x="454" y="230" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">life sciences, cancer screening,</text>
+<text font-size="10" fill="#6b7180" x="454" y="245" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">and at-home testing</text>
+
+<!-- Arrow between two center columns -->
+<text font-size="20" fill="#e87050" x="352" y="120" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">›</text>
+<text font-size="20" fill="#e87050" x="352" y="136" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">›</text>
+
+<!-- Operational enhancement row (full width) -->
+<rect x="180" y="280" width="364" height="50" rx="6" fill="#111520" stroke="#2c3444" stroke-width="0.6"/>
+<text font-size="10" font-weight="600" fill="#dde0ec" x="362" y="295" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Implementing tiered, proactive customer operations,</text>
+<text font-size="10" font-weight="600" fill="#dde0ec" x="362" y="309" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">and promoting conversion of high-end customers</text>
+<text font-size="10" font-weight="600" fill="#dde0ec" x="362" y="323" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">via refined operations</text>
+
+<!-- Bottom conclusion bar -->
+
+<text font-size="10" fill="#888780" x="277" y="388" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Enhancing product competitiveness in core financial businesses of Ping An Group</text>
+<text font-size="10" fill="#888780" x="277" y="402" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">while boosting customer acquisition, retention and customer value</text>
+
+<!-- ── RIGHT COLUMN: HIGHLIGHTS ── -->
+<!-- KPI 1 -->
+<rect x="576" y="62" width="264" height="110" rx="8" fill="#111520" stroke="#3dc9a0" stroke-width="0.7"/>
+<text font-size="28" font-weight="700" fill="#3dc9a0" x="708" y="110" text-anchor="middle" font-family="'Playfair Display',Georgia,serif">~20.0 mn</text>
+<text font-size="11" fill="#6b7180" x="708" y="130" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">No. of F-end paying users</text>
+<text font-size="13" font-weight="600" fill="#3dc9a0" x="708" y="152" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">+34.6% YoY</text>
+
+<!-- KPI 2 -->
+<rect x="576" y="188" width="264" height="110" rx="8" fill="#111520" stroke="#e87050" stroke-width="0.7"/>
+<text font-size="28" font-weight="700" fill="#e87050" x="708" y="236" text-anchor="middle" font-family="'Playfair Display',Georgia,serif">+50.1% YoY</text>
+<text font-size="11" fill="#6b7180" x="708" y="258" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Revenue from F-end</text>
+<text font-size="11" fill="#6b7180" x="708" y="274" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">medical services</text>
+
+</svg>
+    </div>
+    <div class="source-note" style="padding:0 22px 16px;">Nguồn: Good Doctor 2025 Interim Results — F-end Business, slide 13</div>
+  </div>
+  
+
+
+  <!-- B-end Business diagram -->
+  <div class="chart-section reveal">
+    <div class="chart-header"><span class="chart-title">B-end Business</span><span class="chart-desc">Accelerated Client Acquisition — 3,500+ corporate clients (+37.2%), ~80% renewal rate</span></div>
+    <div class="chart-body">
+<svg width="100%" viewBox="0 0 860 400" xmlns="http://www.w3.org/2000/svg">
+
+<!-- TITLE -->
+<text font-size="13" font-weight="600" fill="#e87050" x="430" y="20" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">B-end Business: Accelerated Client Acquisition and Enhanced Conversion via Further Operations</text>
+<text font-size="12" font-weight="600" fill="#e87050" x="430" y="36" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Driving 35.2% YoY Revenue Growth in Corporate Health Management Business</text>
+
+<!-- COLUMN HEADERS -->
+<text font-size="12" font-weight="600" fill="#dde0ec" x="240" y="60" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Business models and achievements</text>
+<text font-size="12" font-weight="600" fill="#dde0ec" x="730" y="60" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Highlights</text>
+<line x1="594" y1="48" x2="594" y2="378" stroke="#1e2230" stroke-width="0.5" stroke-dasharray="4 3"/>
+
+<!-- ══ COL 1: Collaborating with Ping An Group ══ -->
+<rect x="10" y="70" width="185" height="270" rx="8" fill="#0e0c10" stroke="#c04a28" stroke-width="0.8"/>
+<!-- orange corner accent top-left -->
+<rect x="10" y="70" width="28" height="6" rx="2" fill="#c04a28"/>
+<rect x="10" y="70" width="6" height="28" rx="2" fill="#c04a28"/>
+
+<text font-size="11" font-weight="600" fill="#e87050" x="102.5" y="100" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Collaborating with Ping An</text>
+<text font-size="11" font-weight="600" fill="#e87050" x="102.5" y="114" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Group to accelerate acquisition</text>
+<text font-size="11" font-weight="600" fill="#e87050" x="102.5" y="128" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">of corporate clients</text>
+
+<line x1="24" y1="138" x2="181" y2="138" stroke="#2a1e1a" stroke-width="0.5"/>
+
+<text font-size="11" font-weight="600" fill="#dde0ec" x="102.5" y="158" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Collaborating with Ping An</text>
+<text font-size="11" font-weight="600" fill="#dde0ec" x="102.5" y="172" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Group on client acquisition</text>
+<text font-size="10" fill="#6b7180" x="102.5" y="192" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Ping An P&amp;C / Ping An Annuity /</text>
+<text font-size="10" fill="#6b7180" x="102.5" y="206" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Ping An Health Insurance /</text>
+<text font-size="10" fill="#6b7180" x="102.5" y="220" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Ping An Bank...</text>
+
+<line x1="24" y1="234" x2="181" y2="234" stroke="#2a1e1a" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+<text font-size="11" font-weight="600" fill="#dde0ec" x="102.5" y="254" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Expanding the corporate</text>
+<text font-size="11" font-weight="600" fill="#dde0ec" x="102.5" y="268" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">client base independently</text>
+<text font-size="10" fill="#6b7180" x="102.5" y="288" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">The Company's in-house</text>
+<text font-size="10" fill="#6b7180" x="102.5" y="302" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">sales teams</text>
+
+<!-- orange corner accent bottom-right -->
+<rect x="167" y="334" width="28" height="6" rx="2" fill="#c04a28"/>
+<rect x="189" y="312" width="6" height="28" rx="2" fill="#c04a28"/>
+
+<!-- ══ COL 2: Continuing to improve ══ -->
+<rect x="206" y="70" width="185" height="270" rx="8" fill="#0e1510" stroke="#0F6E56" stroke-width="0.8"/>
+<!-- green corner accent -->
+<rect x="206" y="70" width="28" height="6" rx="2" fill="#0F6E56"/>
+<rect x="206" y="70" width="6" height="28" rx="2" fill="#0F6E56"/>
+
+<text font-size="11" font-weight="600" fill="#3dc9a0" x="298.5" y="100" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Continuing to improve</text>
+<text font-size="11" font-weight="600" fill="#3dc9a0" x="298.5" y="114" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">the service system</text>
+
+<line x1="220" y1="124" x2="377" y2="124" stroke="#1a2e20" stroke-width="0.5"/>
+
+<text font-size="11" font-weight="600" fill="#dde0ec" x="298.5" y="148" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">For enterprises</text>
+<text font-size="10" fill="#6b7180" x="298.5" y="167" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Workplace Clinics / in-company</text>
+<text font-size="10" fill="#6b7180" x="298.5" y="181" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">activities / health dashboards…</text>
+
+<line x1="220" y1="196" x2="377" y2="196" stroke="#1a2e20" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+<text font-size="11" font-weight="600" fill="#dde0ec" x="298.5" y="218" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">For employees</text>
+<text font-size="10" fill="#6b7180" x="298.5" y="238" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Health checkups / renowned</text>
+<text font-size="10" fill="#6b7180" x="298.5" y="252" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">doctors / medical visit</text>
+<text font-size="10" fill="#6b7180" x="298.5" y="266" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">assistance / medicine purchase /</text>
+<text font-size="10" fill="#6b7180" x="298.5" y="280" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">chronic disease management…</text>
+
+<!-- green corner accent bottom-right -->
+<rect x="363" y="334" width="28" height="6" rx="2" fill="#0F6E56"/>
+<rect x="385" y="312" width="6" height="28" rx="2" fill="#0F6E56"/>
+
+<!-- ══ COL 3: Promoting conversion ══ -->
+<rect x="402" y="70" width="182" height="270" rx="8" fill="#1a0e08" stroke="#c04a28" stroke-width="0.8"/>
+<!-- orange corner accent -->
+<rect x="402" y="70" width="28" height="6" rx="2" fill="#c04a28"/>
+<rect x="402" y="70" width="6" height="28" rx="2" fill="#c04a28"/>
+
+<text font-size="11" font-weight="600" fill="#e87050" x="493" y="100" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Promoting conversion</text>
+<text font-size="11" font-weight="600" fill="#e87050" x="493" y="114" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">via operations</text>
+
+<line x1="416" y1="124" x2="570" y2="124" stroke="#2a1e1a" stroke-width="0.5"/>
+
+<text font-size="11" font-weight="600" fill="#dde0ec" x="493" y="148" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Online precision /</text>
+<text font-size="11" font-weight="600" fill="#dde0ec" x="493" y="162" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">closed-loop operations</text>
+<text font-size="10" fill="#6b7180" x="493" y="180" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Precise customer operations</text>
+<text font-size="10" fill="#6b7180" x="493" y="194" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">through AI and family doctors,</text>
+<text font-size="10" fill="#6b7180" x="493" y="208" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">tracking throughout disease journey</text>
+
+<line x1="416" y1="220" x2="570" y2="220" stroke="#2a1e1a" stroke-width="0.5" stroke-dasharray="3 3"/>
+
+<text font-size="11" font-weight="600" fill="#dde0ec" x="493" y="242" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Diverse in-company activities</text>
+<text font-size="10" fill="#6b7180" x="493" y="260" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">1 in-company specialist + N support</text>
+<text font-size="10" fill="#6b7180" x="493" y="274" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">teams: renowned doctors' lectures /</text>
+<text font-size="10" fill="#6b7180" x="493" y="288" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">health screening → offline-to-online</text>
+
+<!-- orange corner accent bottom-right -->
+<rect x="558" y="334" width="28" height="6" rx="2" fill="#c04a28"/>
+<rect x="580" y="312" width="6" height="28" rx="2" fill="#c04a28"/>
+
+<!-- Arrow between cols -->
+<text font-size="22" fill="#e87050" x="589" y="198" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">›</text>
+<text font-size="22" fill="#e87050" x="589" y="216" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">›</text>
+
+<!-- ══ RIGHT: HIGHLIGHTS ══ -->
+<!-- KPI 1 -->
+<rect x="610" y="70" width="240" height="90" rx="8" fill="#111520" stroke="#2c3444" stroke-width="0.6"/>
+<text font-size="28" font-weight="700" fill="#3dc9a0" x="730" y="118" text-anchor="middle" font-family="'Playfair Display',Georgia,serif">3,500+</text>
+<text font-size="11" fill="#6b7180" x="730" y="138" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">No. of paying corporate clients 1H 2025</text>
+<text font-size="13" font-weight="600" fill="#3dc9a0" x="730" y="154" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">+37.2% YoY</text>
+
+<!-- KPI 2 -->
+<rect x="610" y="174" width="240" height="90" rx="8" fill="#111520" stroke="#2c3444" stroke-width="0.6"/>
+<text font-size="28" font-weight="700" fill="#3dc9a0" x="730" y="218" text-anchor="middle" font-family="'Playfair Display',Georgia,serif">3.6 mn+</text>
+<text font-size="11" fill="#6b7180" x="730" y="238" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">No. of B-end paying users</text>
+<text font-size="13" font-weight="600" fill="#3dc9a0" x="730" y="254" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">+39.2% YoY</text>
+
+<!-- KPI 3 -->
+<rect x="610" y="278" width="240" height="62" rx="8" fill="#111520" stroke="#2c3444" stroke-width="0.6"/>
+<text font-size="28" font-weight="700" fill="#e87050" x="730" y="314" text-anchor="middle" font-family="'Playfair Display',Georgia,serif">~80%</text>
+<text font-size="11" fill="#6b7180" x="730" y="332" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">B-end client renewal rates</text>
+
+<!-- Bottom conclusion bar -->
+<rect x="10" y="352" width="574" height="36" rx="6" fill="#080a0f" stroke="#2c3444" stroke-width="0.5"/>
+<text font-size="10" fill="#888780" x="297" y="366" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Enhanced product capabilities and services/operations drive higher satisfaction</text>
+<text font-size="10" fill="#888780" x="297" y="381" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">and stickiness among corporate clients</text>
+
+</svg>
+    </div>
+    <div class="source-note" style="padding:0 22px 16px;">Nguồn: Good Doctor 2025 Interim Results — B-end Business, slide 14</div>
+  </div>
+
+  <!-- Service Hubs diagram -->
+  <div class="chart-section reveal">
+    <div class="chart-header"><span class="chart-title">Service Hubs</span><span class="chart-desc">Fast-growing Users Entitled to Benefits due to Improved Service Capabilities — Family Doctors &amp; Senior Care Concierges</span></div>
+    <div class="chart-body">
+<svg width="100%" viewBox="0 0 860 450" xmlns="http://www.w3.org/2000/svg">
+
+<!-- TITLE -->
+<text font-size="13" font-weight="600" fill="#e87050" x="430" y="20" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Service Hubs: Fast-growing Users Entitled to Benefits due to Improved Service Capabilities and Expanding Scenarios</text>
+
+<!-- COLUMN HEADERS -->
+<text font-size="12" font-weight="600" fill="#dde0ec" x="272" y="46" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Two service hubs</text>
+<text font-size="12" font-weight="600" fill="#dde0ec" x="730" y="46" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Highlights</text>
+<line x1="594" y1="34" x2="594" y2="428" stroke="#1e2230" stroke-width="0.5" stroke-dasharray="4 3"/>
+<line x1="10" y1="54" x2="584" y2="54" stroke="#1e2230" stroke-width="0.4"/>
+
+<!-- ══ LEFT CARD: Family Doctors ══ -->
+<rect x="10" y="62" width="278" height="360" rx="8" fill="#0e100c" stroke="#c04a28" stroke-width="0.8"/>
+<!-- orange top-right corner tab -->
+<rect x="252" y="62" width="36" height="30" rx="0" fill="#c04a28" style="clip-path:polygon(0 0,100% 0,100% 100%)"/>
+<rect x="252" y="62" width="36" height="30" rx="4" fill="#1a0e08"/>
+<rect x="268" y="62" width="20" height="20" rx="0" fill="#c04a28"/>
+
+<text font-size="12" font-weight="600" fill="#e87050" x="149" y="90" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Family doctors: multi-tiered</text>
+<text font-size="12" font-weight="600" fill="#e87050" x="149" y="106" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">application across diverse scenarios</text>
+
+<!-- Sub-section 1: Multi-tiered -->
+<rect x="22" y="116" width="254" height="134" rx="6" fill="#141a10" stroke="#2a2a1a" stroke-width="0.4"/>
+<text font-size="11" font-weight="600" fill="#e87050" x="34" y="136" font-family="'IBM Plex Sans',sans-serif">Multi-tiered family doctor system</text>
+<text font-size="10" fill="#555c72" x="200" y="136" font-family="'IBM Plex Sans',sans-serif">(F-end example)</text>
+<!-- bullet points -->
+<rect x="30" y="147" width="4" height="4" rx="1" fill="#6b7180"/>
+<text font-size="10" fill="#6b7180" x="40" y="154" font-family="'IBM Plex Sans',sans-serif">High-end: critical illness mgmt /</text>
+<text font-size="10" fill="#6b7180" x="40" y="166" font-family="'IBM Plex Sans',sans-serif">home-based senior care</text>
+
+<rect x="30" y="177" width="4" height="4" rx="1" fill="#6b7180"/>
+<text font-size="10" fill="#6b7180" x="40" y="184" font-family="'IBM Plex Sans',sans-serif">General: consultations / prescriptions /</text>
+<text font-size="10" fill="#6b7180" x="40" y="196" font-family="'IBM Plex Sans',sans-serif">report interpretation / hospital</text>
+<text font-size="10" fill="#6b7180" x="40" y="208" font-family="'IBM Plex Sans',sans-serif">selection guidance / concierge</text>
+
+<rect x="30" y="219" width="4" height="4" rx="1" fill="#6b7180"/>
+<text font-size="10" fill="#6b7180" x="40" y="226" font-family="'IBM Plex Sans',sans-serif">Prospective: health consultation /</text>
+<text font-size="10" fill="#6b7180" x="40" y="238" font-family="'IBM Plex Sans',sans-serif">basic diagnosis &amp; treatment</text>
+
+<!-- Sub-section 2: One-stop -->
+<rect x="22" y="260" width="254" height="64" rx="6" fill="#141a10" stroke="#2a2a1a" stroke-width="0.4"/>
+<text font-size="11" font-weight="600" fill="#e87050" x="34" y="279" font-family="'IBM Plex Sans',sans-serif">One-stop proactive services</text>
+<text font-size="10" fill="#6b7180" x="34" y="297" font-family="'IBM Plex Sans',sans-serif">Health management, chronic disease management,</text>
+<text font-size="10" fill="#6b7180" x="34" y="311" font-family="'IBM Plex Sans',sans-serif">and disease management</text>
+
+<!-- Sub-section 3: Multi-scenario -->
+<rect x="22" y="334" width="254" height="56" rx="6" fill="#141a10" stroke="#2a2a1a" stroke-width="0.4"/>
+<text font-size="11" font-weight="600" fill="#e87050" x="34" y="356" font-family="'IBM Plex Sans',sans-serif">Multi-scenario application</text>
+<text font-size="10" fill="#6b7180" x="34" y="374" font-family="'IBM Plex Sans',sans-serif">F-end (integrated financial customers) and</text>
+<text font-size="10" fill="#6b7180" x="34" y="388" font-family="'IBM Plex Sans',sans-serif">B-end (corporate employees)</text>
+
+<!-- ══ RIGHT CARD: Senior Care Concierges ══ -->
+<rect x="304" y="62" width="280" height="360" rx="8" fill="#0a100e" stroke="#0F6E56" stroke-width="0.8"/>
+<!-- green top-right corner tab -->
+<rect x="556" y="62" width="28" height="28" rx="0" fill="#0F6E56"/>
+<rect x="556" y="62" width="28" height="28" rx="4" fill="#0a100e"/>
+<rect x="568" y="62" width="16" height="16" rx="0" fill="#0F6E56"/>
+
+<text font-size="12" font-weight="600" fill="#3dc9a0" x="444" y="90" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Senior care concierges:</text>
+<text font-size="12" font-weight="600" fill="#3dc9a0" x="444" y="106" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">core service upgrades</text>
+
+<!-- Sub-section 1: Medical & health services -->
+<rect x="316" y="116" width="256" height="88" rx="6" fill="#0e1a14" stroke="#1a3020" stroke-width="0.4"/>
+<text font-size="11" font-weight="600" fill="#3dc9a0" x="328" y="137" font-family="'IBM Plex Sans',sans-serif">Medical and health services: upgrades</text>
+<text font-size="11" font-weight="600" fill="#3dc9a0" x="328" y="151" font-family="'IBM Plex Sans',sans-serif">of dedicated doctors</text>
+<text font-size="10" fill="#6b7180" x="328" y="168" font-family="'IBM Plex Sans',sans-serif">Gradually upgrading to GPs with</text>
+<text font-size="10" fill="#6b7180" x="328" y="180" font-family="'IBM Plex Sans',sans-serif">associate chief physician titles</text>
+<text font-size="10" fill="#6b7180" x="328" y="192" font-family="'IBM Plex Sans',sans-serif">or above, certified by PUIH &amp; WONCA</text>
+
+<!-- Sub-section 2: Safety -->
+<rect x="316" y="214" width="256" height="88" rx="6" fill="#0e1a14" stroke="#1a3020" stroke-width="0.4"/>
+<text font-size="11" font-weight="600" fill="#3dc9a0" x="328" y="234" font-family="'IBM Plex Sans',sans-serif">Safety: Global Emergency Rescue Service</text>
+<text font-size="10" fill="#6b7180" x="328" y="252" font-family="'IBM Plex Sans',sans-serif">Proactively monitoring in-home risks,</text>
+<text font-size="10" fill="#6b7180" x="328" y="264" font-family="'IBM Plex Sans',sans-serif">providing remote rescue guidance</text>
+<text font-size="10" fill="#6b7180" x="328" y="276" font-family="'IBM Plex Sans',sans-serif">and rapid on-site support</text>
+<text font-size="10" fill="#6b7180" x="328" y="288" font-family="'IBM Plex Sans',sans-serif">developed with Ping An Group</text>
+
+<!-- Sub-section 3: Care -->
+<rect x="316" y="312" width="256" height="88" rx="6" fill="#0e1a14" stroke="#1a3020" stroke-width="0.4"/>
+<text font-size="11" font-weight="600" fill="#3dc9a0" x="328" y="332" font-family="'IBM Plex Sans',sans-serif">Care: professional care support</text>
+<text font-size="10" fill="#6b7180" x="328" y="350" font-family="'IBM Plex Sans',sans-serif">On-site assessments, care guidance,</text>
+<text font-size="10" fill="#6b7180" x="328" y="362" font-family="'IBM Plex Sans',sans-serif">and assistance with care bed admission</text>
+<text font-size="10" fill="#6b7180" x="328" y="374" font-family="'IBM Plex Sans',sans-serif">through care managers; partnering</text>
+<text font-size="10" fill="#6b7180" x="328" y="386" font-family="'IBM Plex Sans',sans-serif">with 100+ senior care institutions</text>
+
+<!-- Arrow between two hubs -->
+<text font-size="20" fill="#e87050" x="596" y="248" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">›</text>
+<text font-size="20" fill="#e87050" x="596" y="264" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">›</text>
+
+<!-- ══ RIGHT: HIGHLIGHTS ══ -->
+<!-- KPI 1 -->
+<rect x="612" y="62" width="238" height="82" rx="8" fill="#111520" stroke="#2c3444" stroke-width="0.6"/>
+<text font-size="26" font-weight="700" fill="#3dc9a0" x="731" y="104" text-anchor="middle" font-family="'Playfair Display',Georgia,serif">35.0 mn+</text>
+<text font-size="10" fill="#6b7180" x="731" y="122" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Users entitled to family doctor service benefits</text>
+<text font-size="12" font-weight="600" fill="#3dc9a0" x="731" y="138" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">+150% YoY</text>
+
+<!-- KPI 2 -->
+<rect x="612" y="156" width="238" height="82" rx="8" fill="#111520" stroke="#2c3444" stroke-width="0.6"/>
+<text font-size="22" font-weight="700" fill="#3dc9a0" x="731" y="196" text-anchor="middle" font-family="'Playfair Display',Georgia,serif">5 times per capita</text>
+<text font-size="10" fill="#6b7180" x="731" y="214" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Annualized usage frequency</text>
+<text font-size="10" fill="#6b7180" x="731" y="228" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">of family doctor services</text>
+
+<!-- KPI 3 -->
+<rect x="612" y="250" width="238" height="82" rx="8" fill="#111520" stroke="#2c3444" stroke-width="0.6"/>
+<text font-size="26" font-weight="700" fill="#e87050" x="731" y="292" text-anchor="middle" font-family="'Playfair Display',Georgia,serif">83%</text>
+<text font-size="10" fill="#6b7180" x="731" y="310" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">YoY increase of users entitled to</text>
+<text font-size="10" fill="#6b7180" x="731" y="324" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">home-based senior care benefits</text>
+
+<!-- KPI 4 -->
+<rect x="612" y="344" width="238" height="78" rx="8" fill="#111520" stroke="#3dc9a0" stroke-width="0.8"/>
+<text font-size="26" font-weight="700" fill="#3dc9a0" x="731" y="385" text-anchor="middle" font-family="'Playfair Display',Georgia,serif">85 cities</text>
+<text font-size="10" fill="#6b7180" x="731" y="401" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">home-based senior care · +10 from end-2024</text>
+
+<!-- footnote -->
+<text font-size="9" fill="#3d4255" x="14" y="440" font-family="'IBM Plex Sans',sans-serif">Note: WONCA = World Organization of National Colleges, Academies, and Academic Associations of General Practitioners/Family Physicians</text>
+
+</svg>
+    </div>
+    <div class="source-note" style="padding:0 22px 16px;">Nguồn: Good Doctor 2025 Interim Results — Service Hubs, slide 15</div>
+  </div>
+
+  <!-- Service Network diagram -->
+  <div class="chart-section reveal">
+    <div class="chart-header"><span class="chart-title">Service Network</span><span class="chart-desc">Expanding Service Network by Improving Service Matrix and Developing Blockbuster Services</span></div>
+    <div class="chart-body">
+<svg width="100%" viewBox="0 0 860 490" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <marker id="arrN" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="#888780" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  <marker id="arrO" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="#e87050" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  <marker id="arrG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="#3dc9a0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+
+<!-- TITLE -->
+<text font-size="13" font-weight="600" fill="#e87050" x="420" y="20" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">A Service Network: Expanding Service Network by Improving Service Matrix and Developing Blockbuster Services</text>
+
+<!-- HEADER ROW -->
+<text font-size="11" font-weight="600" fill="#dde0ec" x="310" y="44" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Developing blockbuster services</text>
+<text font-size="10" fill="#888780" x="618" y="36" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">User pain points</text>
+<line x1="618" y1="40" x2="666" y2="40" stroke="#888780" stroke-width="0.8" marker-end="url(#arrN)"/>
+<text font-size="10" font-weight="600" fill="#e87050" x="710" y="36" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Blockbuster services</text>
+<text font-size="11" font-weight="600" fill="#dde0ec" x="780" y="44" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Expanding the service network</text>
+<line x1="10" y1="50" x2="746" y2="50" stroke="#1e2230" stroke-width="0.4"/>
+<line x1="750" y1="36" x2="750" y2="470" stroke="#1e2230" stroke-width="0.5" stroke-dasharray="4 3"/>
+
+<!-- ── COLUMN HEADERS ── -->
+<rect x="66" y="56" width="192" height="28" rx="5" fill="#c04a28"/>
+<text font-size="12" font-weight="600" fill="#fff" x="162" y="75" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Medical</text>
+<rect x="276" y="56" width="192" height="28" rx="5" fill="#0F6E56"/>
+<text font-size="12" font-weight="600" fill="#fff" x="372" y="75" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Health</text>
+<rect x="486" y="56" width="252" height="28" rx="5" fill="#c04a28"/>
+<text font-size="12" font-weight="600" fill="#fff" x="612" y="75" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Senior care</text>
+
+<!-- ── ROW LABELS (vertical) ── -->
+<!-- Online -->
+<rect x="10" y="92" width="50" height="88" rx="5" fill="#111520" stroke="#2c3444" stroke-width="0.5"/>
+<text font-size="10" fill="#888780" x="35" y="140" text-anchor="middle" transform="rotate(-90,35,140)" font-family="'IBM Plex Sans',sans-serif">Online</text>
+<!-- In-store -->
+<rect x="10" y="190" width="50" height="88" rx="5" fill="#111520" stroke="#2c3444" stroke-width="0.5"/>
+<text font-size="10" fill="#888780" x="35" y="238" text-anchor="middle" transform="rotate(-90,35,238)" font-family="'IBM Plex Sans',sans-serif">In-store</text>
+<!-- In-home -->
+<rect x="10" y="288" width="50" height="88" rx="5" fill="#111520" stroke="#2c3444" stroke-width="0.5"/>
+<text font-size="10" fill="#888780" x="35" y="336" text-anchor="middle" transform="rotate(-90,35,336)" font-family="'IBM Plex Sans',sans-serif">In-home</text>
+<!-- In-company -->
+<rect x="10" y="386" width="50" height="88" rx="5" fill="#111520" stroke="#2c3444" stroke-width="0.5"/>
+<text font-size="10" fill="#888780" x="35" y="434" text-anchor="middle" transform="rotate(-90,35,434)" font-family="'IBM Plex Sans',sans-serif">In-company</text>
+
+<!-- ── MEDICAL COLUMN ── -->
+<!-- Row 1: Online -->
+<text font-size="10" fill="#888780" x="90" y="114" font-family="'IBM Plex Sans',sans-serif">Over-</text>
+<text font-size="10" fill="#888780" x="90" y="127" font-family="'IBM Plex Sans',sans-serif">treatment</text>
+<line x1="130" y1="128" x2="148" y2="128" stroke="#888780" stroke-width="1" marker-end="url(#arrO)"/>
+<text font-size="10" font-weight="600" fill="#e87050" x="154" y="114" font-family="'IBM Plex Sans',sans-serif">24/7 proactive</text>
+<text font-size="10" font-weight="600" fill="#e87050" x="154" y="128" font-family="'IBM Plex Sans',sans-serif">family doctor</text>
+<text font-size="10" font-weight="600" fill="#e87050" x="154" y="142" font-family="'IBM Plex Sans',sans-serif">services</text>
+<line x1="66" y1="180" x2="258" y2="180" stroke="#1e2230" stroke-width="0.4" stroke-dasharray="3 3"/>
+<!-- Row 2: In-store -->
+<text font-size="10" fill="#888780" x="72" y="204" font-family="'IBM Plex Sans',sans-serif">Limited access</text>
+<text font-size="10" fill="#888780" x="72" y="218" font-family="'IBM Plex Sans',sans-serif">to premium</text>
+<text font-size="10" fill="#888780" x="72" y="232" font-family="'IBM Plex Sans',sans-serif">medical resources</text>
+<line x1="130" y1="222" x2="148" y2="222" stroke="#888780" stroke-width="1" marker-end="url(#arrO)"/>
+<text font-size="10" font-weight="600" fill="#e87050" x="154" y="204" font-family="'IBM Plex Sans',sans-serif">Consultation</text>
+<text font-size="10" font-weight="600" fill="#e87050" x="154" y="218" font-family="'IBM Plex Sans',sans-serif">with renowned</text>
+<text font-size="10" font-weight="600" fill="#e87050" x="154" y="232" font-family="'IBM Plex Sans',sans-serif">doctors within</text>
+<text font-size="10" font-weight="600" fill="#e87050" x="154" y="246" font-family="'IBM Plex Sans',sans-serif">as little as 3 hours</text>
+<line x1="66" y1="278" x2="258" y2="278" stroke="#1e2230" stroke-width="0.4" stroke-dasharray="3 3"/>
+<!-- Row 3: In-home -->
+<text font-size="10" fill="#888780" x="72" y="302" font-family="'IBM Plex Sans',sans-serif">Cumbersome</text>
+<text font-size="10" fill="#888780" x="72" y="316" font-family="'IBM Plex Sans',sans-serif">medical visit</text>
+<text font-size="10" fill="#888780" x="72" y="330" font-family="'IBM Plex Sans',sans-serif">processes with</text>
+<text font-size="10" fill="#888780" x="72" y="344" font-family="'IBM Plex Sans',sans-serif">limited assistance</text>
+<line x1="130" y1="326" x2="148" y2="326" stroke="#888780" stroke-width="1" marker-end="url(#arrO)"/>
+<text font-size="10" font-weight="600" fill="#e87050" x="154" y="310" font-family="'IBM Plex Sans',sans-serif">Worry-free</text>
+<text font-size="10" font-weight="600" fill="#e87050" x="154" y="324" font-family="'IBM Plex Sans',sans-serif">services</text>
+<text font-size="10" font-weight="600" fill="#e87050" x="154" y="338" font-family="'IBM Plex Sans',sans-serif">throughout</text>
+<text font-size="10" font-weight="600" fill="#e87050" x="154" y="352" font-family="'IBM Plex Sans',sans-serif">the medical journey</text>
+<line x1="66" y1="376" x2="258" y2="376" stroke="#1e2230" stroke-width="0.4" stroke-dasharray="3 3"/>
+<!-- Row 4: dots -->
+<text font-size="14" fill="#3d4255" x="158" y="420" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">…</text>
+<!-- Medical column border -->
+<rect x="66" y="88" width="192" height="380" rx="6" fill="none" stroke="#2c3444" stroke-width="0.5"/>
+
+<!-- ── HEALTH COLUMN ── -->
+<!-- Row 2 (spanning): Lack of tracking -->
+<text font-size="10" fill="#888780" x="290" y="218" font-family="'IBM Plex Sans',sans-serif">Lack of tracking</text>
+<text font-size="10" fill="#888780" x="290" y="232" font-family="'IBM Plex Sans',sans-serif">and management</text>
+<text font-size="10" fill="#888780" x="290" y="246" font-family="'IBM Plex Sans',sans-serif">after health checkups</text>
+<line x1="352" y1="240" x2="370" y2="240" stroke="#888780" stroke-width="1" marker-end="url(#arrG)"/>
+<text font-size="10" font-weight="600" fill="#3dc9a0" x="376" y="224" font-family="'IBM Plex Sans',sans-serif">One-stop,</text>
+<text font-size="10" font-weight="600" fill="#3dc9a0" x="376" y="238" font-family="'IBM Plex Sans',sans-serif">closed-loop</text>
+<text font-size="10" font-weight="600" fill="#3dc9a0" x="376" y="252" font-family="'IBM Plex Sans',sans-serif">service experience</text>
+<!-- Row 3: Weak health mgmt -->
+<text font-size="10" fill="#888780" x="290" y="310" font-family="'IBM Plex Sans',sans-serif">Weak health</text>
+<text font-size="10" fill="#888780" x="290" y="324" font-family="'IBM Plex Sans',sans-serif">management</text>
+<text font-size="10" fill="#888780" x="290" y="338" font-family="'IBM Plex Sans',sans-serif">awareness</text>
+<line x1="340" y1="330" x2="358" y2="330" stroke="#888780" stroke-width="1" marker-end="url(#arrG)"/>
+<text font-size="10" font-weight="600" fill="#3dc9a0" x="364" y="314" font-family="'IBM Plex Sans',sans-serif">Diverse in-</text>
+<text font-size="10" font-weight="600" fill="#3dc9a0" x="364" y="328" font-family="'IBM Plex Sans',sans-serif">company health</text>
+<text font-size="10" font-weight="600" fill="#3dc9a0" x="364" y="342" font-family="'IBM Plex Sans',sans-serif">activities</text>
+<!-- Health column border -->
+<rect x="276" y="88" width="192" height="380" rx="6" fill="none" stroke="#2c3444" stroke-width="0.5"/>
+<!-- dots -->
+<text font-size="14" fill="#3d4255" x="372" y="420" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">…</text>
+
+<!-- ── SENIOR CARE COLUMN ── -->
+<!-- Row 1: Online -->
+<text font-size="10" fill="#888780" x="498" y="104" font-family="'IBM Plex Sans',sans-serif">Difficult to</text>
+<text font-size="10" fill="#888780" x="498" y="118" font-family="'IBM Plex Sans',sans-serif">manage underlying</text>
+<text font-size="10" fill="#888780" x="498" y="132" font-family="'IBM Plex Sans',sans-serif">conditions</text>
+<line x1="554" y1="122" x2="572" y2="122" stroke="#888780" stroke-width="1" marker-end="url(#arrO)"/>
+<text font-size="10" font-weight="600" fill="#e87050" x="578" y="104" font-family="'IBM Plex Sans',sans-serif">Integrated</text>
+<text font-size="10" font-weight="600" fill="#e87050" x="578" y="118" font-family="'IBM Plex Sans',sans-serif">management of</text>
+<text font-size="10" font-weight="600" fill="#e87050" x="578" y="132" font-family="'IBM Plex Sans',sans-serif">comorbidities</text>
+<text font-size="10" font-weight="600" fill="#e87050" x="578" y="146" font-family="'IBM Plex Sans',sans-serif">through geriatrics</text>
+<text font-size="10" font-weight="600" fill="#e87050" x="578" y="160" font-family="'IBM Plex Sans',sans-serif">services</text>
+<line x1="486" y1="180" x2="738" y2="180" stroke="#1e2230" stroke-width="0.4" stroke-dasharray="3 3"/>
+<!-- Row 2: In-store -->
+<text font-size="10" fill="#888780" x="498" y="202" font-family="'IBM Plex Sans',sans-serif">Difficulties with</text>
+<text font-size="10" fill="#888780" x="498" y="216" font-family="'IBM Plex Sans',sans-serif">safety protection</text>
+<text font-size="10" fill="#888780" x="498" y="230" font-family="'IBM Plex Sans',sans-serif">for the elderly</text>
+<line x1="554" y1="220" x2="572" y2="220" stroke="#888780" stroke-width="1" marker-end="url(#arrG)"/>
+<text font-size="10" font-weight="600" fill="#3dc9a0" x="578" y="204" font-family="'IBM Plex Sans',sans-serif">Smart safety</text>
+<text font-size="10" font-weight="600" fill="#3dc9a0" x="578" y="218" font-family="'IBM Plex Sans',sans-serif">monitoring and</text>
+<text font-size="10" font-weight="600" fill="#3dc9a0" x="578" y="232" font-family="'IBM Plex Sans',sans-serif">protection</text>
+<line x1="486" y1="278" x2="738" y2="278" stroke="#1e2230" stroke-width="0.4" stroke-dasharray="3 3"/>
+<!-- Row 3: In-home -->
+<text font-size="10" fill="#888780" x="498" y="302" font-family="'IBM Plex Sans',sans-serif">Missed window</text>
+<text font-size="10" fill="#888780" x="498" y="316" font-family="'IBM Plex Sans',sans-serif">for timely</text>
+<text font-size="10" fill="#888780" x="498" y="330" font-family="'IBM Plex Sans',sans-serif">emergency</text>
+<text font-size="10" fill="#888780" x="498" y="344" font-family="'IBM Plex Sans',sans-serif">assistance</text>
+<line x1="554" y1="328" x2="572" y2="328" stroke="#888780" stroke-width="1" marker-end="url(#arrO)"/>
+<text font-size="10" font-weight="600" fill="#e87050" x="578" y="310" font-family="'IBM Plex Sans',sans-serif">Global Emergency</text>
+<text font-size="10" font-weight="600" fill="#e87050" x="578" y="324" font-family="'IBM Plex Sans',sans-serif">Rescue Service</text>
+<line x1="486" y1="376" x2="738" y2="376" stroke="#1e2230" stroke-width="0.4" stroke-dasharray="3 3"/>
+<!-- dots -->
+<text font-size="14" fill="#3d4255" x="612" y="420" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">…</text>
+<!-- Senior care column border -->
+<rect x="486" y="88" width="252" height="380" rx="6" fill="none" stroke="#2c3444" stroke-width="0.5"/>
+
+<!-- ── RIGHT: EXPANDING SERVICE NETWORK ── -->
+<!-- Arrow double orange -->
+<text font-size="22" fill="#e87050" x="746" y="248" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">›</text>
+<text font-size="22" fill="#e87050" x="746" y="264" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">›</text>
+
+<!-- KPI 1 -->
+<rect x="758" y="88" width="94" height="80" rx="6" fill="#111520" stroke="#2c3444" stroke-width="0.6"/>
+<text font-size="17" font-weight="700" fill="#dde0ec" x="805" y="126" text-anchor="middle" font-family="'Playfair Display',Georgia,serif">~50,000</text>
+<text font-size="9" fill="#6b7180" x="805" y="143" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">In-house &amp; contracted</text>
+<text font-size="9" fill="#6b7180" x="805" y="156" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">external doctors</text>
+
+<!-- KPI 2 -->
+<rect x="758" y="180" width="94" height="80" rx="6" fill="#111520" stroke="#2c3444" stroke-width="0.6"/>
+<text font-size="17" font-weight="700" fill="#3dc9a0" x="805" y="216" text-anchor="middle" font-family="'Playfair Display',Georgia,serif">3,200+</text>
+<text font-size="9" fill="#6b7180" x="805" y="233" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Contracted renowned</text>
+<text font-size="9" fill="#6b7180" x="805" y="246" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">doctors (+~300)</text>
+
+<!-- KPI 3 -->
+<rect x="758" y="272" width="94" height="80" rx="6" fill="#111520" stroke="#2c3444" stroke-width="0.6"/>
+<text font-size="15" font-weight="700" fill="#3dc9a0" x="805" y="308" text-anchor="middle" font-family="'Playfair Display',Georgia,serif">Nearly 106K</text>
+<text font-size="9" fill="#6b7180" x="805" y="326" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Health service</text>
+<text font-size="9" fill="#6b7180" x="805" y="339" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">providers</text>
+
+<!-- KPI 4 -->
+<rect x="758" y="364" width="94" height="80" rx="6" fill="#111520" stroke="#3dc9a0" stroke-width="0.8"/>
+<text font-size="15" font-weight="700" fill="#3dc9a0" x="805" y="400" text-anchor="middle" font-family="'Playfair Display',Georgia,serif">Nearly 3,300</text>
+<text font-size="9" fill="#6b7180" x="805" y="418" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Partner checkup inst.</text>
+<text font-size="9" fill="#3dc9a0" x="805" y="432" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">+~700 from end-2024</text>
+
+<!-- Row dividers across all 3 content columns -->
+<line x1="66" y1="278" x2="258" y2="278" stroke="#1e2230" stroke-width="0.4" stroke-dasharray="3 3"/>
+<line x1="66" y1="376" x2="258" y2="376" stroke="#1e2230" stroke-width="0.4" stroke-dasharray="3 3"/>
+<line x1="276" y1="180" x2="468" y2="180" stroke="#1e2230" stroke-width="0.4" stroke-dasharray="3 3"/>
+<line x1="276" y1="376" x2="468" y2="376" stroke="#1e2230" stroke-width="0.4" stroke-dasharray="3 3"/>
+
+</svg>
+    </div>
+    <div class="source-note" style="padding:0 22px 16px;">Nguồn: Good Doctor 2025 Interim Results — A Service Network, slide 16</div>
+  </div>
+
+  <div class="chart-section reveal">
+    <div class="chart-header"><span class="chart-title">Biểu đồ 03</span><span class="chart-desc">Kiến trúc 3 tầng — service network &amp; hiệu quả đo được</span></div>
+    <div class="chart-body">
+<svg width="100%" viewBox="0 0 780 340" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="a3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#534AB7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<!-- L1 Online -->
+<rect x="10" y="10" width="760" height="100" rx="12" fill="#080f1e" stroke="#185FA5" stroke-width="0.7"/>
+<text font-size="13" font-weight="600" fill="#B5D4F4" x="390" y="34" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Tầng 1 — Online: Family Doctors + Senior Care Concierges</text>
+<rect x="26" y="48" width="220" height="50" rx="8" fill="#0a1830" stroke="#185FA5" stroke-width="0.5"/>
+<text font-size="11" font-weight="600" fill="#B5D4F4" x="136" y="68" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Family Doctor 24/7</text>
+<text font-size="10" fill="#85B7EB" x="136" y="86" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">~24M paying · 35M+ beneficiary · 5×/năm</text>
+<rect x="266" y="48" width="220" height="50" rx="8" fill="#0a1830" stroke="#185FA5" stroke-width="0.5"/>
+<text font-size="11" font-weight="600" fill="#B5D4F4" x="376" y="68" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Senior Care Concierge</text>
+<text font-size="10" fill="#85B7EB" x="376" y="86" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">85 thành phố · Smart Guard 10s</text>
+<rect x="506" y="48" width="250" height="50" rx="8" fill="#0a1830" stroke="#185FA5" stroke-width="0.5"/>
+<text font-size="11" font-weight="600" fill="#B5D4F4" x="631" y="68" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">AI Doctor Matrix "7+N+1"</text>
+<text font-size="10" fill="#85B7EB" x="631" y="86" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">100+ scenarios · ~4M ca/ngày max</text>
+<line x1="390" y1="110" x2="390" y2="126" stroke="#534AB7" stroke-width="1" marker-end="url(#a3)"/>
+<!-- L2 Offline -->
+<rect x="10" y="127" width="760" height="80" rx="12" fill="#0a160f" stroke="#0F6E56" stroke-width="0.7"/>
+<text font-size="13" font-weight="600" fill="#9FE1CB" x="390" y="151" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Tầng 2 — Offline: PKU Healthcare + 36K+ Partner Hospitals</text>
+<rect x="26" y="165" width="350" height="32" rx="8" fill="#071a15" stroke="#0F6E56" stroke-width="0.5"/>
+<text font-size="11" font-weight="500" fill="#9FE1CB" x="201" y="183" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">PKU Healthcare Rev RMB5.51B · PUIH 1.25M visits · Mayo/Cleveland</text>
+<rect x="394" y="165" width="362" height="32" rx="8" fill="#071a15" stroke="#0F6E56" stroke-width="0.5"/>
+<text font-size="11" font-weight="500" fill="#9FE1CB" x="575" y="183" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">36K+ bệnh viện · 235K nhà thuốc · 35 quốc gia</text>
+<line x1="390" y1="207" x2="390" y2="223" stroke="#534AB7" stroke-width="1" marker-end="url(#a3)"/>
+<!-- L3 AI -->
+<rect x="10" y="224" width="760" height="106" rx="12" fill="#1a1030" stroke="#534AB7" stroke-width="0.7"/>
+<text font-size="13" font-weight="600" fill="#CECBF6" x="390" y="248" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Tầng 3 — AI &amp; Payer: HealthKonnect · Medical Master · Smart Claims</text>
+<rect x="26" y="262" width="220" height="56" rx="8" fill="#26215C" stroke="#534AB7" stroke-width="0.5"/>
+<text font-size="11" font-weight="600" fill="#CECBF6" x="136" y="282" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">HealthKonnect</text>
+<text font-size="10" fill="#AFA9EC" x="136" y="300" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">800M · 22 tỉnh · RMB300B/năm</text>
+<rect x="266" y="262" width="220" height="56" rx="8" fill="#26215C" stroke="#534AB7" stroke-width="0.5"/>
+<text font-size="11" font-weight="600" fill="#CECBF6" x="376" y="282" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">AI Medical Master</text>
+<text font-size="10" fill="#AFA9EC" x="376" y="300" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">1.44B records · 200B tokens · 98% accuracy</text>
+<rect x="506" y="262" width="250" height="56" rx="8" fill="#26215C" stroke="#534AB7" stroke-width="0.5"/>
+<text font-size="11" font-weight="600" fill="#CECBF6" x="631" y="282" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Smart Claims + Fraud AI</text>
+<text font-size="10" fill="#7F77DD" x="631" y="300" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">RMB20B loss prevented · 93% underwriting auto</text>
+</svg>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PHẦN 4: INTEGRATED FINANCE ══════════ -->
+<section id="integrated">
+  <div class="section-tag reveal">Phần 04</div>
+  <h2 class="section-h reveal">Integrated Finance:<br>242 triệu khách hàng &amp; con số thực tế 2024</h2>
+  <p class="section-lead reveal">Không phải bán chéo thông thường. Báo cáo 2024 xác nhận: khách hàng dùng health &amp; senior care ecosystem đóng góp <strong>70% NBV của Ping An Life</strong> — con số quan trọng nhất trong toàn bộ nghiên cứu này.</p>
+
+  <div class="img-cinematic reveal">
+    <img src="https://group.pingan.com/dam/jcr:2659616b-71b0-400d-ad9f-456b068aa33b/longevity-half-banner.jpg" alt="Ping An Healthcare Ecosystem" loading="lazy">
+    <div class="img-cinematic-overlay">
+      <div class="img-cinematic-label">Integrated Finance + Health and Senior Care</div>
+      <div class="img-cinematic-h">70% NBV của Ping An Life đến từ khách hàng dùng healthcare ecosystem</div>
+      <div class="img-cinematic-sub">Số liệu chính thức từ Business Highlights — Annual Results March 2025</div>
+    </div>
+  </div>
+
+  <div class="kpi-grid reveal">
+    <div class="kpi k-blue"><div class="kpi-num">242M</div><div class="kpi-label">Retail customers 2024</div><div class="kpi-sub">+4.7% YoY</div></div>
+    <div class="kpi k-gold"><div class="kpi-num">70%</div><div class="kpi-label">NBV từ health eco users</div><div class="kpi-sub">Ping An Life NBV contribution</div></div>
+    <div class="kpi k-teal"><div class="kpi-num">2.3x</div><div class="kpi-label">Contracts per high-value KH</div><div class="kpi-sub">vs. KH không dùng health eco</div></div>
+    <div class="kpi k-coral"><div class="kpi-num">3x</div><div class="kpi-label">Higher Life FYP/policy</div><div class="kpi-sub">KH dùng home-based senior care</div></div>
+    <div class="kpi k-purple"><div class="kpi-num">25.6%</div><div class="kpi-label">KH nắm 4+ hợp đồng</div><div class="kpi-sub">Retention 98.0%</div></div>
+    <div class="kpi k-blue"><div class="kpi-num">72.2%</div><div class="kpi-label">KH phục vụ 5+ năm</div><div class="kpi-sub">Retention 94.7%</div></div>
+  </div>
+  <div class="source-note reveal">Nguồn: Ping An 2024 Annual Results — Business Highlights slide 7 &amp; Health &amp; Senior Care Services slide 32</div>
+
+  <div class="img-text reverse reveal">
+    <img src="https://group.pingan.com/dam/jcr:63b8561c-f8eb-4fa1-b271-0b6876eb7ef1/ft-article1-24.jpg" alt="Ping An Senior Care" loading="lazy">
+    <div class="img-text-body">
+      <div class="img-text-tag">Case Study · Senior Care 2024</div>
+      <div class="img-text-h">Home-based Senior Care: +160,000 KH, tăng 70,000 chỉ trong 1 năm</div>
+      <div class="img-text-p">Ping An xây dựng "insurance + home-based senior care" — con mua gói chăm sóc cho bố mẹ. <strong>75 thành phố đối tác</strong>. Hàng trăm lợi ích chăm sóc tại nhà. <strong>100% response rate của Smart Guard</strong>. Giá trị: KH dùng home-based senior care mua Life FYP/policy cao hơn <strong>3×</strong> so với KH thông thường. Đây là proof-of-concept rõ ràng nhất của dual-driver model.</div>
+    </div>
+  </div>
+
+  <div class="chart-section reveal">
+    <div class="chart-header"><span class="chart-title">Biểu đồ 04</span><span class="chart-desc">Value Matrix — Vòng đời khách hàng × Sản phẩm Ping An</span></div>
+    <div class="chart-body">
+<svg width="100%" viewBox="0 0 780 360" xmlns="http://www.w3.org/2000/svg">
+<rect x="100" y="8" width="124" height="30" rx="6" fill="#161922" stroke="#1e2230" stroke-width="0.5"/>
+<text font-size="11" font-weight="600" fill="#888ea8" x="162" y="27" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Thanh niên</text>
+<rect x="236" y="8" width="124" height="30" rx="6" fill="#161922" stroke="#1e2230" stroke-width="0.5"/>
+<text font-size="11" font-weight="600" fill="#888ea8" x="298" y="27" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Lập gia đình</text>
+<rect x="372" y="8" width="124" height="30" rx="6" fill="#161922" stroke="#1e2230" stroke-width="0.5"/>
+<text font-size="11" font-weight="600" fill="#888ea8" x="434" y="27" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Trung niên</text>
+<rect x="508" y="8" width="124" height="30" rx="6" fill="#161922" stroke="#1e2230" stroke-width="0.5"/>
+<text font-size="11" font-weight="600" fill="#888ea8" x="570" y="27" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Tiền hưu</text>
+<rect x="644" y="8" width="124" height="30" rx="6" fill="#161922" stroke="#1e2230" stroke-width="0.5"/>
+<text font-size="11" font-weight="600" fill="#888ea8" x="706" y="27" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Cao tuổi</text>
+<!-- Row labels -->
+<text font-size="10" fill="#555c72" x="52" y="67" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Bảo hiểm</text>
+<text font-size="10" fill="#555c72" x="52" y="135" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Tài chính</text>
+<text font-size="10" fill="#555c72" x="52" y="203" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Y tế</text>
+<text font-size="10" fill="#555c72" x="52" y="271" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Senior</text>
+<!-- BH row -->
+<rect x="100" y="48" width="124" height="40" rx="7" fill="#080f20" stroke="#185FA5" stroke-width="0.5"/>
+<text font-size="11" font-weight="500" fill="#B5D4F4" x="162" y="72" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">BH tai nạn</text>
+<rect x="236" y="48" width="124" height="40" rx="7" fill="#080f20" stroke="#185FA5" stroke-width="0.5"/>
+<text font-size="11" font-weight="500" fill="#B5D4F4" x="298" y="72" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">BH nhân thọ</text>
+<rect x="372" y="48" width="124" height="40" rx="7" fill="#080f20" stroke="#185FA5" stroke-width="0.5"/>
+<text font-size="11" font-weight="500" fill="#B5D4F4" x="434" y="72" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">BH sức khỏe</text>
+<rect x="508" y="48" width="124" height="40" rx="7" fill="#080f20" stroke="#185FA5" stroke-width="0.5"/>
+<text font-size="11" font-weight="500" fill="#B5D4F4" x="570" y="72" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">BH hưu trí</text>
+<rect x="644" y="48" width="124" height="40" rx="7" fill="#080f20" stroke="#185FA5" stroke-width="0.5"/>
+<text font-size="11" font-weight="500" fill="#B5D4F4" x="706" y="72" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">BH bệnh mãn</text>
+<!-- Finance row -->
+<rect x="100" y="116" width="124" height="40" rx="7" fill="#071a15" stroke="#0F6E56" stroke-width="0.5"/>
+<text font-size="11" font-weight="500" fill="#9FE1CB" x="162" y="140" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Tiết kiệm</text>
+<rect x="236" y="116" width="124" height="40" rx="7" fill="#071a15" stroke="#0F6E56" stroke-width="0.5"/>
+<text font-size="11" font-weight="500" fill="#9FE1CB" x="298" y="140" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Vay mua nhà</text>
+<rect x="372" y="116" width="124" height="40" rx="7" fill="#071a15" stroke="#0F6E56" stroke-width="0.5"/>
+<text font-size="11" font-weight="500" fill="#9FE1CB" x="434" y="140" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Đầu tư · AUM</text>
+<rect x="508" y="116" width="124" height="40" rx="7" fill="#071a15" stroke="#0F6E56" stroke-width="0.5"/>
+<text font-size="11" font-weight="500" fill="#9FE1CB" x="570" y="140" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Lập kế hoạch TS</text>
+<rect x="644" y="116" width="124" height="40" rx="7" fill="#071a15" stroke="#0F6E56" stroke-width="0.5"/>
+<text font-size="11" font-weight="500" fill="#9FE1CB" x="706" y="140" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Quản lý di sản</text>
+<!-- Health row -->
+<rect x="100" y="184" width="124" height="40" rx="7" fill="#180c08" stroke="#993C1D" stroke-width="0.5"/>
+<text font-size="11" font-weight="500" fill="#F5C4B3" x="162" y="208" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Tầm soát</text>
+<rect x="236" y="184" width="124" height="40" rx="7" fill="#180c08" stroke="#993C1D" stroke-width="0.5"/>
+<text font-size="11" font-weight="500" fill="#F5C4B3" x="298" y="208" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Thai sản · Nhi</text>
+<rect x="372" y="184" width="124" height="40" rx="7" fill="#180c08" stroke="#993C1D" stroke-width="0.5"/>
+<text font-size="11" font-weight="500" fill="#F5C4B3" x="434" y="208" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Bệnh mãn tính</text>
+<rect x="508" y="184" width="124" height="40" rx="7" fill="#180c08" stroke="#993C1D" stroke-width="0.5"/>
+<text font-size="11" font-weight="500" fill="#F5C4B3" x="570" y="208" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Phòng bệnh</text>
+<rect x="644" y="184" width="124" height="40" rx="7" fill="#180c08" stroke="#993C1D" stroke-width="0.5"/>
+<text font-size="11" font-weight="500" fill="#F5C4B3" x="706" y="208" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Home care 24/7</text>
+<!-- Senior row -->
+<rect x="100" y="252" width="380" height="40" rx="7" fill="#161922" stroke="#1e2230" stroke-width="0.5" stroke-dasharray="5 3"/>
+<text font-size="10" fill="#3d4255" x="290" y="276" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">— chưa áp dụng —</text>
+<rect x="508" y="252" width="124" height="40" rx="7" fill="#1a1208" stroke="#854F0B" stroke-width="0.5"/>
+<text font-size="11" font-weight="500" fill="#FAC775" x="570" y="276" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Lập kế hoạch dưỡng lão</text>
+<rect x="644" y="252" width="124" height="40" rx="7" fill="#1a1208" stroke="#854F0B" stroke-width="0.7"/>
+<text font-size="11" font-weight="600" fill="#FAC775" x="706" y="268" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Home Senior Care</text>
+<text font-size="10" fill="#EF9F27" x="706" y="284" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">FYP/policy ×3 · 160K users</text>
+<!-- KPI Banner -->
+<rect x="10" y="308" width="760" height="44" rx="8" fill="#1a1030" stroke="#534AB7" stroke-width="0.5"/>
+<text font-size="11" font-weight="600" fill="#CECBF6" x="390" y="327" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Health eco users: 70% of Life NBV · Contracts ×2.3 · FYP/policy ×3 · Retention 98%</text>
+<text font-size="10" fill="#7F77DD" x="390" y="344" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Nguồn: Ping An 2024 Annual Results slides 7 &amp; 32 — dữ liệu chính thức từ ban lãnh đạo</text>
+</svg>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PHẦN 5: AI LAYER ══════════ -->
+<section id="ai">
+  <div class="section-tag reveal">Phần 05</div>
+  <h2 class="section-h reveal">AI là xương sống:<br>"9+5+3" Proposition &amp; "7+N+1" Product Matrix</h2>
+  <p class="section-lead reveal">Ping An đặt tên công thức AI của họ là <strong>"9+5+3"</strong>: 9 databases + 5 labs + 3 tech companies. Good Doctor 2025 IR công bố thêm <strong>"7+N+1" AI product matrix</strong> với 100+ business scenarios.</p>
+
+  <div class="img-cinematic reveal">
+    <img src="https://group.pingan.com/dam/jcr:abdf52a3-abf4-44a0-8952-0052b1bb2d3e/pingan-financial-center-2102.jpg" alt="Ping An HQ 2" loading="lazy">
+    <div class="img-cinematic-overlay">
+      <div class="img-cinematic-label">Tech: "9+5+3" AI Proposition</div>
+      <div class="img-cinematic-h">55,080 patent · World No.1 fintech/healthtech · LLM calls tăng 200%+ năm 2025</div>
+      <div class="img-cinematic-sub">9 databases · 5 labs · 3 tech companies · 3,000+ scientists · 355M LLM calls (2024)</div>
+    </div>
+  </div>
+
+  <div class="kpi-grid reveal">
+    <div class="kpi k-purple"><div class="kpi-num">55,080</div><div class="kpi-label">Patent applications</div><div class="kpi-sub">World No.1 fintech/healthtech</div></div>
+    <div class="kpi k-blue"><div class="kpi-num">355M</div><div class="kpi-label">LLM calls năm 2024</div><div class="kpi-sub">Tăng 200%+ trong 2025</div></div>
+    <div class="kpi k-teal"><div class="kpi-num">540+</div><div class="kpi-label">AI scenarios áp dụng</div><div class="kpi-sub">Tăng 40%+ trong 2025</div></div>
+    <div class="kpi k-gold"><div class="kpi-num">~4M</div><div class="kpi-label">Ca/ngày tối đa với AI</div><div class="kpi-sub">Good Doctor 1H 2025</div></div>
+    <div class="kpi k-coral"><div class="kpi-num">~98%</div><div class="kpi-label">AI consultation accuracy</div><div class="kpi-sub">AI-assisted inquiry</div></div>
+    <div class="kpi k-orange"><div class="kpi-num">~80%</div><div class="kpi-label">MDT critical illness accuracy</div><div class="kpi-sub">Complex disease treatment</div></div>
+  </div>
+  <div class="source-note reveal">Nguồn: Ping An AR 2024 slide 33 &amp; Good Doctor 2025 IR slide 5 &amp; 18</div>
+
+  <!-- AI Breakthroughs from Annual Report -->
+  <div class="section-divider reveal"><span>AI breakthroughs 2024 — từ Annual Results slide 34</span></div>
+
+  <div class="data-table reveal">
+    <table class="data-table" style="width:100%">
+      <thead><tr><th>Ứng dụng AI</th><th>Kết quả cụ thể</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>AI Agent Sales</td><td class="up">~RMB 140 tỷ doanh số từ AI agents</td><td style="color:var(--hint);font-size:11px;">Annual Results 2024</td></tr>
+        <tr><td>Underwriting — Life</td><td class="up">93% policies underwritten tự động trong vài giây</td><td style="color:var(--hint);font-size:11px;">Annual Results 2024</td></tr>
+        <tr><td>Claims — Life (Smart Quick Claim)</td><td class="up">56% life claims settled trong 10 phút</td><td style="color:var(--hint);font-size:11px;">Annual Results 2024</td></tr>
+        <tr><td>Claims — A&amp;H</td><td class="up">32% claims settled tự động trong 2 phút</td><td style="color:var(--hint);font-size:11px;">Annual Results 2024</td></tr>
+        <tr><td>Risk Prevention — Insurance</td><td class="up">~RMB 20 tỷ loss prevented</td><td style="color:var(--hint);font-size:11px;">Annual Results 2024</td></tr>
+        <tr><td>Risk Prevention — Credit</td><td class="up">~RMB 500 tỷ recovered</td><td style="color:var(--hint);font-size:11px;">Annual Results 2024</td></tr>
+        <tr><td>Policy Issuance — Auto</td><td class="up">80% policies issued trong 1 phút bởi car dealers</td><td style="color:var(--hint);font-size:11px;">Annual Results 2024</td></tr>
+        <tr><td>Customer Service — Group</td><td class="up">80% tổng lượng customer service volume</td><td style="color:var(--hint);font-size:11px;">Annual Results 2024</td></tr>
+        <tr><td>Family Doctor cost/customer</td><td class="up">−52% YoY nhờ AI (Good Doctor 1H 2025)</td><td style="color:var(--hint);font-size:11px;">Good Doctor 1H 2025</td></tr>
+        <tr><td>Middle office operational efficiency</td><td class="up">~50% YoY improvement (Good Doctor)</td><td style="color:var(--hint);font-size:11px;">Good Doctor 1H 2025</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Image strip -->
+  <div class="img-strip reveal">
+    <div class="img-strip-item">
+      <img src="https://group.pingan.com/dam/jcr:e365ae93-9f58-424c-b346-e604b2b9fa05/pingan-financial-center-2103.jpg" alt="Foundation Data" loading="lazy">
+      <span>9 Databases · Foundation</span>
+    </div>
+    <div class="img-strip-item">
+      <img src="https://group.pingan.com/dam/jcr:70cb6e35-503f-4f31-a9e4-59dcfd0374f6/pingan-financial-center-2104.jpg" alt="Domain Models" loading="lazy">
+      <span>5 Labs · Domain Models</span>
+    </div>
+    <div class="img-strip-item">
+      <img src="https://group.pingan.com/dam/jcr:47856de9-bd78-4417-82d5-1e76d1d50100/pingan-financial-center-2105.jpg" alt="Applications" loading="lazy">
+      <span>3 Tech companies · Apps</span>
+    </div>
+  </div>
+
+  <div class="chart-section reveal">
+    <div class="chart-header"><span class="chart-title">Biểu đồ 05</span><span class="chart-desc">Kiến trúc AI "9+5+3" kết hợp "7+N+1" Good Doctor matrix</span></div>
+    <div class="chart-body">
+<svg width="100%" viewBox="0 0 780 420" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="a5" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#534AB7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<!-- Foundation -->
+<rect x="10" y="330" width="760" height="80" rx="12" fill="#130d20" stroke="#534AB7" stroke-width="0.7"/>
+<text font-size="13" font-weight="600" fill="#CECBF6" x="390" y="354" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Foundation: "9 Databases + 5 Labs + 3.2 trn tokens + 242M customers"</text>
+<rect x="26" y="368" width="170" height="32" rx="8" fill="#1a1030" stroke="#534AB7" stroke-width="0.5"/>
+<text font-size="10" fill="#AFA9EC" x="111" y="386" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">5HC + 3Finance + 1Ops DB</text>
+<rect x="210" y="368" width="170" height="32" rx="8" fill="#1a1030" stroke="#534AB7" stroke-width="0.5"/>
+<text font-size="10" fill="#AFA9EC" x="295" y="386" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">55,080 patent · 3,000+ scientists</text>
+<rect x="394" y="368" width="170" height="32" rx="8" fill="#1a1030" stroke="#534AB7" stroke-width="0.5"/>
+<text font-size="10" fill="#AFA9EC" x="479" y="386" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">1.44B consultation records</text>
+<rect x="578" y="368" width="192" height="32" rx="8" fill="#1a1030" stroke="#534AB7" stroke-width="0.5"/>
+<text font-size="10" fill="#7F77DD" x="674" y="386" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">1B+ records/day · DeepSeek+Qwen3</text>
+<line x1="390" y1="328" x2="390" y2="312" stroke="#534AB7" stroke-width="1" marker-end="url(#a5)"/>
+<!-- Domain -->
+<rect x="40" y="192" width="700" height="118" rx="12" fill="#080f20" stroke="#185FA5" stroke-width="0.7"/>
+<text font-size="13" font-weight="600" fill="#B5D4F4" x="390" y="215" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Domain Models: Finance AI + Medical AI + "5 Vertical Large Models"</text>
+<rect x="58" y="230" width="148" height="68" rx="8" fill="#0a1830" stroke="#378ADD" stroke-width="0.5"/>
+<text font-size="11" font-weight="600" fill="#B5D4F4" x="132" y="250" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Underwriting AI</text>
+<text font-size="10" fill="#85B7EB" x="132" y="266" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">93% auto · seconds</text>
+<text font-size="10" fill="#378ADD" x="132" y="282" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">RMB20B saved</text>
+<rect x="222" y="230" width="148" height="68" rx="8" fill="#0a1830" stroke="#378ADD" stroke-width="0.5"/>
+<text font-size="11" font-weight="600" fill="#B5D4F4" x="296" y="250" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Claims AI</text>
+<text font-size="10" fill="#85B7EB" x="296" y="266" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">7.4 min · 56% in 10min</text>
+<text font-size="10" fill="#378ADD" x="296" y="282" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">RMB500B recovered</text>
+<rect x="386" y="230" width="148" height="68" rx="8" fill="#0a1830" stroke="#378ADD" stroke-width="0.5"/>
+<text font-size="11" font-weight="600" fill="#B5D4F4" x="460" y="250" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Medical AI Master</text>
+<text font-size="10" fill="#85B7EB" x="460" y="266" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">~98% accuracy · 3,000+ disease</text>
+<text font-size="10" fill="#378ADD" x="460" y="282" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">MDT ~80% accuracy</text>
+<rect x="550" y="230" width="176" height="68" rx="8" fill="#0a1830" stroke="#378ADD" stroke-width="0.5"/>
+<text font-size="11" font-weight="600" fill="#B5D4F4" x="638" y="250" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Anti-fraud + Risk AI</text>
+<text font-size="10" fill="#85B7EB" x="638" y="266" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">80% customer service vol</text>
+<text font-size="10" fill="#378ADD" x="638" y="282" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">AI agents: RMB140B sales</text>
+<line x1="390" y1="190" x2="390" y2="174" stroke="#534AB7" stroke-width="1" marker-end="url(#a5)"/>
+<!-- Application -->
+<rect x="76" y="14" width="628" height="158" rx="12" fill="#1a1030" stroke="#7F77DD" stroke-width="0.7"/>
+<text font-size="13" font-weight="600" fill="#CECBF6" x="390" y="38" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Application: "7+N+1" Good Doctor AI Matrix · 100+ scenarios</text>
+<rect x="94" y="52" width="172" height="106" rx="10" fill="#26215C" stroke="#7F77DD" stroke-width="0.5"/>
+<text font-size="12" font-weight="600" fill="#CECBF6" x="180" y="73" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">7 AI Native Products</text>
+<text font-size="10" fill="#AFA9EC" x="180" y="91" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">AI Family Doctor</text>
+<text font-size="10" fill="#AFA9EC" x="180" y="107" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Renowned Doctor Avatar</text>
+<text font-size="10" fill="#AFA9EC" x="180" y="123" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">AI Senior Care Concierge</text>
+<text font-size="10" fill="#7F77DD" x="180" y="139" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">+AI Clinics, AI Health Benefit...</text>
+<rect x="282" y="52" width="172" height="106" rx="10" fill="#26215C" stroke="#7F77DD" stroke-width="0.5"/>
+<text font-size="12" font-weight="600" fill="#CECBF6" x="368" y="73" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">N AI-assisted Robots</text>
+<text font-size="10" fill="#AFA9EC" x="368" y="91" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Medical: inquiry · chronic</text>
+<text font-size="10" fill="#AFA9EC" x="368" y="107" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Health: checkup · reports</text>
+<text font-size="10" fill="#AFA9EC" x="368" y="123" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Senior: monitoring · social</text>
+<text font-size="10" fill="#7F77DD" x="368" y="139" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">−52% service cost/KH YoY</text>
+<rect x="470" y="52" width="220" height="106" rx="10" fill="#26215C" stroke="#7F77DD" stroke-width="0.5"/>
+<text font-size="12" font-weight="600" fill="#CECBF6" x="580" y="73" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">1 Industry-enabling Platform</text>
+<text font-size="10" fill="#AFA9EC" x="580" y="91" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Ping An AI Enablement Platform</text>
+<text font-size="10" fill="#AFA9EC" x="580" y="107" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">DeepSeek + Qwen3 integrated</text>
+<text font-size="10" fill="#AFA9EC" x="580" y="123" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">355M LLM calls · →200%+ 2025</text>
+<text font-size="10" fill="#7F77DD" x="580" y="139" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">540+ scenarios · →40%+ 2025</text>
+</svg>
+    </div>
+    <div class="source-note" style="padding:0 22px 16px;">Nguồn: Annual Results 2024 slide 33–34 · Good Doctor 2025 IR slide 17–18</div>
+  </div>
+
+  <!-- AI Capabilities: Data + Models + Real-world Scenarios -->
+  <div class="chart-section reveal">
+    <div class="chart-header"><span class="chart-title">AI Capabilities</span><span class="chart-desc">Further Strengthening Our Edge in "Data + Models + Real-world Scenarios" — Good Doctor 2025 IR, slide 17</span></div>
+    <div class="chart-body">
+<svg width="100%" viewBox="0 0 860 460" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <marker id="arrUp" viewBox="0 0 10 10" refX="5" refY="8" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M5 2L9 8H1Z" fill="#c04a28"/>
+  </marker>
+</defs>
+
+<!-- TITLE -->
+<text font-size="13" font-weight="600" fill="#e87050" x="430" y="20" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">AI Capabilities: Further Strengthening Our Edge in "Data + Models + Real-world Scenarios"</text>
+
+<!-- ══ LEFT LABELS ══ -->
+<text font-size="12" font-weight="600" fill="#e87050" x="58" y="115" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Scenarios</text>
+<text font-size="12" font-weight="600" fill="#e87050" x="58" y="133" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">"7+N+1"</text>
+<text font-size="10" fill="#6b7180" x="58" y="152" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">AI product matrix</text>
+<text font-size="10" fill="#6b7180" x="58" y="165" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">enables</text>
+<text font-size="10" font-weight="600" fill="#e87050" x="58" y="180" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">100+</text>
+<text font-size="10" fill="#6b7180" x="58" y="193" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">business</text>
+<text font-size="10" fill="#6b7180" x="58" y="206" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">scenarios</text>
+
+<text font-size="12" font-weight="600" fill="#e87050" x="58" y="290" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Models</text>
+<text font-size="10" fill="#6b7180" x="58" y="310" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Proprietary</text>
+<text font-size="10" fill="#6b7180" x="58" y="323" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">large models +</text>
+<text font-size="10" fill="#6b7180" x="58" y="336" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">vertical models</text>
+
+<text font-size="12" font-weight="600" fill="#e87050" x="58" y="403" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Data</text>
+<text font-size="10" fill="#6b7180" x="58" y="422" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Closed-loop</text>
+<text font-size="10" fill="#6b7180" x="58" y="435" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">health care &amp;</text>
+<text font-size="10" fill="#6b7180" x="58" y="448" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">insurance data</text>
+
+<!-- ══ MAIN CONTENT AREA ══ -->
+
+<!-- ── TOP: AI Doctor product matrix box ── -->
+<rect x="104" y="34" width="630" height="218" rx="10" fill="#0e0c0a" stroke="#c04a28" stroke-width="0.8"/>
+<text font-size="11" font-weight="600" fill="#dde0ec" x="419" y="54" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Ping An AI Doctor product matrix</text>
+
+<!-- 7 AI Native products row (top) -->
+<text font-size="10" fill="#888780" x="118" y="76" font-family="'IBM Plex Sans',sans-serif">7</text>
+<text font-size="10" fill="#888780" x="118" y="88" font-family="'IBM Plex Sans',sans-serif">AI Native</text>
+<text font-size="10" fill="#888780" x="118" y="100" font-family="'IBM Plex Sans',sans-serif">products</text>
+
+<!-- 4 top product pills -->
+<rect x="148" y="64" width="108" height="26" rx="5" fill="#c04a28"/>
+<text font-size="10" font-weight="600" fill="#fff" x="202" y="81" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">AI Family Doctor</text>
+
+<rect x="268" y="64" width="126" height="26" rx="5" fill="#c04a28"/>
+<text font-size="10" font-weight="600" fill="#fff" x="331" y="81" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">AI Chronic Disease Manager</text>
+
+<rect x="408" y="64" width="118" height="26" rx="5" fill="#c04a28"/>
+<text font-size="10" font-weight="600" fill="#fff" x="467" y="81" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">AI Health Manager</text>
+
+<rect x="540" y="64" width="130" height="26" rx="5" fill="#c04a28"/>
+<text font-size="10" font-weight="600" fill="#fff" x="605" y="81" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">AI Senior Care Concierge</text>
+
+<!-- Ellipse orbit -->
+<ellipse cx="419" cy="140" rx="230" ry="44" fill="none" stroke="#c04a28" stroke-width="0.8" stroke-dasharray="4 3" opacity="0.5"/>
+
+<!-- Middle row pills (inner orbit) -->
+<rect x="200" y="124" width="140" height="28" rx="5" fill="#c04a28"/>
+<text font-size="10" font-weight="600" fill="#fff" x="270" y="142" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Renowned Doctor Digital Avatar</text>
+
+<rect x="358" y="120" width="90" height="28" rx="5" fill="#c04a28"/>
+<text font-size="10" font-weight="600" fill="#fff" x="403" y="138" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">AI Clinics</text>
+
+<rect x="466" y="124" width="120" height="28" rx="5" fill="#c04a28"/>
+<text font-size="10" font-weight="600" fill="#fff" x="526" y="142" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">AI Health Benefit Officer</text>
+
+<!-- N AI-assisted robots row -->
+<text font-size="10" fill="#888780" x="118" y="180" font-family="'IBM Plex Sans',sans-serif">N</text>
+<text font-size="10" fill="#888780" x="118" y="192" font-family="'IBM Plex Sans',sans-serif">AI-assisted</text>
+<text font-size="10" fill="#888780" x="118" y="204" font-family="'IBM Plex Sans',sans-serif">robots</text>
+
+<!-- 3 robot category boxes -->
+<rect x="148" y="172" width="148" height="68" rx="6" fill="#1a0e08" stroke="#2c3444" stroke-width="0.4"/>
+<text font-size="10" font-weight="600" fill="#e87050" x="222" y="191" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Medical</text>
+<text font-size="9" fill="#6b7180" x="222" y="207" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Inquiry and consultation /</text>
+<text font-size="9" fill="#6b7180" x="222" y="219" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">chronic disease mgmt /</text>
+<text font-size="9" fill="#6b7180" x="222" y="231" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">critical illness management...</text>
+
+<rect x="312" y="172" width="148" height="68" rx="6" fill="#0e1510" stroke="#2c3444" stroke-width="0.4"/>
+<text font-size="10" font-weight="600" fill="#3dc9a0" x="386" y="191" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Health management</text>
+<text font-size="9" fill="#6b7180" x="386" y="207" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Health checkups /</text>
+<text font-size="9" fill="#6b7180" x="386" y="219" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">report interpretation /</text>
+<text font-size="9" fill="#6b7180" x="386" y="231" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">health management...</text>
+
+<rect x="476" y="172" width="148" height="68" rx="6" fill="#1a1208" stroke="#2c3444" stroke-width="0.4"/>
+<text font-size="10" font-weight="600" fill="#FAC775" x="550" y="191" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Senior care</text>
+<text font-size="9" fill="#6b7180" x="550" y="207" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Safety monitoring /</text>
+<text font-size="9" fill="#6b7180" x="550" y="219" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">social interaction...</text>
+
+<!-- ── MIDDLE: Models Box ── -->
+<rect x="104" y="280" width="630" height="70" rx="10" fill="#0e1510" stroke="#0F6E56" stroke-width="0.8"/>
+<text font-size="11" font-weight="600" fill="#dde0ec" x="419" y="302" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Ping An Health Proprietary Models + Ping An Group Vertical Models</text>
+
+<rect x="180" y="316" width="120" height="22" rx="4" fill="#0F6E56"/>
+<text font-size="10" fill="#fff" x="240" y="331" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Medical Large Model</text>
+
+<rect x="350" y="316" width="140" height="22" rx="4" fill="#0F6E56"/>
+<text font-size="10" fill="#fff" x="420" y="331" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Health Mgmt Large Model</text>
+
+<rect x="540" y="316" width="120" height="22" rx="4" fill="#0F6E56"/>
+<text font-size="10" fill="#fff" x="600" y="331" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Senior Care Large Model</text>
+
+<!-- ── BOTTOM: Data Box ── -->
+<rect x="104" y="390" width="630" height="60" rx="10" fill="#0a0e14" stroke="#185FA5" stroke-width="0.8"/>
+<text font-size="11" font-weight="600" fill="#dde0ec" x="419" y="412" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">High-quality Closed-loop Medical &amp; Health Data + Financial &amp; Insurance Data</text>
+<text font-size="10" fill="#6b7180" x="419" y="432" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">1.44B consultation records  |  200B medical tokens  |  Ping An Group's 242M retail customers</text>
+
+<!-- ── UPWARD ARROWS ── -->
+<line x1="419" y1="390" x2="419" y2="356" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrUp)"/>
+<line x1="419" y1="280" x2="419" y2="258" stroke="#0F6E56" stroke-width="1.5" marker-end="url(#arrUp)"/>
+
+</svg>
+    </div>
+    <div class="source-note" style="padding:0 22px 16px;">Nguồn: Good Doctor 2025 Interim Results — AI Capabilities, slide 17</div>
+  </div>
+</section>
+
+<!-- ══════════ PHẦN 6: KẾT QUẢ TÀI CHÍNH 2024 ══════════ -->
+<section id="financial">
+  <div class="section-tag reveal">Phần 06</div>
+  <h2 class="section-h reveal">Kết quả tài chính 2024:<br>Net profit +47.8% — Chiến lược đã được thực chứng</h2>
+  <p class="section-lead reveal">2024 là năm bản lề: Net profit RMB 126.6 tỷ (+47.8%), NBV tăng 28.8%, comprehensive investment yield tăng 2.2 pps lên 5.8%. Ba ngành cốt lõi L&H, P&C, Banking đều tăng trưởng.</p>
+
+  <div class="img-banner reveal">
+    <img src="https://group.pingan.com/dam/jcr:9c567966-9bbc-43df-8bb5-6e4577a1ecb1/10.jpg" alt="Ping An Shanghai HQ" loading="lazy">
+    <div class="img-banner-caption">Ping An · Shanghai Lujiazui — "Advancing with Stability through Cycles" — chủ đề Annual Results 2024</div>
+  </div>
+
+  <div class="kpi-grid reveal">
+    <div class="kpi k-orange"><div class="kpi-num">RMB 1,029B</div><div class="kpi-label">Revenue 2024 (GAAP)</div><div class="kpi-sub">+12.6% YoY</div></div>
+    <div class="kpi k-teal"><div class="kpi-num">RMB 126.6B</div><div class="kpi-label">Net profit 2024</div><div class="kpi-sub">+47.8% YoY</div></div>
+    <div class="kpi k-blue"><div class="kpi-num">RMB 121.9B</div><div class="kpi-label">OPAT 2024</div><div class="kpi-sub">+9.1% YoY</div></div>
+    <div class="kpi k-gold"><div class="kpi-num">5.8%</div><div class="kpi-label">Comprehensive investment yield</div><div class="kpi-sub">+2.2 pps YoY</div></div>
+    <div class="kpi k-purple"><div class="kpi-num">RMB 28.5B</div><div class="kpi-label">NBV 2024</div><div class="kpi-sub">+28.8% YoY (like-for-like)</div></div>
+    <div class="kpi k-coral"><div class="kpi-num">RMB 2.55</div><div class="kpi-label">DPS 2024</div><div class="kpi-sub">+5% · tăng 13 năm liên tiếp</div></div>
+  </div>
+  <div class="source-note reveal">Nguồn: Ping An 2024 Annual Results — slide 6 &amp; 7</div>
+
+  <div class="section-divider reveal"><span>Breakdown OPAT theo mảng kinh doanh</span></div>
+
+  <div class="data-table reveal">
+    <table class="data-table" style="width:100%">
+      <thead><tr><th>Mảng kinh doanh</th><th>OPAT 2024 (RMB mn)</th><th>Tỷ trọng</th><th>Tăng trưởng YoY</th></tr></thead>
+      <tbody>
+        <tr><td>Life &amp; Health</td><td>96,975</td><td>79.6%</td><td class="down">−1.9%</td></tr>
+        <tr><td>P&amp;C Insurance</td><td>14,952</td><td>12.3%</td><td class="up">+67.7%</td></tr>
+        <tr><td>Banking (Ping An Bank)</td><td>25,796</td><td>21.2%</td><td class="down">−4.2%</td></tr>
+        <tr><td>Asset Management</td><td>(11,899)</td><td>–</td><td>Loss ↓ 42.6%</td></tr>
+        <tr><td style="color:var(--gold2);font-weight:600;">The Group's OPAT</td><td style="color:var(--gold2);font-weight:600;">121,862</td><td style="color:var(--gold2);">100%</td><td class="up">+9.1%</td></tr>
+        <tr><td style="color:var(--teal2);font-weight:600;">Net Profit (parent)</td><td style="color:var(--teal2);font-weight:600;">126,607</td><td>–</td><td class="up">+47.8%</td></tr>
+      </tbody>
+    </table>
+    <div class="source-note">Nguồn: Annual Results 2024 — Appendix Table A-1</div>
+  </div>
+
+  <div class="twin reveal">
+    <div class="twin-card">
+      <div class="twin-card-head">L&amp;H — Tăng trưởng NBV</div>
+      <div class="twin-card-title">NBV +28.8% · Agent channel +26.5%</div>
+      <div class="twin-card-body">NBV per agent per month: RMB 8,439 (+43.3% YoY). Agent income +5.9%. Bancassurance NBV +62.7% YoY. Community Finance NBV +299% YoY với 131 outlets (từ 65). <strong>13-month persistency ratio: 96.4%</strong> (+3.6 pps).</div>
+    </div>
+    <div class="twin-card">
+      <div class="twin-card-head">P&amp;C — Lợi nhuận nhảy vọt</div>
+      <div class="twin-card-title">Net profit +67.7% · COR 98.3%</div>
+      <div class="twin-card-body">Insurance revenue RMB 328 tỷ (+4.7%). Auto COR 98.1% (tốt hơn bình quân thị trường). Registered users "Ping An Auto Owner": 236M (+16.7%). Non-auto premium +11.6%, non-auto COR cải thiện 7.8 pps. <strong>Comprehensive investment yield: 5.8%</strong>.</div>
+    </div>
+  </div>
+
+  <div class="callout orange reveal">
+    <p>Insight từ Strategy Update: Ping An xác định <strong>4 xu hướng vĩ mô</strong> sẽ tiếp tục thúc đẩy mô hình: (1) Life insurance entering a golden age, (2) Integrated finance competitive advantage in saturated market, (3) Health and senior care: essential demand in longevity era, (4) Tech: <strong>AI breakthrough, singularity approaching</strong>. Đây là lý do tập đoàn tin tưởng đây mới là điểm khởi đầu.</p>
+  </div>
+
+  <!-- Policy Tailwinds diagram -->
+  <div class="chart-section reveal">
+    <div class="chart-header"><span class="chart-title">Policy Tailwinds</span><span class="chart-desc">Government Support for Health and Senior Care Industries, and Healthy Workplace Initiatives</span></div>
+    <div class="chart-body">
+<svg width="100%" viewBox="0 0 860 460" xmlns="http://www.w3.org/2000/svg">
+
+<!-- TITLE -->
+<text font-size="13" font-weight="600" fill="#e87050" x="430" y="20" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Policy Tailwinds: Government Support for Health and Senior Care Industries, and Healthy Workplace Initiatives</text>
+
+<!-- ── THREE COLUMN HEADERS ── -->
+<rect x="10" y="34" width="268" height="30" rx="6" fill="none" stroke="#c04a28" stroke-width="1"/>
+<text font-size="11" font-weight="600" fill="#e87050" x="144" y="54" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Strong synergies between health care and insurance</text>
+
+<rect x="296" y="34" width="268" height="30" rx="6" fill="none" stroke="#c04a28" stroke-width="1"/>
+<text font-size="11" font-weight="600" fill="#e87050" x="430" y="54" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Fully integrated health and senior care</text>
+
+<rect x="582" y="34" width="268" height="30" rx="6" fill="none" stroke="#c04a28" stroke-width="1"/>
+<text font-size="11" font-weight="600" fill="#e87050" x="716" y="54" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Continuous efforts to develop healthy workplaces</text>
+
+<!-- ══ COL 1: Third Pillar Pension ══ -->
+<rect x="10" y="76" width="268" height="284" rx="8" fill="#0e0c0a" stroke="#2c3444" stroke-width="0.6"/>
+
+<text font-size="11" font-weight="600" fill="#dde0ec" x="144" y="100" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" text-decoration="underline">Continuous expansion of the third pillar</text>
+<text font-size="11" font-weight="600" fill="#dde0ec" x="144" y="114" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" text-decoration="underline">of pension insurance</text>
+
+<!-- Third pillar box -->
+<rect x="26" y="124" width="236" height="56" rx="6" fill="#1a0e08" stroke="#c04a28" stroke-width="0.6"/>
+<text font-size="11" font-weight="600" fill="#e87050" x="144" y="145" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Third pillar — private pension</text>
+<text font-size="10" fill="#b4b2a9" x="144" y="165" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Users' investment in commercial pension schemes</text>
+
+<!-- Two sub-boxes and arrows -->
+<rect x="26" y="196" width="104" height="50" rx="5" fill="#1a0e08" stroke="#c04a28" stroke-width="0.5"/>
+<text font-size="10" fill="#888780" x="78" y="215" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Purchase of</text>
+<text font-size="10" fill="#888780" x="78" y="228" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">commercial insurance</text>
+
+<rect x="152" y="196" width="110" height="50" rx="5" fill="#1a0e08" stroke="#c04a28" stroke-width="0.5"/>
+<text font-size="10" fill="#888780" x="207" y="215" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">The Company's</text>
+<text font-size="10" fill="#888780" x="207" y="228" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">customers</text>
+
+<!-- Circle arrows between two boxes -->
+<text font-size="18" fill="#c04a28" x="78" y="280" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">↻</text>
+<text font-size="10" fill="#888780" x="78" y="300" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Ping An Group's</text>
+<text font-size="10" fill="#888780" x="78" y="313" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">insurance customers</text>
+<text font-size="18" fill="#c04a28" x="207" y="280" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">↻</text>
+<text font-size="10" fill="#888780" x="207" y="300" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">The Company's</text>
+<text font-size="10" fill="#888780" x="207" y="313" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">customers</text>
+
+<!-- Policy quote box -->
+<rect x="10" y="372" width="268" height="56" rx="6" fill="#111520" stroke="#2c3444" stroke-width="0.5"/>
+<text font-size="10" fill="#6b7180" x="144" y="392" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">The Report on the Work of the Government:</text>
+<text font-size="10" font-weight="600" fill="#dde0ec" x="144" y="408" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">"We will accelerate the development of</text>
+<text font-size="10" font-weight="600" fill="#dde0ec" x="144" y="422" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">third-pillar pension plans"¹</text>
+
+<!-- ══ COL 2: Integrated Health & Senior Care ══ -->
+<rect x="296" y="76" width="268" height="284" rx="8" fill="#0e0c0a" stroke="#2c3444" stroke-width="0.6"/>
+
+<text font-size="11" font-weight="600" fill="#dde0ec" x="430" y="98" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" text-decoration="underline">Continuous integration of full-cycle health</text>
+<text font-size="11" font-weight="600" fill="#dde0ec" x="430" y="112" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" text-decoration="underline">and senior care services</text>
+
+<!-- Center flow diagram -->
+<!-- Capabilities left -->
+<text font-size="11" font-weight="600" fill="#e87050" x="345" y="148" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Capabilities</text>
+<text font-size="10" fill="#e87050" x="345" y="168" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Online follow-up</text>
+<text font-size="10" fill="#e87050" x="345" y="181" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">visits</text>
+<text font-size="13" fill="#c04a28" x="345" y="200" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">+</text>
+<text font-size="10" fill="#e87050" x="345" y="220" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Payment routes</text>
+
+<!-- Medical + Senior care vertical labels (rotated) -->
+<rect x="390" y="130" width="28" height="110" rx="5" fill="#c04a28"/>
+<text font-size="10" font-weight="600" fill="#fff" x="404" y="190" text-anchor="middle" transform="rotate(-90,404,190)" font-family="'IBM Plex Sans',sans-serif">Medical</text>
+
+<rect x="446" y="130" width="28" height="110" rx="5" fill="#c04a28"/>
+<text font-size="10" font-weight="600" fill="#fff" x="460" y="190" text-anchor="middle" transform="rotate(-90,460,190)" font-family="'IBM Plex Sans',sans-serif">Senior care</text>
+
+<!-- Center content -->
+<text font-size="10" fill="#6b7180" x="432" y="250" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Post-discharge</text>
+<text font-size="10" fill="#6b7180" x="432" y="263" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">rehabilitation</text>
+<text font-size="10" fill="#6b7180" x="432" y="276" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Chronic disease mgmt</text>
+<rect x="380" y="287" width="104" height="24" rx="4" fill="#111520" stroke="#c04a28" stroke-width="0.5"/>
+<text font-size="10" fill="#dde0ec" x="432" y="303" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Bi-directional referral</text>
+<text font-size="10" fill="#6b7180" x="432" y="324" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Smart monitoring</text>
+<text font-size="10" fill="#6b7180" x="432" y="337" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Medical visit assistance</text>
+
+<!-- Promotion right -->
+<text font-size="11" font-weight="600" fill="#e87050" x="510" y="148" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Promotion</text>
+<text font-size="10" fill="#6b7180" x="510" y="168" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Post-discharge</text>
+<text font-size="10" fill="#6b7180" x="510" y="181" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">management</text>
+<text font-size="13" fill="#c04a28" x="510" y="200" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">+</text>
+<text font-size="10" fill="#6b7180" x="510" y="218" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Adherence</text>
+<text font-size="10" fill="#6b7180" x="510" y="231" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">and stickiness</text>
+
+<!-- Curved arrows -->
+<path d="M380 250 Q365 285 380 320" fill="none" stroke="#888780" stroke-width="1" stroke-dasharray="3 2"/>
+<path d="M484 250 Q499 285 484 320" fill="none" stroke="#888780" stroke-width="1" stroke-dasharray="3 2"/>
+
+<!-- Policy quote box -->
+<rect x="296" y="372" width="268" height="56" rx="6" fill="#111520" stroke="#2c3444" stroke-width="0.5"/>
+<text font-size="10" fill="#6b7180" x="430" y="390" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">The NHC and other authorities released the</text>
+<text font-size="10" font-weight="600" fill="#dde0ec" x="430" y="406" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Guidelines on Promoting High-Quality</text>
+<text font-size="10" font-weight="600" fill="#dde0ec" x="430" y="420" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Development of Integrated Medical &amp; Elderly Care²</text>
+
+<!-- ══ COL 3: Healthy Workplaces ══ -->
+<rect x="582" y="76" width="268" height="284" rx="8" fill="#0e0c0a" stroke="#2c3444" stroke-width="0.6"/>
+
+<text font-size="11" font-weight="600" fill="#dde0ec" x="716" y="100" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" text-decoration="underline">Enhanced focus on healthy workplaces</text>
+
+<!-- Left sub-box -->
+<rect x="596" y="114" width="116" height="80" rx="6" fill="#1a0e08" stroke="#c04a28" stroke-width="0.5"/>
+<text font-size="10" font-weight="600" fill="#dde0ec" x="654" y="134" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Aligning with the</text>
+<text font-size="10" font-weight="600" fill="#dde0ec" x="654" y="148" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">policies to develop</text>
+<text font-size="10" font-weight="600" fill="#dde0ec" x="654" y="162" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">healthy workplaces</text>
+
+<rect x="596" y="210" width="116" height="80" rx="6" fill="#1a0e08" stroke="#c04a28" stroke-width="0.5"/>
+<text font-size="10" font-weight="600" fill="#dde0ec" x="654" y="230" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Meeting the health</text>
+<text font-size="10" font-weight="600" fill="#dde0ec" x="654" y="244" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">improvement needs</text>
+<text font-size="10" font-weight="600" fill="#dde0ec" x="654" y="258" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">of enterprises/empl.</text>
+
+<!-- Arrow -->
+<text font-size="18" fill="#c04a28" x="724" y="200" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">›</text>
+<text font-size="18" fill="#c04a28" x="724" y="216" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">›</text>
+
+<!-- Right services list -->
+<text font-size="10" font-weight="600" fill="#e87050" x="738" y="128" font-family="'IBM Plex Sans',sans-serif">Upgrades of corporate</text>
+<text font-size="10" font-weight="600" fill="#e87050" x="738" y="142" font-family="'IBM Plex Sans',sans-serif">management strategies</text>
+<line x1="738" y1="152" x2="840" y2="152" stroke="#2c3444" stroke-width="0.4" stroke-dasharray="3 2"/>
+<text font-size="10" fill="#b4b2a9" x="738" y="168" font-family="'IBM Plex Sans',sans-serif">Membership-based health</text>
+<text font-size="10" fill="#b4b2a9" x="738" y="181" font-family="'IBM Plex Sans',sans-serif">management service</text>
+<line x1="738" y1="190" x2="840" y2="190" stroke="#2c3444" stroke-width="0.4" stroke-dasharray="3 2"/>
+<text font-size="10" fill="#b4b2a9" x="738" y="207" font-family="'IBM Plex Sans',sans-serif">Out-of-hospital medical</text>
+<text font-size="10" fill="#b4b2a9" x="738" y="220" font-family="'IBM Plex Sans',sans-serif">and health services</text>
+<line x1="738" y1="229" x2="840" y2="229" stroke="#2c3444" stroke-width="0.4" stroke-dasharray="3 2"/>
+<text font-size="10" fill="#b4b2a9" x="738" y="246" font-family="'IBM Plex Sans',sans-serif">In-hospital claim</text>
+<text font-size="10" fill="#b4b2a9" x="738" y="259" font-family="'IBM Plex Sans',sans-serif">settlement for medical</text>
+<text font-size="10" fill="#b4b2a9" x="738" y="272" font-family="'IBM Plex Sans',sans-serif">visits</text>
+
+<!-- Policy quote box -->
+<rect x="582" y="372" width="268" height="56" rx="6" fill="#111520" stroke="#2c3444" stroke-width="0.5"/>
+<text font-size="10" fill="#6b7180" x="716" y="390" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">10+ policies³ including the</text>
+<text font-size="10" font-weight="600" fill="#dde0ec" x="716" y="406" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Healthy China 2030 Initiative</text>
+<text font-size="10" font-weight="600" fill="#dde0ec" x="716" y="420" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">and Guidelines on Developing Healthy Enterprises</text>
+
+<!-- Footnotes -->
+<text font-size="9" fill="#3d4255" x="10" y="445" font-family="'IBM Plex Sans',sans-serif">¹ Delivered at the Third Session of the 14th National People's Congress · ² NHC, Ministry of Civil Affairs, NHSA, NATCM, NDCPA on Promoting High-Quality Development of Integrated Medical and Elderly Care Services, Dec 2024</text>
+<text font-size="9" fill="#3d4255" x="10" y="457" font-family="'IBM Plex Sans',sans-serif">³ Including National Occupational Disease Prevention and Control Plan (2021–2025), the 14th Five-Year Plan for National Health, and the Notice on Further Promoting Occupational Health Protection Actions</text>
+
+</svg>
+    </div>
+    <div class="source-note" style="padding:0 22px 16px;">Nguồn: Good Doctor 2025 Interim Results — Policy Tailwinds, slide 20</div>
+  </div>
+
+  <!-- Synergies: Deepening Synergies diagram -->
+  <div class="chart-section reveal">
+    <div class="chart-header"><span class="chart-title">Synergies</span><span class="chart-desc">Deepening Synergies and Mutual Enablement with Ping An Group as A Consolidated Subsidiary</span></div>
+    <div class="chart-body">
+<svg width="100%" viewBox="0 0 860 400" xmlns="http://www.w3.org/2000/svg">
+
+<!-- TITLE BANNER -->
+<rect x="10" y="10" width="840" height="44" rx="8" fill="#c04a28"/>
+<text font-size="11" font-weight="600" fill="#fff" x="430" y="28" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">As a flagship of Ping An Group's health and senior care ecosystem, the Company promotes mutual</text>
+<text font-size="11" font-weight="600" fill="#fff" x="430" y="44" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">enablement, with a focus on improving medical and health services</text>
+
+<!-- ── LEFT: Supporting Ping An Group ── -->
+<text font-size="13" font-weight="600" fill="#e87050" x="170" y="84" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Supporting Ping An Group</text>
+<line x1="30" y1="90" x2="310" y2="90" stroke="#c04a28" stroke-width="0.6"/>
+
+<text font-size="11" font-weight="600" fill="#dde0ec" x="170" y="116" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Advancing health and senior care strategies</text>
+<text font-size="11" font-weight="600" fill="#dde0ec" x="170" y="148" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Enabling whole-process services</text>
+<text font-size="11" font-weight="600" fill="#dde0ec" x="170" y="162" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">across diverse scenarios</text>
+<text font-size="11" font-weight="600" fill="#dde0ec" x="170" y="194" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Worry-free, time-saving, and money-saving</text>
+
+<!-- Ping An Group logo text -->
+<text font-size="14" font-weight="700" fill="#e87050" x="150" y="232" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">中国平安 PING AN</text>
+<text font-size="10" fill="#6b7180" x="150" y="246" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">专业·价值</text>
+
+<!-- Left description box -->
+<rect x="18" y="266" width="284" height="72" rx="6" fill="#111520" stroke="#2c3444" stroke-width="0.5"/>
+<text font-size="10" fill="#6b7180" x="160" y="286" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Delivering the most cost-effective services by enabling</text>
+<text font-size="10" fill="#6b7180" x="160" y="300" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">marketing through tiered, scenario-based services</text>
+<text font-size="10" fill="#6b7180" x="160" y="314" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">and integrating medical and health service providers</text>
+
+
+
+<!-- Orange circle icon (left of center) -->
+<circle cx="390" cy="248" r="32" fill="#c04a28"/>
+<text font-size="22" fill="#fff" x="390" y="258" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">✚</text>
+
+<!-- Green circle icon (right of center) -->
+<circle cx="546" cy="170" r="32" fill="#0F6E56"/>
+<text font-size="22" fill="#fff" x="546" y="180" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">$</text>
+
+<!-- Center text -->
+<text font-size="14" font-weight="700" fill="#dde0ec" x="468" y="196" text-anchor="middle" font-family="'Playfair Display',Georgia,serif">Greater synergies</text>
+<text font-size="14" font-weight="700" fill="#dde0ec" x="468" y="226" text-anchor="middle" font-family="'Playfair Display',Georgia,serif">Mutual enablement</text>
+
+<!-- ── RIGHT: Empowering the Company ── -->
+<text font-size="13" font-weight="600" fill="#3dc9a0" x="700" y="84" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Empowering the Company</text>
+<line x1="570" y1="90" x2="850" y2="90" stroke="#0F6E56" stroke-width="0.6"/>
+
+<text font-size="11" font-weight="600" fill="#dde0ec" x="700" y="118" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Consolidating user traffic</text>
+<text font-size="11" font-weight="600" fill="#dde0ec" x="700" y="152" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Integrating medical and health ecosystems</text>
+<text font-size="11" font-weight="600" fill="#dde0ec" x="700" y="186" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Leveraging AI technologies</text>
+
+<!-- Good Doctor logo text -->
+<text font-size="13" font-weight="700" fill="#e87050" x="740" y="232" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">平安好医生</text>
+<text font-size="10" fill="#3dc9a0" x="740" y="247" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Ping An Good Doctor</text>
+
+<!-- Right description box -->
+<rect x="574" y="266" width="276" height="88" rx="6" fill="#111520" stroke="#2c3444" stroke-width="0.5"/>
+<text font-size="10" fill="#6b7180" x="712" y="286" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Integrating Ping An Group's "technology +</text>
+<text font-size="10" fill="#6b7180" x="712" y="300" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">finance + health care" resources into the medical</text>
+<text font-size="10" fill="#6b7180" x="712" y="314" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">and health ecosystems to enable targeted customer</text>
+<text font-size="10" fill="#6b7180" x="712" y="328" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">engagement and refined operations,</text>
+<text font-size="10" fill="#6b7180" x="712" y="342" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">and boost customer value</text>
+
+</svg>
+    </div>
+    <div class="source-note" style="padding:0 22px 16px;">Nguồn: Good Doctor 2025 Interim Results — Synergies, slide 21</div>
+  </div>
+
+  <!-- Strategic Outlook diagram -->
+  <div class="chart-section reveal">
+    <div class="chart-header"><span class="chart-title">Strategic Outlook</span><span class="chart-desc">Becoming China's No.1 Online Health Care Service Portal by Deepening Synergies with Ping An Group's Health and Senior Care Ecosystem</span></div>
+    <div class="chart-body">
+<svg width="100%" viewBox="0 0 860 470" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <marker id="arrSO" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="#c04a28" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+
+<!-- TITLE -->
+<text font-size="12" font-weight="600" fill="#e87050" x="430" y="18" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Strategic Outlook: Becoming China's No.1 Online Health Care Service Portal by Deepening Synergies</text>
+<text font-size="12" font-weight="600" fill="#e87050" x="430" y="32" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">with Ping An Group's Health and Senior Care Ecosystem</text>
+
+<!-- STRATEGY BANNER -->
+<rect x="10" y="42" width="840" height="32" rx="6" fill="none" stroke="#c04a28" stroke-width="1"/>
+<text font-size="11" font-weight="600" fill="#e87050" x="430" y="63" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Being firm in strategies and bold in execution, and continuously exploring AI enablement and innovative models</text>
+
+<!-- ══ LEFT COLUMN: 3 labels ══ -->
+<!-- Row 1: Acting for payers -->
+<text font-size="22" fill="#c04a28" x="60" y="126" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">👥</text>
+<text font-size="10" font-weight="600" fill="#e87050" x="60" y="152" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Acting for payers</text>
+<text font-size="10" fill="#6b7180" x="60" y="168" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Pooling traffic and</text>
+<text font-size="10" fill="#6b7180" x="60" y="181" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">integrating data</text>
+<!-- Row 2: Integrating providers -->
+<text font-size="22" fill="#c04a28" x="60" y="270" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">⊞</text>
+<text font-size="10" font-weight="600" fill="#e87050" x="60" y="294" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Integrating providers</text>
+<text font-size="9" fill="#6b7180" x="60" y="316" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Set standards |</text>
+<text font-size="9" fill="#6b7180" x="60" y="328" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Centralize procurement |</text>
+<text font-size="9" fill="#6b7180" x="60" y="340" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Evaluate services</text>
+<!-- Row 3: Providing cost-effective -->
+<text font-size="10" font-weight="600" fill="#e87050" x="60" y="412" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Providing the most</text>
+<text font-size="10" font-weight="600" fill="#e87050" x="60" y="428" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">cost-effective services</text>
+
+<!-- Left divider line -->
+<line x1="118" y1="82" x2="118" y2="462" stroke="#2c3444" stroke-width="0.6"/>
+
+<!-- ══ ROW 1: Acting for payers ══ -->
+<rect x="126" y="82" width="860" height="128" rx="8" fill="#0e0c0a" stroke="#2c3444" stroke-width="0.5"/>
+
+<!-- F-end circle diagram -->
+<rect x="198" y="94" width="82" height="24" rx="5" fill="#1a0e08" stroke="#c04a28" stroke-width="0.6"/>
+<text font-size="10" font-weight="600" fill="#e87050" x="239" y="110" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">F-end</text>
+<text font-size="9" fill="#e87050" x="390" y="110" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Memberships Online, in-store,in-home, in-company</text>
+
+<!-- Service models + Underlying capabilities circle -->
+<text font-size="10" fill="#888780" x="188" y="144" font-family="'IBM Plex Sans',sans-serif">Service</text>
+<text font-size="10" fill="#888780" x="188" y="156" font-family="'IBM Plex Sans',sans-serif">models</text>
+<text font-size="16" fill="#c04a28" x="235" y="152" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">+</text>
+<text font-size="10" fill="#888780" x="248" y="144" font-family="'IBM Plex Sans',sans-serif">Underlying</text>
+<text font-size="10" fill="#888780" x="248" y="156" font-family="'IBM Plex Sans',sans-serif">capabilities</text>
+<!-- Arrows around circle -->
+<path d="M195 120 Q170 148 195 176" fill="none" stroke="#c04a28" stroke-width="1.2" stroke-dasharray="3 2" marker-end="url(#arrSO)"/>
+<path d="M280 176 Q300 148 280 120" fill="none" stroke="#c04a28" stroke-width="1.2" stroke-dasharray="3 2" marker-end="url(#arrSO)"/>
+<!-- B-end -->
+<rect x="198" y="180" width="82" height="22" rx="5" fill="#1a0e08" stroke="#c04a28" stroke-width="0.6"/>
+<text font-size="10" font-weight="600" fill="#e87050" x="239" y="195" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">B-end</text>
+
+<!-- Row 1 center text -->
+<text font-size="10" fill="#888780" x="470" y="130" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Validating F-end business model and sharing experience</text>
+<text font-size="10" fill="#888780" x="470" y="145" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">to increase penetration of the B-end corporate client base</text>
+<text font-size="10" fill="#888780" x="470" y="160" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">and improve the service system</text>
+
+<!-- Row 1 right outcome -->
+<text font-size="11" font-weight="600" fill="#e87050" x="760" y="130" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Deepening collaboration to</text>
+<text font-size="11" font-weight="600" fill="#e87050" x="760" y="145" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">support the Group's health and</text>
+<text font-size="11" font-weight="600" fill="#e87050" x="760" y="160" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">senior care ecosystem</text>
+
+<!-- Right divider -->
+<line x1="610" y1="82" x2="610" y2="462" stroke="#1e2230" stroke-width="0.4" stroke-dasharray="4 3"/>
+
+<!-- ══ ROW 2: Integrating providers ══ -->
+<rect x="126" y="218" width="860" height="128" rx="8" fill="#0e0c0a" stroke="#2c3444" stroke-width="0.5"/>
+
+<!-- Provider boxes -->
+<rect x="138" y="234" width="96" height="90" rx="6" fill="#111520" stroke="#2c3444" stroke-width="0.5"/>
+<text font-size="10" font-weight="600" fill="#dde0ec" x="186" y="275" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Medical</text>
+<text font-size="10" font-weight="600" fill="#dde0ec" x="186" y="289" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">institutions</text>
+
+<rect x="246" y="234" width="100" height="90" rx="6" fill="#111520" stroke="#2c3444" stroke-width="0.5"/>
+<text font-size="10" font-weight="600" fill="#dde0ec" x="296" y="268" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Health</text>
+<text font-size="10" font-weight="600" fill="#dde0ec" x="296" y="282" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">management</text>
+<text font-size="10" font-weight="600" fill="#dde0ec" x="296" y="296" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">institutions</text>
+
+<rect x="358" y="234" width="100" height="90" rx="6" fill="#111520" stroke="#2c3444" stroke-width="0.5"/>
+<text font-size="10" font-weight="600" fill="#dde0ec" x="408" y="258" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Pharmacies</text>
+<line x1="366" y1="264" x2="450" y2="264" stroke="#2c3444" stroke-width="0.3" stroke-dasharray="2 2"/>
+<text font-size="10" font-weight="600" fill="#dde0ec" x="408" y="279" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Pharmaceutical</text>
+<text font-size="10" font-weight="600" fill="#dde0ec" x="408" y="293" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">firms</text>
+<line x1="366" y1="299" x2="450" y2="299" stroke="#2c3444" stroke-width="0.3" stroke-dasharray="2 2"/>
+<text font-size="10" font-weight="600" fill="#dde0ec" x="408" y="314" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Device manufacturers</text>
+
+<!-- Row 2 center text -->
+<text font-size="10" fill="#888780" x="580" y="262" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Expanding with product, service</text>
+<text font-size="10" fill="#888780" x="580" y="277" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">providers to address all demands</text>
+<text font-size="10" fill="#888780" x="580" y="302" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Exploring integration models to</text>
+<text font-size="10" fill="#888780" x="580" y="317" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">build a win-win ecosystem</text>
+
+<!-- Row 2 right outcome -->
+<text font-size="11" font-weight="600" fill="#e87050" x="760" y="262" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Improving quality and efficiency</text>
+<text font-size="11" font-weight="600" fill="#e87050" x="760" y="277" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">to develop mutually beneficial</text>
+<text font-size="11" font-weight="600" fill="#e87050" x="760" y="292" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">supply chains</text>
+
+<!-- ══ ROW 3: Providing cost-effective ══ -->
+<rect x="126" y="354" width="860" height="108" rx="8" fill="#0e0c0a" stroke="#2c3444" stroke-width="0.5"/>
+
+<!-- Reactive → Proactive -->
+<rect x="138" y="374" width="80" height="36" rx="5" fill="#f5d5c8" stroke="#c04a28" stroke-width="0.5"/>
+<text font-size="11" font-weight="600" fill="#333" x="178" y="397" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Reactive</text>
+<text font-size="20" fill="#c04a28" x="238" y="399" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">›</text>
+<text font-size="20" fill="#c04a28" x="250" y="399" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">›</text>
+<rect x="270" y="374" width="90" height="36" rx="5" fill="#c04a28"/>
+<text font-size="11" font-weight="600" fill="#fff" x="315" y="397" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Proactive</text>
+<!-- Sub-labels -->
+<rect x="138" y="418" width="72" height="20" rx="4" fill="#111520" stroke="#2c3444" stroke-width="0.4"/>
+<text font-size="9" fill="#888780" x="174" y="432" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Worry-free</text>
+<rect x="220" y="418" width="72" height="20" rx="4" fill="#111520" stroke="#2c3444" stroke-width="0.4"/>
+<text font-size="9" fill="#888780" x="256" y="432" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Time-saving</text>
+<rect x="302" y="418" width="80" height="20" rx="4" fill="#111520" stroke="#2c3444" stroke-width="0.4"/>
+<text font-size="9" fill="#888780" x="342" y="432" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Money-saving</text>
+
+<!-- Row 3 center text -->
+<text font-size="10" fill="#888780" x="540" y="390" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Leveraging AI to improve proactive service delivery</text>
+<text font-size="10" fill="#888780" x="540" y="415" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Fostering mutual enablement to build a differentiated moat</text>
+
+<!-- Row 3 right outcome -->
+<text font-size="11" font-weight="600" fill="#e87050" x="760" y="390" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">Pursing unique, long-standing</text>
+<text font-size="11" font-weight="600" fill="#e87050" x="760" y="406" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif">competitive advantages</text>
+
+</svg>
+    </div>
+    <div class="source-note" style="padding:0 22px 16px;">Nguồn: Good Doctor 2025 Interim Results — Strategic Outlook, slide 22</div>
+  </div>
+</section>
+
+<!-- ══════════ PHẦN 7: 5 INSIGHTS ══════════ -->
+<section id="insights">
+  <div class="section-tag reveal">Phần 07</div>
+  <h2 class="section-h reveal">5 Insights Chiến Lược:<br>Đúc kết từ dữ liệu thực</h2>
+  <p class="section-lead reveal">Những điều không thể thấy chỉ từ headline numbers — nhưng được xác nhận bởi dữ liệu từ cả hai báo cáo chính thức.</p>
+
+  <div class="img-banner reveal">
+    <img src="https://group.pingan.com/dam/jcr:9c567966-9bbc-43df-8bb5-6e4577a1ecb1/10.jpg" alt="Shanghai Lujiazui" loading="lazy">
+    <div class="img-banner-caption">Ping An · "Expertise Makes Life Easier" — tagline chính thức 2024</div>
+  </div>
+
+  <div class="insights-grid">
+    <div class="insight-card ic-blue reveal">
+      <div class="ic-num">Insight 01 · Xác nhận bởi Annual Results 2024</div>
+      <div class="ic-title">Healthcare là "loss leader" — đã được chứng minh</div>
+      <div class="ic-body">Con số chính thức: khách hàng dùng health eco đóng góp <strong>70% NBV của Ping An Life</strong>. FYP/policy cao hơn <strong>3×</strong> với home-based senior care users. Contracts per high-value customer cao hơn <strong>2.3×</strong>. Good Doctor chịu lỗ 10 năm để tạo ra multiplier này — đây là đầu tư chiến lược tính toán kỹ, không phải thất bại.</div>
+    </div>
+    <div class="insight-card ic-teal reveal">
+      <div class="ic-num">Insight 02 · Xác nhận bởi Good Doctor 2025 IR</div>
+      <div class="ic-title">Mô hình kinh doanh đã được "validated"</div>
+      <div class="ic-body">Gross margin 33.6% (+1.4 pps). Expense ratio giảm <strong>6.3 pps YoY</strong> xuống 30.1%. Operating cash flow dương <strong>RMB 64M trong 1H 2025</strong>. Net profit +136.8%. Đây là bằng chứng unit economics đang cải thiện — không phải growth at all costs mà là profitable growth.</div>
+    </div>
+    <div class="insight-card ic-coral reveal">
+      <div class="ic-num">Insight 03 · Từ Tech: "9+5+3" slide 33</div>
+      <div class="ic-title">Data flywheel tạo ra moat không thể copy</div>
+      <div class="ic-body">9 databases (5 healthcare + 3 financial + 1 operations) xử lý <strong>1 tỷ+ records mỗi ngày</strong>. DeepSeek và Qwen3 được tích hợp. <strong>LLM calls tăng 200%+ trong 2025</strong>. Mỗi tương tác của 242M khách hàng là dữ liệu training. Không startup nào có thể tích lũy được điều này trong dưới 15 năm.</div>
+    </div>
+    <div class="insight-card ic-purple reveal">
+      <div class="ic-num">Insight 04 · Longevity Era trend</div>
+      <div class="ic-title">Senior care là "next frontier" — 250M người trên 60 tuổi</div>
+      <div class="ic-body">Senior care revenue Good Doctor tăng <strong>+263.9% YoY</strong> trong 1H 2025. Home-based senior care users tăng <strong>+83% YoY</strong>. Chính phủ ban hành Guidelines on Integrated Medical and Elderly Care 12/2024. Ping An đang xây dựng <strong>6 premium senior care communities tại 5 thành phố</strong> — Shanghai và Shenzhen mở 2H 2025.</div>
+    </div>
+    <div class="insight-card ic-gold full reveal">
+      <div class="ic-num">Insight 05 · Tổng hợp từ cả hai báo cáo</div>
+      <div class="ic-title">AI singularity sắp đến — và Ping An đặt cược lớn vào đó</div>
+      <div class="ic-body">Co-CEO Michael Guo trong Strategy Update: <strong>"Tech: AI breakthrough, singularity approaching"</strong> — đây là 1 trong 4 macrotrends Ping An xây chiến lược xoay quanh. AI agent sales đã đạt <strong>~RMB 140 tỷ</strong>. LLM calls tăng 200%+ năm 2025. Ping An đầu tư <strong>RMB 160M R&amp;D chỉ trong 1H 2025 tại Good Doctor</strong> — duy trì flat YoY dù profitability đã được cải thiện. Đây là dấu hiệu họ tiếp tục đầu tư vào platform, không cắt giảm để tối ưu lợi nhuận ngắn hạn.</div>
+    </div>
+  </div>
+
+  <div class="img-text reveal" style="margin-top:40px;">
+    <img src="https://group.pingan.com/dam/jcr:e4830dcd-5471-404a-8a8d-c73938316bef/ClimateReport1.jpg" alt="Ping An Group" loading="lazy">
+    <div class="img-text-body">
+      <div class="img-text-tag">Kết luận chiến lược · Barrier to entry</div>
+      <div class="img-text-h">Tại sao không thể copy trong 10 năm?</div>
+      <div class="img-text-p"><strong>(1) 55,080 patent</strong> và hạ tầng data 30 năm không thể mua được. <strong>(2) Quan hệ với 22 tỉnh BHXH</strong> và NHSA — đây là political capital, không phải technical capability. <strong>(3) 242M khách hàng đa sản phẩm</strong> — switching cost quá cao khi bảo hiểm + ngân hàng + bác sĩ gia đình trong một app. <strong>(4) Good Doctor vừa được "validated"</strong> — cost structure đang cải thiện nhanh. Barrier to entry là structural, không phải competitive.</div>
+    </div>
+  </div>
+
+  <div class="lesson-card reveal">
+    <div class="lesson-tag">Tổng kết · Nhìn vào 2025 và xa hơn</div>
+    <div class="lesson-title">Ping An không xây công ty bảo hiểm có thêm y tế — họ xây "hệ điều hành vòng đời"</div>
+    <div class="lesson-body">Từ Annual Results 2025 sẽ là thời điểm để kiểm chứng 3 hypothesis: <strong>(1)</strong> Health &amp; Senior Care strategy có tiếp tục đóng góp tăng trưởng NBV không? <strong>(2)</strong> Good Doctor có maintain profitability trend và tiến tới double-digit net margin không? <strong>(3)</strong> AI agent sales (RMB 140 tỷ năm 2024) có tăng tốc thành nguồn doanh thu chính không? Nếu cả 3 điều này xảy ra, Ping An sẽ là case study kinh điển nhất về <strong>insurtech + healthtech + fintech convergence</strong> trong thập kỷ này.</div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-brand">Ping An <span>·</span> Research</div>
+    <p style="font-size:13px;color:var(--muted);margin-top:5px;">HMO &amp; Integrated Finance — Cập nhật Q1 2025</p>
+  </div>
+  <div class="footer-meta">
+    <p>Ping An Group 2024 Annual Results (March 2025)</p>
+    <p>Good Doctor / Ping An Health 2025 Interim Results</p>
+    <p>group.pingan.com · Hình ảnh: Ping An Group official</p>
+    <p style="margin-top:4px;color:var(--hint);">Dữ liệu cập nhật đến 1H 2025</p>
+  </div>
+</footer>
+
+<script>
+const els = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 50);
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.06, rootMargin: '0px 0px -40px 0px' });
+els.forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
