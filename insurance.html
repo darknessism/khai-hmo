@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiến lược Bảo hiểm Cộng đồng toàn diện - AN SINH 360</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        blackbg: '#050505',
+                        'pastel-pink': '#ff2a93', /* Neon Pink */
+                        'baby-blue': '#00e5ff',   /* Neon Blue */
+                        'emerald-soft': '#34d399',
+                        'purple-soft': '#a78bfa',
+                        'amber-soft': '#fbbf24',
+                        'rose-soft': '#f43f5e'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #050505;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+
+        /* Ambient Lighting */
+        .ambient-light {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(140px);
+            z-index: -1;
+            opacity: 0.35;
+            animation: pulse-slow 15s infinite alternate;
+        }
+        .light-pink { width: 50vw; height: 50vw; background: rgba(255, 42, 147, 0.2); top: -5%; left: -20%; }
+        .light-blue { width: 45vw; height: 45vw; background: rgba(0, 229, 255, 0.2); bottom: 10%; right: -10%; animation-delay: -7s; }
+
+        @keyframes pulse-slow {
+            0% { transform: scale(1) translate(0, 0); opacity: 0.25; }
+            100% { transform: scale(1.1) translate(30px, -30px); opacity: 0.5; }
+        }
+
+        /* Glassmorphism */
+        .premium-glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.9);
+        }
+
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #ff2a93, #00e5ff);
+        }
+
+        /* Custom Form Inputs */
+        .glass-input {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+        .glass-input:focus {
+            outline: none;
+            border-color: #00e5ff;
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
+            background: rgba(0, 229, 255, 0.05);
+        }
+        
+        /* Custom Range Slider */
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: #00e5ff;
+            cursor: pointer;
+            margin-top: -10px;
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.6);
+            border: 2px solid #050505;
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: rgba(255,255,255,0.2);
+            border-radius: 2px;
+        }
+        
+        /* Builder Checkbox Styling */
+        .pkg-checkbox:checked + div {
+            border-color: #00e5ff;
+            background: linear-gradient(to right, rgba(0, 229, 255, 0.05), transparent);
+            box-shadow: inset 2px 0 0 0 #00e5ff;
+        }
+        .pkg-checkbox:checked + div .check-indicator {
+            background-color: #00e5ff;
+            color: #050505;
+            border-color: #00e5ff;
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 10px; }
+    </style>
+</head>
+<body class="antialiased relative selection:bg-pastel-pink selection:text-blackbg">
+
+    <div class="ambient-light light-pink"></div>
+    <div class="ambient-light light-blue"></div>
+
+    <!-- Navigation -->
+    <nav class="bg-[#00e5ff]/90 backdrop-blur-xl sticky top-0 z-50 border-b border-white/20 shadow-[0_5px_20px_rgba(0,229,255,0.4)]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full border-2 border-blackbg flex items-center justify-center bg-white/20 shadow-[0_0_10px_rgba(0,0,0,0.2)]">
+                        <span class="font-serif italic font-bold text-xl text-blackbg">D</span>
+                    </div>
+                    <div class="flex flex-col leading-tight">
+                        <span class="font-serif text-base md:text-lg tracking-wider text-blackbg font-bold drop-shadow-sm">CỘNG ĐỒNG <span class="text-white"> AN SINH</span></span>
+                        <span class="text-[11px] tracking-wider text-blackbg font-sans font-bold mt-0.5">daotuankhai@gmail.com - 0901740904</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#macro" class="font-sans text-sm tracking-wide text-blackbg font-bold hover:text-white transition-colors">Vĩ Mô</a>
+                    <a href="#sim" class="font-sans text-sm tracking-wide text-blackbg font-bold hover:text-white transition-colors">Mô Phỏng</a>
+                    <a href="#solutions" class="font-sans text-sm tracking-wide text-blackbg font-bold hover:text-white transition-colors">Giải Pháp</a>
+                    <a href="#builder" class="font-sans text-sm tracking-wide text-blackbg font-bold hover:text-white transition-colors">Kiến Tạo</a>
+                    <a href="#customer-profile" class="font-sans text-sm tracking-wide text-blackbg font-bold hover:text-white transition-colors">Hồ Sơ KH</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-32">
+
+        <!-- HEADER -->
+        <header class="text-center space-y-8 pt-10">
+            <p class="font-sans text-baby-blue text-sm uppercase tracking-[0.3em]">Đề xuất giải pháp</p>
+            <h1 class="font-serif text-5xl md:text-7xl font-semibold text-white leading-[1.1]">
+                Thiết Kế Lưới An Sinh <br>
+                <i class="text-gradient">Toàn Diện 360°</i>
+            </h1>
+            <p class="font-sans text-lg text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
+                Nghiên cứu kiến trúc sản phẩm bảo hiểm dành riêng cho Hệ sinh thái Dạ Hợp. Khai thác dữ liệu từ 50.000 cư dân để định chuẩn mức phí, quyền lợi và tỷ suất hoàn vốn (ROI) cho mô hình B2B2C.
+            </p>
+        </header>
+
+        <!-- 1. MACRO CONTEXT -->
+        <section id="macro" class="space-y-16 scroll-mt-28">
+            
+            <!-- Intro Block: Separated Image & Text -->
+            <div class="premium-glass rounded-[2.5rem] overflow-hidden border border-white/10 shadow-xl flex flex-col lg:flex-row bg-[#050505]">
+                <div class="lg:w-1/2">
+                    <img src="https://images.pexels.com/photos/374870/pexels-photo-374870.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Khu đô thị công nghiệp" class="w-full h-full object-cover min-h-[300px]">
+                </div>
+                <div class="lg:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                    <p class="font-serif text-xl md:text-2xl text-white leading-relaxed font-light italic border-l-4 border-baby-blue pl-6 mb-6">
+                        "Một dự án đại đô thị kết hợp công nghiệp - dịch vụ quy mô 500 ha với 50.000 dân là một bài toán quy hoạch tuyệt vời. Mật độ dân số trung bình 100 người/ha là mức lý tưởng để phát triển một thành phố thu nhỏ."
+                    </p>
+                    <p class="font-sans text-sm text-gray-400 tracking-wide leading-relaxed">
+                        Để vận hành thành công hệ sinh thái này, dữ liệu nhân chủng học không chỉ là những con số tĩnh, mà là dòng chảy của nhu cầu, dòng tiền và hành vi sinh hoạt.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Demographics Breakdown -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <div class="premium-glass rounded-[2rem] border border-white/10 overflow-hidden flex flex-col shadow-lg bg-[#050505]">
+                    <div class="h-56 w-full">
+                        <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Cấu trúc dân số" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8 flex-grow">
+                        <h3 class="font-serif text-2xl text-baby-blue mb-4">Cấu trúc Nhân khẩu học Tổng quát</h3>
+                        <p class="text-sm text-gray-300 mb-8 leading-relaxed">
+                            Với đặc thù có phân khu "Công nghiệp", tháp dân số của hệ sinh thái này sẽ có hình "kim cương" hoặc "quả chuông", phình to ở độ tuổi lao động trẻ.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white/5 p-4 rounded-xl border border-white/10 text-center">
+                                <div class="text-3xl font-serif text-white mb-1">50.000</div>
+                                <div class="text-xs text-baby-blue uppercase tracking-widest font-semibold">Tổng Cư Dân</div>
+                            </div>
+                            <div class="bg-white/5 p-4 rounded-xl border border-white/10 text-center">
+                                <div class="text-3xl font-serif text-white mb-1">52 / 48</div>
+                                <div class="text-xs text-pastel-pink uppercase tracking-widest font-semibold">% Nam / Nữ</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="premium-glass p-10 rounded-[2rem] border border-white/5 flex flex-col justify-center">
+                    <h3 class="font-serif text-3xl text-white mb-6">Mô Hình Dân Số Động</h3>
+                    <p class="text-gray-300 text-base leading-relaxed mb-6">
+                        Việc thấu hiểu dòng chuyển dịch cơ cấu tuổi tác giúp chúng ta không chỉ xây dựng bảo hiểm cho "ngày hôm nay" mà còn đón đầu các rủi ro của "ngày mai".
+                    </p>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        Dưới đây là 5 thế hệ cốt lõi định hình nên sức mua, nhu cầu y tế và bức tranh rủi ro của toàn bộ siêu dự án 500ha này.
+                    </p>
+                </div>
+            </div>
+
+            <!-- AGE DISTRIBUTION - MAGAZINE LAYOUT (SEPARATED TEXT & IMAGE) -->
+            <div class="space-y-10 mt-20">
+                <div class="text-center mb-12">
+                    <h3 class="font-serif text-4xl text-pastel-pink mb-4">1. Phân bổ theo Độ tuổi (Thế hệ)</h3>
+                    <p class="text-gray-400 text-base max-w-3xl mx-auto">Phân tích chuyên sâu về hành vi, dòng tiền và tâm lý gia đình của 5 nhóm cư dân định hình nên hệ sinh thái.</p>
+                </div>
+
+                <!-- Group 1: 0-17 -->
+                <div class="premium-glass rounded-3xl overflow-hidden border border-white/10 shadow-lg flex flex-col md:flex-row bg-[#050505]">
+                    <div class="md:w-2/5">
+                        <img src="https://images.pexels.com/photos/1148998/pexels-photo-1148998.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Trẻ em" class="w-full h-full object-cover min-h-[300px]">
+                    </div>
+                    <div class="md:w-3/5 p-8 flex flex-col justify-center">
+                        <h4 class="font-serif text-2xl md:text-3xl text-emerald-soft mb-2">Nhóm 0 - 17 tuổi: Thế hệ Alpha & Gen Z nhỏ</h4>
+                        <span class="inline-block bg-emerald-soft/20 text-emerald-soft text-xs px-3 py-1 rounded-full mb-6 w-fit font-bold tracking-widest">20% | 10.000 NGƯỜI</span>
+                        
+                        <p class="text-sm text-gray-300 mb-4 italic border-l-2 border-emerald-soft/50 pl-3">
+                            Dù không làm ra tiền, đây lại là "người ra quyết định gián tiếp" mạnh mẽ nhất trong hệ sinh thái. 
+                        </p>
+                        <div class="space-y-3 text-sm text-gray-400 leading-relaxed">
+                            <p><strong class="text-white">Tài chính:</strong> Phụ thuộc 100% vào cha mẹ. Dòng tiền đổ vào nhóm này ít co giãn (cha mẹ luôn ưu tiên chi tiêu cho con).</p>
+                            <p><strong class="text-white">Hành vi:</strong> Chịu ảnh hưởng MXH. Chi tiêu F&B, giải trí, lớp kỹ năng.</p>
+                            <p><strong class="text-white">Nhu cầu nổi bật:</strong> Công viên an toàn, trường học nội khu, phòng khám nhi khoa.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group 2: 18-25 -->
+                <div class="premium-glass rounded-3xl overflow-hidden border border-white/10 shadow-lg flex flex-col md:flex-row-reverse bg-[#050505]">
+                    <div class="md:w-2/5">
+                        <img src="https://images.pexels.com/photos/1542085/pexels-photo-1542085.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Gen Z" class="w-full h-full object-cover min-h-[300px]">
+                    </div>
+                    <div class="md:w-3/5 p-8 flex flex-col justify-center">
+                        <h4 class="font-serif text-2xl md:text-3xl text-baby-blue mb-2">Nhóm 18 - 25 tuổi: Gen Z - Bắt đầu lao động</h4>
+                        <span class="inline-block bg-baby-blue/20 text-baby-blue text-xs px-3 py-1 rounded-full mb-6 w-fit font-bold tracking-widest">20% | 10.000 NGƯỜI</span>
+                        
+                        <p class="text-sm text-gray-300 mb-4 italic border-l-2 border-baby-blue/50 pl-3">
+                            Nhóm mang lại sự năng động cho đô thị về đêm, là nguồn lao động trẻ cho công nghiệp và dịch vụ.
+                        </p>
+                        <div class="space-y-3 text-sm text-gray-400 leading-relaxed">
+                            <p><strong class="text-white">Tài chính:</strong> Thu nhập khởi điểm. Tích lũy thấp, hay dùng thẻ tín dụng, mua trước trả sau.</p>
+                            <p><strong class="text-white">Hành vi:</strong> Ưu tiên trải nghiệm YOLO. Thích giao hàng, cafe làm việc, tiện lợi 24/7.</p>
+                            <p><strong class="text-white">Nhu cầu nổi bật:</strong> Căn hộ studio thuê rẻ, xe buýt nội khu, phố đi bộ, phòng gym.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group 3: 26-40 -->
+                <div class="premium-glass rounded-3xl overflow-hidden border border-white/10 shadow-lg flex flex-col md:flex-row bg-[#050505]">
+                    <div class="md:w-2/5">
+                        <img src="https://images.pexels.com/photos/1128318/pexels-photo-1128318.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Millennials" class="w-full h-full object-cover min-h-[300px]">
+                    </div>
+                    <div class="md:w-3/5 p-8 flex flex-col justify-center">
+                        <h4 class="font-serif text-2xl md:text-3xl text-purple-soft mb-2">Nhóm 26 - 40 tuổi: Millennials - Trụ cột</h4>
+                        <span class="inline-block bg-purple-soft/20 text-purple-soft text-xs px-3 py-1 rounded-full mb-6 w-fit font-bold tracking-widest">40% | 20.000 NGƯỜI</span>
+                        
+                        <p class="text-sm text-gray-300 mb-4 italic border-l-2 border-purple-soft/50 pl-3">
+                            "Trái tim" của hệ sinh thái, tiêu dùng mạnh tay nhất, quyết định sự thành bại của mảng thương mại.
+                        </p>
+                        <div class="space-y-3 text-sm text-gray-400 leading-relaxed">
+                            <p><strong class="text-white">Tài chính:</strong> Thu nhập tăng tốc nhưng áp lực trả góp nhà/xe đạt đỉnh.</p>
+                            <p><strong class="text-white">Hành vi:</strong> Mua sắm có kế hoạch, mua tạp hóa số lượng lớn cuối tuần. Sẵn sàng chi cao cho sức khỏe gia đình.</p>
+                            <p><strong class="text-white">Nhu cầu nổi bật:</strong> Căn hộ 2-3 PN gần trường/bệnh viện. Giải pháp bảo vệ tài chính (bảo hiểm).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group 4: 41-55 -->
+                <div class="premium-glass rounded-3xl overflow-hidden border border-white/10 shadow-lg flex flex-col md:flex-row-reverse bg-[#050505]">
+                    <div class="md:w-2/5">
+                        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Gen X" class="w-full h-full object-cover min-h-[300px]">
+                    </div>
+                    <div class="md:w-3/5 p-8 flex flex-col justify-center">
+                        <h4 class="font-serif text-2xl md:text-3xl text-amber-soft mb-2">Nhóm 41 - 55 tuổi: Gen X - Quản lý</h4>
+                        <span class="inline-block bg-amber-soft/20 text-amber-soft text-xs px-3 py-1 rounded-full mb-6 w-fit font-bold tracking-widest">15% | 7.500 NGƯỜI</span>
+                        
+                        <p class="text-sm text-gray-300 mb-4 italic border-l-2 border-amber-soft/50 pl-3">
+                            Nhóm định hình "đẳng cấp" cho khu đô thị, tạo việc làm và mua bất động sản cao cấp.
+                        </p>
+                        <div class="space-y-3 text-sm text-gray-400 leading-relaxed">
+                            <p><strong class="text-white">Tài chính:</strong> Giai đoạn hoàng kim. Dòng tiền chuyển dịch từ tiêu dùng sang đầu tư BĐS và hưu trí.</p>
+                            <p><strong class="text-white">Hành vi:</strong> Đòi hỏi riêng tư, chất lượng hoàn hảo. Không thích sự xô bồ.</p>
+                            <p><strong class="text-white">Nhu cầu nổi bật:</strong> Biệt thự, Shophouse. Tầm soát chuyên sâu, sân golf, clubhouse.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group 5: 55+ -->
+                <div class="premium-glass rounded-3xl overflow-hidden border border-white/10 shadow-lg flex flex-col md:flex-row bg-[#050505]">
+                    <div class="md:w-2/5">
+                        <img src="https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Hưu trí" class="w-full h-full object-cover min-h-[300px]">
+                    </div>
+                    <div class="md:w-3/5 p-8 flex flex-col justify-center">
+                        <h4 class="font-serif text-2xl md:text-3xl text-rose-soft mb-2">Nhóm Trên 55 tuổi: Seniors - Hưu trí</h4>
+                        <span class="inline-block bg-rose-soft/20 text-rose-soft text-xs px-3 py-1 rounded-full mb-6 w-fit font-bold tracking-widest">5% | 2.500 NGƯỜI</span>
+                        
+                        <p class="text-sm text-gray-300 mb-4 italic border-l-2 border-rose-soft/50 pl-3">
+                            Nhóm này mang lại chiều sâu văn hóa và sự bình yên cho khu đô thị.
+                        </p>
+                        <div class="space-y-3 text-sm text-gray-400 leading-relaxed">
+                            <p><strong class="text-white">Tài chính:</strong> Dựa vào lương hưu hoặc chu cấp. Dòng tiền ổn định nhưng ít tăng trưởng.</p>
+                            <p><strong class="text-white">Hành vi:</strong> Thắt chặt chi tiêu ngẫu hứng, ưu tiên y tế tại gia, mua sắm truyền thống.</p>
+                            <p><strong class="text-white">Nhu cầu nổi bật:</strong> Môi trường sống xanh yên tĩnh. Đường bằng phẳng bóng mát, phòng khám lão khoa gần nhà.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Deep Dive Breakdown - Separated Layout -->
+            <div class="pt-10">
+                <div class="text-center mb-10">
+                    <h3 class="font-serif text-3xl text-white mb-3">Phân nhóm theo Lực lượng dân cư</h3>
+                    <p class="text-gray-400 text-sm max-w-2xl mx-auto">Dựa trên dữ liệu 37.500 người (độ tuổi lao động 18-55), chia thành 3 nhóm cốt lõi:</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Nhom 1 -->
+                    <div class="premium-glass rounded-2xl overflow-hidden flex flex-col border border-white/10 shadow-lg bg-[#050505]">
+                        <img src="https://images.pexels.com/photos/1125136/pexels-photo-1125136.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Nhóm 1" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow border-t border-white/5">
+                            <div class="text-xs text-baby-blue uppercase tracking-widest mb-1 font-bold">Nhóm 1 (~50%)</div>
+                            <h4 class="font-serif text-2xl text-white mb-4">Lực lượng Sản xuất</h4>
+                            <ul class="text-sm text-gray-400 space-y-3 font-sans">
+                                <li><strong class="text-white">Gia đình:</strong> 60% Độc thân; 40% GĐ trẻ ở nhà xã hội.</li>
+                                <li><strong class="text-baby-blue">Hành vi:</strong> Căn hộ nhỏ. Đi siêu thị bình dân. Di chuyển xe máy.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Nhom 2 -->
+                    <div class="premium-glass rounded-2xl overflow-hidden flex flex-col border border-white/10 shadow-lg bg-[#050505]">
+                        <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Nhóm 2" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow border-t border-white/5">
+                            <div class="text-xs text-pastel-pink uppercase tracking-widest mb-1 font-bold">Nhóm 2 (~35%)</div>
+                            <h4 class="font-serif text-2xl text-white mb-4">Lực lượng Trí thức</h4>
+                            <ul class="text-sm text-gray-400 space-y-3 font-sans">
+                                <li><strong class="text-white">Gia đình:</strong> 80% hạt nhân (vợ chồng + con nhỏ).</li>
+                                <li><strong class="text-pastel-pink">Hành vi:</strong> Căn hộ tầm trung, nợ ngân hàng. Cần trường học, TTTM.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Nhom 3 -->
+                    <div class="premium-glass rounded-2xl overflow-hidden flex flex-col border border-white/10 shadow-lg bg-[#050505]">
+                        <img src="https://images.pexels.com/photos/225011/pexels-photo-225011.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Nhóm 3" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow border-t border-white/5">
+                            <div class="text-xs text-emerald-soft uppercase tracking-widest mb-1 font-bold">Nhóm 3 (~15%)</div>
+                            <h4 class="font-serif text-2xl text-white mb-4">Lực lượng Tinh hoa</h4>
+                            <ul class="text-sm text-gray-400 space-y-3 font-sans">
+                                <li><strong class="text-white">Gia đình:</strong> Đa thế hệ, không gian biệt lập.</li>
+                                <li><strong class="text-emerald-soft">Hành vi:</strong> Biệt thự, Penthouse. Chi trả cao cho y tế quốc tế, sân golf.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline 24h - Separated Layout -->
+            <div class="text-center mb-10 mt-16">
+                <h3 class="font-serif text-3xl text-white mb-2">Mô phỏng Dòng thời gian Hệ sinh thái</h3>
+                <p class="text-gray-400 text-sm">Một ngày điển hình để quy hoạch hạ tầng và dịch vụ.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="premium-glass rounded-2xl overflow-hidden flex flex-col shadow-lg border border-white/10 bg-[#050505]">
+                    <img src="https://images.pexels.com/photos/373912/pexels-photo-373912.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Morning" class="w-full h-40 object-cover">
+                    <div class="p-5 flex-grow border-t border-white/10">
+                        <div class="text-baby-blue font-serif text-xl mb-2">06:00 - 08:00</div>
+                        <p class="text-xs text-gray-400 leading-relaxed">Cao điểm dịch chuyển. 18k công nhân đến KCN. 10k trẻ em đến trường.</p>
+                    </div>
+                </div>
+                <div class="premium-glass rounded-2xl overflow-hidden flex flex-col shadow-lg border border-white/10 bg-[#050505]">
+                    <img src="https://images.pexels.com/photos/3184311/pexels-photo-3184311.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Midday" class="w-full h-40 object-cover">
+                    <div class="p-5 flex-grow border-t border-white/10">
+                        <div class="text-white font-serif text-xl mb-2">09:00 - 16:00</div>
+                        <p class="text-xs text-gray-400 leading-relaxed">Khu dân cư tĩnh lặng. Shophouse/Cafe cho Freelancer. Siêu thị đón hưu trí.</p>
+                    </div>
+                </div>
+                <div class="premium-glass rounded-2xl overflow-hidden flex flex-col shadow-lg border border-white/10 bg-[#050505]">
+                    <img src="https://images.pexels.com/photos/3171837/pexels-photo-3171837.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Evening" class="w-full h-40 object-cover">
+                    <div class="p-5 flex-grow border-t border-white/10">
+                        <div class="text-pastel-pink font-serif text-xl mb-2">17:00 - 19:00</div>
+                        <p class="text-xs text-gray-400 leading-relaxed">Cao điểm tan tầm. Công viên, sân thể thao và siêu thị bắt đầu kín người.</p>
+                    </div>
+                </div>
+                <div class="premium-glass rounded-2xl overflow-hidden flex flex-col shadow-lg border border-white/10 bg-[#050505]">
+                    <img src="https://images.pexels.com/photos/1115090/pexels-photo-1115090.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Night" class="w-full h-40 object-cover">
+                    <div class="p-5 flex-grow border-t border-white/10">
+                        <div class="text-purple-soft font-serif text-xl mb-2">20:00 - 22:00</div>
+                        <p class="text-xs text-gray-400 leading-relaxed">Thương mại dịch vụ, rạp chiếu phim, phố đi bộ thu hút Gen Z và Gia đình trẻ.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. INTERACTIVE DASHBOARD: POPULATION SIMULATOR -->
+        <section id="sim" class="scroll-mt-28 mt-32">
+            <div class="premium-glass rounded-[3rem] p-8 md:p-12 border border-white/10 shadow-2xl relative overflow-hidden">
+                <div class="text-center mb-12 relative z-10">
+                    <h2 class="font-serif text-3xl md:text-5xl text-white mb-4">Bảng Điều Khiển Tương Tác Cấu Trúc</h2>
+                    <p class="font-sans text-gray-400 max-w-2xl mx-auto">Thay đổi giả định quy mô dân số dự án để xem hệ thống tự động tính toán lại quy mô tệp khách hàng tiềm năng.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 font-sans relative z-10">
+                    <div class="lg:col-span-5 space-y-8 bg-[#050505]/80 p-8 rounded-3xl border border-white/10 shadow-lg">
+                        <div>
+                            <div class="flex justify-between items-end mb-4">
+                                <label class="text-sm text-baby-blue font-semibold uppercase tracking-wider">Tổng Quy Mô Dân Số</label>
+                                <span class="font-serif text-4xl text-white font-bold" id="valTotalPop">50,000</span>
+                            </div>
+                            <input type="range" id="sliderPop" min="10000" max="100000" step="1000" value="50000" class="w-full" oninput="runSimulation()">
+                            <div class="flex justify-between text-xs text-gray-500 mt-2">
+                                <span>10k</span>
+                                <span>100k</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-white/10">
+                            <h4 class="text-sm text-pastel-pink font-semibold uppercase tracking-wider mb-6">Tệp Khách Hàng (18-55 tuổi)</h4>
+                            <div class="space-y-4">
+                                <div class="flex justify-between items-center p-3 bg-white/5 rounded-xl border border-white/5">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-3 h-3 rounded-full bg-[#00e5ff]"></div>
+                                        <span class="text-sm text-gray-300">Công Nhân (Nhóm 1)</span>
+                                    </div>
+                                    <span class="font-mono text-white font-medium text-lg" id="valGroup1">18,750</span>
+                                </div>
+                                <div class="flex justify-between items-center p-3 bg-white/5 rounded-xl border border-white/5">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-3 h-3 rounded-full bg-[#ff2a93]"></div>
+                                        <span class="text-sm text-gray-300">Trí thức (Nhóm 2)</span>
+                                    </div>
+                                    <span class="font-mono text-white font-medium text-lg" id="valGroup2">13,125</span>
+                                </div>
+                                <div class="flex justify-between items-center p-3 bg-white/5 rounded-xl border border-white/5">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-3 h-3 rounded-full bg-[#34d399]"></div>
+                                        <span class="text-sm text-gray-300">Tinh hoa (Nhóm 3)</span>
+                                    </div>
+                                    <span class="font-mono text-white font-medium text-lg" id="valGroup3">5,625</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8 bg-[#050505]/40 p-6 rounded-3xl border border-white/5">
+                        <div class="flex flex-col items-center w-full">
+                            <h4 class="text-sm text-gray-300 font-medium mb-4 text-center">Phân bổ Thế hệ</h4>
+                            <div class="chart-container w-full" style="height: 250px;">
+                                <canvas id="simAgeChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center w-full">
+                            <h4 class="text-sm text-gray-300 font-medium mb-4 text-center">Quy mô Nhóm KH</h4>
+                            <div class="chart-container w-full" style="height: 250px;">
+                                <canvas id="simGroupChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. PERSONAS - INSURANCE SOLUTIONS (SEPARATED LAYOUT) -->
+        <section id="solutions" class="space-y-16 scroll-mt-28 mt-32">
+            <div class="flex flex-col items-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl text-white mb-4">Chiến Lược Sản Phẩm Theo Phân Khúc</h2>
+                <div class="w-16 h-[1px] bg-gradient-to-r from-pastel-pink to-baby-blue"></div>
+            </div>
+
+            <!-- Group 1 Insurance -->
+            <div class="premium-glass rounded-[2.5rem] p-8 md:p-12 border border-white/10 shadow-2xl bg-[#050505]/60">
+                <div class="flex flex-col md:flex-row items-start md:items-center border-b border-white/10 pb-6 mb-8 gap-4">
+                    <div>
+                        <h3 class="font-serif text-3xl text-baby-blue mb-2">1. Nhóm Lao Động Trẻ Công Nghiệp</h3>
+                        <p class="text-sm text-gray-400">Dễ bị tổn thương tài chính nhất do quỹ dự phòng mỏng.</p>
+                    </div>
+                    <div class="bg-baby-blue/10 px-4 py-2 rounded-full text-xs text-baby-blue border border-baby-blue/30 uppercase tracking-widest font-semibold">Chi phí thấp • Bồi thường nhanh</div>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                    <div class="lg:col-span-5 space-y-6">
+                        <img src="https://images.pexels.com/photos/1125136/pexels-photo-1125136.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Lao động trẻ" class="w-full h-64 object-cover rounded-2xl border border-white/10">
+                        <div>
+                            <h4 class="text-sm font-semibold text-white uppercase tracking-widest mb-3">Phân tích rủi ro:</h4>
+                            <ul class="space-y-2 text-sm text-gray-400 leading-relaxed">
+                                <li><strong class="text-white">Rủi ro tai nạn cao:</strong> Môi trường nhà máy & di chuyển xe máy.</li>
+                                <li><strong class="text-white">Quỹ dự phòng = 0:</strong> Ốm đau dễ dẫn đến vòng xoáy nợ nần.</li>
+                                <li><strong class="text-white">Mất thu nhập:</strong> Nghỉ làm ngày nào mất dòng tiền ngày đó.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:col-span-7 flex flex-col gap-6 justify-center">
+                        <div class="bg-[#050505] rounded-2xl border border-white/10 overflow-hidden flex flex-col sm:flex-row shadow-lg">
+                            <div class="sm:w-2/5 h-48 sm:h-auto">
+                                <img src="https://images.pexels.com/photos/48148/document-agreement-documents-sign-48148.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Bảo hiểm vi mô" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-6 sm:w-3/5 flex flex-col justify-center">
+                                <h5 class="text-white font-serif text-xl mb-3">Bảo hiểm Vi mô (Microinsurance)</h5>
+                                <p class="text-xs text-gray-400 mb-2"><strong class="text-baby-blue">Đặc tính:</strong> Phí cực nhỏ (đóng theo tháng), thẩm định đơn giản.</p>
+                                <p class="text-xs text-gray-400"><strong class="text-baby-blue">Tác dụng:</strong> Khiên bảo vệ cơ bản trước tử vong/thương tật.</p>
+                            </div>
+                        </div>
+                        <div class="bg-[#050505] rounded-2xl border border-white/10 overflow-hidden flex flex-col sm:flex-row shadow-lg">
+                            <div class="sm:w-2/5 h-48 sm:h-auto">
+                                <img src="https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Trợ cấp nằm viện" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-6 sm:w-3/5 flex flex-col justify-center">
+                                <h5 class="text-white font-serif text-xl mb-3">Trợ cấp nằm viện & Tai nạn</h5>
+                                <p class="text-xs text-gray-400 mb-2"><strong class="text-baby-blue">Đặc tính:</strong> Chi trả tiền mặt cố định mỗi ngày nằm viện.</p>
+                                <p class="text-xs text-gray-400"><strong class="text-baby-blue">Tác dụng:</strong> Thay thế thu nhập trong những ngày ốm đau.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Group 2 Insurance -->
+            <div class="premium-glass rounded-[2.5rem] p-8 md:p-12 border border-white/10 shadow-2xl bg-[#050505]/60">
+                <div class="flex flex-col md:flex-row items-start md:items-center border-b border-white/10 pb-6 mb-8 gap-4">
+                    <div>
+                        <h3 class="font-serif text-3xl text-pastel-pink mb-2">2. Nhóm Gia Đình Trẻ Đô Thị</h3>
+                        <p class="text-sm text-gray-400">"Thế hệ bánh mì kẹp" gánh vác nợ tài sản và chi phí nuôi con.</p>
+                    </div>
+                    <div class="bg-pastel-pink/10 px-4 py-2 rounded-full text-xs text-pastel-pink border border-pastel-pink/30 uppercase tracking-widest font-semibold">Bảo vệ Trụ cột • Y tế Gia đình</div>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                    <div class="lg:col-span-5 space-y-6">
+                        <img src="https://images.pexels.com/photos/1128318/pexels-photo-1128318.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Gia đình trẻ" class="w-full h-64 object-cover rounded-2xl border border-white/10">
+                        <div>
+                            <h4 class="text-sm font-semibold text-white uppercase tracking-widest mb-3">Phân tích rủi ro:</h4>
+                            <ul class="space-y-2 text-sm text-gray-400 leading-relaxed">
+                                <li><strong class="text-white">Sụp đổ tài chính:</strong> Vợ/chồng mất lao động dẫn đến ngân hàng siết nợ nhà/xe.</li>
+                                <li><strong class="text-white">Lỗ hổng y tế nhi khoa:</strong> Trẻ con dễ ốm, viện phí tư nhân phá vỡ kế hoạch chi tiêu.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:col-span-7 flex flex-col gap-6 justify-center">
+                        <div class="bg-[#050505] rounded-2xl border border-white/10 overflow-hidden flex flex-col sm:flex-row shadow-lg">
+                            <div class="sm:w-2/5 h-48 sm:h-auto">
+                                <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Nhân thọ hỗn hợp" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-6 sm:w-3/5 flex flex-col justify-center">
+                                <h5 class="text-white font-serif text-xl mb-3">Nhân thọ Hỗn hợp</h5>
+                                <p class="text-xs text-gray-400 mb-2"><strong class="text-pastel-pink">Đặc tính:</strong> Mệnh giá sinh mạng lớn kèm giá trị hoàn lại.</p>
+                                <p class="text-xs text-gray-400"><strong class="text-pastel-pink">Tác dụng:</strong> Giữ được nhà, bảo vệ quỹ học vấn cho con.</p>
+                            </div>
+                        </div>
+                        <div class="bg-[#050505] rounded-2xl border border-white/10 overflow-hidden flex flex-col sm:flex-row shadow-lg">
+                            <div class="sm:w-2/5 h-48 sm:h-auto">
+                                <img src="https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Thẻ CSSK" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-6 sm:w-3/5 flex flex-col justify-center">
+                                <h5 class="text-white font-serif text-xl mb-3">Thẻ CSSK Gia đình</h5>
+                                <p class="text-xs text-gray-400 mb-2"><strong class="text-pastel-pink">Đặc tính:</strong> Bảo lãnh nội/ngoại trú BV tư nhân/quốc tế.</p>
+                                <p class="text-xs text-gray-400"><strong class="text-pastel-pink">Tác dụng:</strong> An tâm chọn dịch vụ y tế tốt nhất cho con.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Group 3 Insurance -->
+            <div class="premium-glass rounded-[2.5rem] p-8 md:p-12 border border-white/10 shadow-2xl bg-[#050505]/60">
+                <div class="flex flex-col md:flex-row items-start md:items-center border-b border-white/10 pb-6 mb-8 gap-4">
+                    <div>
+                        <h3 class="font-serif text-3xl text-emerald-soft mb-2">3. Cấp Quản Lý / Chủ Doanh Nghiệp</h3>
+                        <p class="text-sm text-gray-400">Giai đoạn bảo vệ tài sản, hưởng thụ và chuyển giao sự nghiệp.</p>
+                    </div>
+                    <div class="bg-emerald-soft/10 px-4 py-2 rounded-full text-xs text-emerald-soft border border-emerald-soft/30 uppercase tracking-widest font-semibold">Hạn mức lớn • Màng lọc Pháp lý</div>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                    <div class="lg:col-span-5 space-y-6">
+                        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Quản lý cao cấp" class="w-full h-64 object-cover rounded-2xl border border-white/10">
+                        <div>
+                            <h4 class="text-sm font-semibold text-white uppercase tracking-widest mb-3">Phân tích rủi ro:</h4>
+                            <ul class="space-y-2 text-sm text-gray-400 leading-relaxed">
+                                <li><strong class="text-white">Bệnh lý nghiêm trọng:</strong> Áp lực và tuổi 45+ làm tăng rủi ro đột quỵ.</li>
+                                <li><strong class="text-white">Rủi ro pháp lý:</strong> Kiện tụng ảnh hưởng tài sản cá nhân.</li>
+                                <li><strong class="text-white">Nhu cầu y tế:</strong> Cần tiếp cận y tế xuyên biên giới.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:col-span-7 flex flex-col gap-6 justify-center">
+                        <div class="bg-[#050505] rounded-2xl border border-white/10 overflow-hidden flex flex-col sm:flex-row shadow-lg">
+                            <div class="sm:w-2/5 h-48 sm:h-auto">
+                                <img src="https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Hưu trí" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-6 sm:w-3/5 flex flex-col justify-center">
+                                <h5 class="text-white font-serif text-xl mb-3">Hưu trí & Bệnh lý nghiêm trọng</h5>
+                                <p class="text-xs text-gray-400 mb-2"><strong class="text-emerald-soft">Đặc tính:</strong> Chi trả tiền mặt một lần khổng lồ.</p>
+                                <p class="text-xs text-gray-400"><strong class="text-emerald-soft">Tác dụng:</strong> Chi trả y tế nước ngoài, tạo dòng tiền hưu trí.</p>
+                            </div>
+                        </div>
+                        <div class="bg-[#050505] rounded-2xl border border-white/10 overflow-hidden flex flex-col sm:flex-row shadow-lg">
+                            <div class="sm:w-2/5 h-48 sm:h-auto">
+                                <img src="https://images.pexels.com/photos/48148/document-agreement-documents-sign-48148.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Bảo hiểm D&O" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-6 sm:w-3/5 flex flex-col justify-center">
+                                <h5 class="text-white font-serif text-xl mb-3">Bảo hiểm Trách nhiệm Giám đốc</h5>
+                                <p class="text-xs text-gray-400 mb-2"><strong class="text-emerald-soft">Đặc tính:</strong> Bồi thường chi phí kiện tụng.</p>
+                                <p class="text-xs text-gray-400"><strong class="text-emerald-soft">Tác dụng:</strong> Khiên bảo vệ tài sản cá nhân của lãnh đạo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. EXPERT PRODUCT BUILDER -->
+        <section id="builder" class="mt-32 scroll-mt-28">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-4xl md:text-5xl text-white mb-6">Kiến Tạo Gói "AN SINH 360"</h2>
+                <p class="font-sans text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                    Mô phỏng cấu trúc 4 phân hệ bảo vệ hệ sinh thái B2B2C. Hãy chọn để tính toán Coverage Index.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 font-sans">
+                <div class="lg:col-span-8 space-y-6">
+                    <label class="block cursor-pointer group">
+                        <input type="checkbox" class="sr-only pkg-checkbox" value="25" onchange="updatePremiumScore()">
+                        <div class="premium-glass rounded-2xl border border-white/10 transition-all duration-300 p-6 flex items-start gap-4 bg-[#050505]/60">
+                            <div class="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center text-[10px] text-transparent transition-all check-indicator flex-shrink-0 mt-1">✔</div>
+                            <div>
+                                <h4 class="font-serif text-2xl text-pastel-pink mb-1">I. Phân hệ Y Tế Nhóm Doanh Nghiệp</h4>
+                                <p class="text-xs text-gray-400 mb-3"><strong class="text-white">Kỹ thuật:</strong> Nội trú cơ bản 100tr/năm + Nha khoa/Thai sản. Co-payment 80/20.</p>
+                                <p class="text-xs text-gray-400"><strong class="text-pastel-pink">B2B Value:</strong> Công cụ Retention (giữ người) số 1 cho các doanh nghiệp FDI tại KCN.</p>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="block cursor-pointer group">
+                        <input type="checkbox" class="sr-only pkg-checkbox" value="25" onchange="updatePremiumScore()">
+                        <div class="premium-glass rounded-2xl border border-white/10 transition-all duration-300 p-6 flex items-start gap-4 bg-[#050505]/60">
+                            <div class="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center text-[10px] text-transparent transition-all check-indicator flex-shrink-0 mt-1">✔</div>
+                            <div>
+                                <h4 class="font-serif text-2xl text-baby-blue mb-1">II. Phân hệ An Sinh Cốt Lõi (Term Life)</h4>
+                                <p class="text-xs text-gray-400 mb-3"><strong class="text-white">Kỹ thuật:</strong> Sum Assured = 36 tháng lương + Rider 36 Bệnh hiểm nghèo.</p>
+                                <p class="text-xs text-gray-400"><strong class="text-baby-blue">B2C Value:</strong> Phòng tránh phá sản hộ gia đình, đảm bảo an sinh xã hội vi mô đô thị.</p>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="block cursor-pointer group">
+                        <input type="checkbox" class="sr-only pkg-checkbox" value="25" onchange="updatePremiumScore()">
+                        <div class="premium-glass rounded-2xl border border-white/10 transition-all duration-300 p-6 flex items-start gap-4 bg-[#050505]/60">
+                            <div class="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center text-[10px] text-transparent transition-all check-indicator flex-shrink-0 mt-1">✔</div>
+                            <div>
+                                <h4 class="font-serif text-2xl text-white mb-1">III. Phân hệ Bảo Vệ Tài Sản & Gián Đoạn</h4>
+                                <p class="text-xs text-gray-400 mb-3"><strong class="text-white">Kỹ thuật:</strong> All-Risk (PAR) + Điều khoản Business Interruption (BI) đền bù lợi nhuận mất mát.</p>
+                                <p class="text-xs text-gray-400"><strong class="text-gray-300">B2B Value:</strong> Đảm bảo chuỗi cung ứng KCN không sụp đổ sau thảm họa cháy nổ.</p>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="block cursor-pointer group">
+                        <input type="checkbox" class="sr-only pkg-checkbox" value="25" onchange="updatePremiumScore()">
+                        <div class="premium-glass rounded-2xl border border-white/10 transition-all duration-300 p-6 flex items-start gap-4 bg-[#050505]/60">
+                            <div class="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center text-[10px] text-transparent transition-all check-indicator flex-shrink-0 mt-1">✔</div>
+                            <div>
+                                <h4 class="font-serif text-2xl text-gray-300 mb-1">IV. Phân hệ Bọc Lót Trách Nhiệm Dân Sự</h4>
+                                <p class="text-xs text-gray-400 mb-3"><strong class="text-white">Kỹ thuật:</strong> TNDS Chủ lao động + TNDS Công cộng khu Dịch vụ.</p>
+                                <p class="text-xs text-gray-400"><strong class="text-gray-400">B2B Value:</strong> Chuyển giao rủi ro kiện tụng đền bù cho bên thứ 3 sang công ty bảo hiểm.</p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="lg:col-span-4 lg:sticky top-32 h-fit">
+                    <div class="premium-glass rounded-[2rem] p-8 flex flex-col items-center justify-center min-h-[450px] bg-[#050505]/60">
+                        <p class="text-[10px] uppercase tracking-[0.2em] text-gray-400 mb-6">Coverage Index</p>
+                        <div class="w-40 h-40 rounded-full flex items-center justify-center mb-8 relative border border-white/5">
+                            <div id="gaugeRing" class="absolute inset-0 rounded-full transition-all duration-1000 ease-out" style="background: conic-gradient(rgba(255,255,255,0.05) 100%, transparent 0);"></div>
+                            <div class="absolute inset-2 bg-blackbg rounded-full flex flex-col items-center justify-center z-10 premium-glass border-0">
+                                <div class="flex items-start">
+                                    <span id="scoreDisplay" class="font-serif text-6xl font-normal text-white">0</span>
+                                    <span class="text-xl text-gray-500 mt-2">%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center w-full mb-4">
+                            <h3 id="statusTitle" class="font-serif text-xl text-white mb-2 transition-colors">Trạng thái: Chưa xác định</h3>
+                        </div>
+                        <button onclick="alert('Đã lưu cấu trúc gói!')" class="w-full py-4 rounded-xl border border-white/10 bg-[#00e5ff] text-blackbg hover:bg-white font-sans text-sm font-bold tracking-wide transition-all shadow-[0_0_15px_rgba(0,229,255,0.5)]">
+                            GHI NHẬN CẤU TRÚC
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CUSTOMER KYC PROFILING -->
+        <section id="customer-profile" class="space-y-16 scroll-mt-28 mt-32">
+            <div class="text-center mb-16 relative z-10">
+                <p class="font-sans text-pastel-pink text-sm uppercase tracking-[0.3em] mb-2 drop-shadow-[0_0_10px_rgba(255,42,147,0.5)]">Bức Tranh Dữ Liệu</p>
+                <h2 class="font-serif text-4xl md:text-5xl text-white mb-6">Phân Tích Nhu Cầu <br> Khách Hàng (KYC)</h2>
+                <div class="w-16 h-[1px] bg-gradient-to-r from-pastel-pink to-baby-blue mx-auto mb-6"></div>
+                <p class="font-sans text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                    Để thiết kế một hợp đồng bảo hiểm cá nhân hóa, hệ thống cần phác họa chân dung đa chiều của khách hàng dựa trên 4 trụ cột cốt lõi. Hãy hoàn thiện các thông số dưới đây.
+                </p>
+            </div>
+
+            <!-- Central Diagram -->
+            <div class="relative w-full max-w-4xl mx-auto h-[450px] md:h-[500px] my-12 flex items-center justify-center">
+                <div class="relative z-20 w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-[#050505] shadow-[0_0_40px_rgba(0,229,255,0.6)] flex items-center justify-center bg-blackbg overflow-hidden">
+                    <img src="https://images.pexels.com/photos/3184611/pexels-photo-3184611.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Customer" class="w-full h-full object-cover">
+                </div>
+
+                <div class="absolute top-4 md:top-12 left-4 md:left-24 z-10 flex flex-col items-center">
+                    <div class="w-14 h-14 md:w-16 md:h-16 rounded-full premium-glass flex items-center justify-center border border-baby-blue/50 text-2xl shadow-[0_0_20px_rgba(0,229,255,0.3)] mb-2 bg-[#050505]/80">💰</div>
+                    <span class="text-xs md:text-sm font-semibold text-baby-blue bg-[#050505]/80 px-3 py-1 rounded-full border border-white/5">1. Tài chính</span>
+                </div>
+                <div class="absolute top-4 md:top-12 right-4 md:right-24 z-10 flex flex-col items-center">
+                    <div class="w-14 h-14 md:w-16 md:h-16 rounded-full premium-glass flex items-center justify-center border border-purple-soft/50 text-2xl shadow-[0_0_20px_rgba(167,139,250,0.3)] mb-2 bg-[#050505]/80">👨‍👩‍👧‍👦</div>
+                    <span class="text-xs md:text-sm font-semibold text-purple-soft bg-[#050505]/80 px-3 py-1 rounded-full border border-white/5">2. Nhân khẩu</span>
+                </div>
+                <div class="absolute bottom-4 md:bottom-12 left-4 md:left-24 z-10 flex flex-col items-center">
+                    <div class="w-14 h-14 md:w-16 md:h-16 rounded-full premium-glass flex items-center justify-center border border-emerald-soft/50 text-2xl shadow-[0_0_20px_rgba(52,211,153,0.3)] mb-2 bg-[#050505]/80">🏥</div>
+                    <span class="text-xs md:text-sm font-semibold text-emerald-soft bg-[#050505]/80 px-3 py-1 rounded-full border border-white/5">3. Sức khỏe</span>
+                </div>
+                <div class="absolute bottom-4 md:bottom-12 right-4 md:right-24 z-10 flex flex-col items-center">
+                    <div class="w-14 h-14 md:w-16 md:h-16 rounded-full premium-glass flex items-center justify-center border border-pastel-pink/50 text-2xl shadow-[0_0_20px_rgba(255,42,147,0.3)] mb-2 bg-[#050505]/80">🎯</div>
+                    <span class="text-xs md:text-sm font-semibold text-pastel-pink bg-[#050505]/80 px-3 py-1 rounded-full border border-white/5">4. Mục tiêu</span>
+                </div>
+
+                <svg class="absolute inset-0 w-full h-full pointer-events-none z-0" style="opacity: 0.2;">
+                    <line x1="50%" y1="50%" x2="25%" y2="25%" stroke="#00e5ff" stroke-width="2" stroke-dasharray="5,5" />
+                    <line x1="50%" y1="50%" x2="75%" y2="25%" stroke="#a78bfa" stroke-width="2" stroke-dasharray="5,5" />
+                    <line x1="50%" y1="50%" x2="25%" y2="75%" stroke="#34d399" stroke-width="2" stroke-dasharray="5,5" />
+                    <line x1="50%" y1="50%" x2="75%" y2="75%" stroke="#ff2a93" stroke-width="2" stroke-dasharray="5,5" />
+                </svg>
+            </div>
+
+            <!-- KYC Form -->
+            <div class="premium-glass rounded-[2.5rem] p-6 md:p-12 border border-white/10 shadow-2xl relative z-10 bg-[#050505]/80">
+                <form onsubmit="event.preventDefault(); alert('Dữ liệu đã được hệ thống ghi nhận để thiết kế hợp đồng.');" class="space-y-16">
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                        <div class="lg:col-span-5 space-y-4">
+                            <h3 class="font-serif text-2xl text-baby-blue flex items-center gap-2"><span class="text-3xl">💰</span> 1. Bức tranh Tài chính</h3>
+                            <p class="text-sm text-white italic font-light bg-baby-blue/10 border-l-2 border-baby-blue p-3 rounded-r-lg">Đây là dữ liệu quan trọng nhất để trả lời câu hỏi: Khách hàng cần bảo vệ bao nhiêu tiền?</p>
+                            <ul class="text-sm text-gray-400 space-y-3 leading-relaxed">
+                                <li><strong class="text-baby-blue">Thu nhập:</strong> Phân rõ đâu là chủ động và thụ động để xác định ngân sách đóng phí (chỉ nên trích 8% - 15%).</li>
+                                <li><strong class="text-baby-blue">Chi phí sinh hoạt tối thiểu:</strong> Tính toán số tiền gia đình cần duy trì mức sống trong 5-10 năm tới.</li>
+                                <li><strong class="text-baby-blue">Các khoản nợ hiện tại:</strong> Bảo hiểm nhân thọ cần gánh được nợ để tránh ngân hàng siết tài sản.</li>
+                                <li><strong class="text-baby-blue">Tài sản dự phòng:</strong> Khấu trừ lại mức trách nhiệm cần bảo vệ, tránh mua thừa.</li>
+                            </ul>
+                        </div>
+                        <div class="lg:col-span-7 bg-[#050505]/40 p-6 md:p-8 rounded-2xl border border-white/5 space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs text-gray-400 mb-2 uppercase tracking-widest">Thu nhập Chủ động (VND/Tháng)</label>
+                                    <input type="number" class="w-full glass-input p-3 rounded-lg text-sm" placeholder="VD: 25,000,000">
+                                </div>
+                                <div>
+                                    <label class="block text-xs text-gray-400 mb-2 uppercase tracking-widest">Thu nhập Thụ động (VND/Tháng)</label>
+                                    <input type="number" class="w-full glass-input p-3 rounded-lg text-sm" placeholder="VD: 5,000,000">
+                                </div>
+                                <div>
+                                    <label class="block text-xs text-gray-400 mb-2 uppercase tracking-widest">Chi phí sinh hoạt tối thiểu/Tháng</label>
+                                    <input type="number" class="w-full glass-input p-3 rounded-lg text-sm" placeholder="VD: 15,000,000">
+                                </div>
+                                <div>
+                                    <label class="block text-xs text-gray-400 mb-2 uppercase tracking-widest">Tổng Dư Nợ hiện tại (Nhà/Xe)</label>
+                                    <input type="number" class="w-full glass-input p-3 rounded-lg text-sm" placeholder="VD: 1,500,000,000">
+                                </div>
+                                <div class="md:col-span-2">
+                                    <label class="block text-xs text-gray-400 mb-2 uppercase tracking-widest">Tài sản dự phòng thanh khoản nhanh</label>
+                                    <input type="text" class="w-full glass-input p-3 rounded-lg text-sm" placeholder="Sổ tiết kiệm, vàng, chứng khoán... (Ghi rõ ước tính giá trị)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                        <div class="lg:col-span-5 space-y-4">
+                            <h3 class="font-serif text-2xl text-purple-soft flex items-center gap-2"><span class="text-3xl">👨‍👩‍👧‍👦</span> 2. Nhân khẩu học & Gia đình</h3>
+                            <p class="text-sm text-white italic font-light bg-purple-soft/10 border-l-2 border-purple-soft p-3 rounded-r-lg">Dữ liệu này quyết định cấu trúc của hợp đồng.</p>
+                            <ul class="text-sm text-gray-400 space-y-3 leading-relaxed">
+                                <li><strong class="text-purple-soft">Tuổi và Giới tính:</strong> Yếu tố cơ bản quyết định tỷ lệ phí (Premium rate). Nam giới thường có phí cao hơn nữ.</li>
+                                <li><strong class="text-purple-soft">Tình trạng hôn nhân & Người phụ thuộc:</strong> Ai là người phụ thuộc lớn nhất? (Dùng để chọn "Người thụ hưởng" và thời gian cần bảo vệ, ví dụ: đến khi con út 18 tuổi).</li>
+                            </ul>
+                        </div>
+                        <div class="lg:col-span-7 bg-[#050505]/40 p-6 md:p-8 rounded-2xl border border-white/5 space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs text-gray-400 mb-2 uppercase tracking-widest">Độ tuổi</label>
+                                    <input type="number" class="w-full glass-input p-3 rounded-lg text-sm" placeholder="VD: 32">
+                                </div>
+                                <div>
+                                    <label class="block text-xs text-gray-400 mb-2 uppercase tracking-widest">Giới tính</label>
+                                    <select class="w-full glass-input p-3 rounded-lg text-sm bg-[#050505] appearance-none">
+                                        <option value="" disabled selected>Chọn giới tính</option>
+                                        <option value="Nam">Nam</option>
+                                        <option value="Nữ">Nữ</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs text-gray-400 mb-2 uppercase tracking-widest">Tình trạng hôn nhân</label>
+                                    <select class="w-full glass-input p-3 rounded-lg text-sm bg-[#050505] appearance-none">
+                                        <option value="" disabled selected>Chọn tình trạng</option>
+                                        <option value="Độc thân">Độc thân</option>
+                                        <option value="Đã kết hôn">Đã kết hôn</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs text-gray-400 mb-2 uppercase tracking-widest">Số người phụ thuộc</label>
+                                    <input type="number" class="w-full glass-input p-3 rounded-lg text-sm" placeholder="VD: 2">
+                                </div>
+                                <div class="md:col-span-2">
+                                    <label class="block text-xs text-gray-400 mb-2 uppercase tracking-widest">Chi tiết người phụ thuộc lớn nhất</label>
+                                    <input type="text" class="w-full glass-input p-3 rounded-lg text-sm" placeholder="VD: Con trai út 3 tuổi (cần bảo vệ đến năm 22 tuổi)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                        <div class="lg:col-span-5 space-y-4">
+                            <h3 class="font-serif text-2xl text-emerald-soft flex items-center gap-2"><span class="text-3xl">🏥</span> 3. Hồ sơ Sức khỏe & Rủi ro</h3>
+                            <p class="text-sm text-white italic font-light bg-emerald-soft/10 border-l-2 border-emerald-soft p-3 rounded-r-lg">Quyết định việc khách hàng có được mua bảo hiểm hay không và phí có bị tăng (chuẩn/dưới chuẩn).</p>
+                            <ul class="text-sm text-gray-400 space-y-3 leading-relaxed">
+                                <li><strong class="text-emerald-soft">Tiền sử y tế cá nhân và gia đình:</strong> Phẫu thuật, bệnh nền, di truyền.</li>
+                                <li><strong class="text-emerald-soft">Chiều cao, Cân nặng (BMI):</strong> Rủi ro béo phì/suy dinh dưỡng.</li>
+                                <li><strong class="text-emerald-soft">Nghề nghiệp hiện tại:</strong> Nhóm nghề càng cao, phí tai nạn và nhân thọ càng đắt.</li>
+                                <li><strong class="text-emerald-soft">Thói quen sinh hoạt:</strong> Hút thuốc, uống rượu, thể thao mạo hiểm.</li>
+                            </ul>
+                        </div>
+                        <div class="lg:col-span-7 bg-[#050505]/40 p-6 md:p-8 rounded-2xl border border-white/5 space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="md:col-span-2">
+                                    <label class="block text-xs text-gray-400 mb-2 uppercase tracking-widest">Tiền sử y tế cá nhân & Gia đình</label>
+                                    <textarea class="w-full glass-input p-3 rounded-lg text-sm min-h-[80px]" placeholder="Ghi rõ phẫu thuật, bệnh nền..."></textarea>
+                                </div>
+                                <div>
+                                    <label class="block text-xs text-gray-400 mb-2 uppercase tracking-widest">Chiều cao (cm)</label>
+                                    <input type="number" class="w-full glass-input p-3 rounded-lg text-sm" placeholder="VD: 170">
+                                </div>
+                                <div>
+                                    <label class="block text-xs text-gray-400 mb-2 uppercase tracking-widest">Cân nặng (kg)</label>
+                                    <input type="number" class="w-full glass-input p-3 rounded-lg text-sm" placeholder="VD: 65">
+                                </div>
+                                <div>
+                                    <label class="block text-xs text-gray-400 mb-2 uppercase tracking-widest">Nhóm Nghề nghiệp</label>
+                                    <select class="w-full glass-input p-3 rounded-lg text-sm bg-[#050505] appearance-none">
+                                        <option value="" disabled selected>Chọn nhóm nghề</option>
+                                        <option value="1">Nhóm 1: NV văn phòng</option>
+                                        <option value="2">Nhóm 2: Di chuyển nhiều</option>
+                                        <option value="3">Nhóm 3: Công nhân máy</option>
+                                        <option value="4">Nhóm 4: Nguy hiểm cao</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs text-gray-400 mb-2 uppercase tracking-widest">Thói quen sinh hoạt</label>
+                                    <input type="text" class="w-full glass-input p-3 rounded-lg text-sm" placeholder="Hút thuốc, rượu bia...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                        <div class="lg:col-span-5 space-y-4">
+                            <h3 class="font-serif text-2xl text-pastel-pink flex items-center gap-2"><span class="text-3xl">🎯</span> 4. Mục tiêu & Bận tâm</h3>
+                            <ul class="text-sm text-gray-400 space-y-3 leading-relaxed">
+                                <li><strong class="text-pastel-pink">Khách hàng lo lắng điều gì nhất hiện tại?</strong> (Sợ bệnh hiểm nghèo tốn kém, sợ tai nạn, sợ không có tiền cho con học đại học, hay đơn giản muốn có thẻ y tế đi viện tư).</li>
+                            </ul>
+                        </div>
+                        <div class="lg:col-span-7 bg-[#050505]/40 p-6 md:p-8 rounded-2xl border border-white/5 space-y-6">
+                            <div class="grid grid-cols-1 gap-6">
+                                <div>
+                                    <label class="block text-xs text-gray-400 mb-2 uppercase tracking-widest">Mối bận tâm lớn nhất của Anh/Chị là gì?</label>
+                                    <textarea class="w-full glass-input p-4 rounded-lg text-sm min-h-[100px]" placeholder="Chia sẻ lo lắng chân thực nhất..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center pt-8">
+                        <button type="submit" class="bg-[#00e5ff] text-[#050505] font-bold font-sans px-10 py-4 rounded-full hover:bg-white transition-colors duration-300 shadow-[0_0_20px_rgba(0,229,255,0.4)] hover:shadow-[0_0_30px_rgba(255,255,255,0.6)] tracking-wide">
+                            GỬI HỒ SƠ PHÂN TÍCH (KYC)
+                        </button>
+                        <p class="text-xs text-gray-500 mt-4">Dữ liệu được mã hóa và bảo mật tuyệt đối theo tiêu chuẩn AES-256.</p>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="mt-32 border-t border-white/5 py-12 premium-glass rounded-t-[3rem]">
+        <div class="max-w-7xl mx-auto px-6 text-center flex flex-col items-center gap-2">
+            <span class="font-sans text-xs tracking-widest text-gray-500 uppercase">DIGITAL AFFINITY NETWORK © 2026 • Interactive Simulator Edition</span>
+            <span class="font-sans text-xs text-baby-blue">Liên hệ: daotuankhai@gmail.com - 0901740904</span>
+        </div>
+    </footer>
+
+    <script>
+        // --- 1. SIMULATOR LOGIC (INTERACTIVE DASHBOARD) ---
+        Chart.defaults.color = '#94a3b8';
+        Chart.defaults.font.family = "'Inter', sans-serif";
+
+        let simAgeChart, simGroupChart;
+        const ageColors = ['#34d399', '#00e5ff', '#a78bfa', '#fbbf24', '#f43f5e']; 
+        const groupColors = ['#00e5ff', '#ff2a93', '#34d399']; 
+
+        function initCharts() {
+            const ctxAge = document.getElementById('simAgeChart').getContext('2d');
+            simAgeChart = new Chart(ctxAge, {
+                type: 'doughnut',
+                data: {
+                    labels: ['0-17 tuổi (20%)', '18-25 tuổi (20%)', '26-40 tuổi (40%)', '41-55 tuổi (15%)', '55+ tuổi (5%)'],
+                    datasets: [{
+                        data: [10000, 10000, 20000, 7500, 2500],
+                        backgroundColor: ageColors,
+                        borderWidth: 2, 
+                        borderColor: '#050505',
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: { 
+                        legend: { display: false }, 
+                        tooltip: { 
+                            padding: 12,
+                            backgroundColor: 'rgba(5, 5, 5, 0.9)',
+                            titleFont: { size: 14, family: 'Playfair Display' },
+                            bodyFont: { size: 13, family: 'Inter' }
+                        } 
+                    },
+                    cutout: '75%'
+                }
+            });
+
+            const ctxGroup = document.getElementById('simGroupChart').getContext('2d');
+            simGroupChart = new Chart(ctxGroup, {
+                type: 'bar',
+                data: {
+                    labels: ['Nhóm 1', 'Nhóm 2', 'Nhóm 3'],
+                    datasets: [{
+                        label: 'Số lượng',
+                        data: [18750, 13125, 5625],
+                        backgroundColor: groupColors,
+                        borderRadius: 6,
+                        barPercentage: 0.7
+                    }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: { 
+                        legend: { display: false },
+                        tooltip: { padding: 12, backgroundColor: 'rgba(5, 5, 5, 0.9)' } 
+                    },
+                    scales: {
+                        y: { display: false, grid: { display: false } },
+                        x: { 
+                            grid: { display: false, drawBorder: false }, 
+                            ticks: { font: {size: 11, weight: '500'}, color: '#e2e8f0' } 
+                        }
+                    }
+                }
+            });
+        }
+
+        function runSimulation() {
+            const totalPop = parseInt(document.getElementById('sliderPop').value);
+            document.getElementById('valTotalPop').textContent = totalPop.toLocaleString();
+
+            const a0_17 = totalPop * 0.20;
+            const a18_25 = totalPop * 0.20;
+            const a26_40 = totalPop * 0.40;
+            const a41_55 = totalPop * 0.15;
+            const a55_plus = totalPop * 0.05;
+
+            const workingAgeTotal = a18_25 + a26_40 + a41_55;
+            const g1 = workingAgeTotal * 0.50; 
+            const g2 = workingAgeTotal * 0.35; 
+            const g3 = workingAgeTotal * 0.15; 
+
+            document.getElementById('valGroup1').textContent = Math.round(g1).toLocaleString();
+            document.getElementById('valGroup2').textContent = Math.round(g2).toLocaleString();
+            document.getElementById('valGroup3').textContent = Math.round(g3).toLocaleString();
+
+            if (simAgeChart && simGroupChart) {
+                simAgeChart.data.datasets[0].data = [a0_17, a18_25, a26_40, a41_55, a55_plus];
+                simAgeChart.update();
+                simGroupChart.data.datasets[0].data = [g1, g2, g3];
+                simGroupChart.update();
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            initCharts();
+            runSimulation(); 
+        });
+
+        // --- 2. BUILDER LOGIC ---
+        function updatePremiumScore() {
+            const boxes = document.querySelectorAll('.pkg-checkbox');
+            let total = 0;
+            boxes.forEach(b => { if(b.checked) total += parseInt(b.value); });
+
+            const display = document.getElementById('scoreDisplay');
+            const ring = document.getElementById('gaugeRing');
+            const title = document.getElementById('statusTitle');
+
+            display.textContent = total;
+
+            if (total === 0) {
+                ring.style.background = `conic-gradient(rgba(255,255,255,0.05) 100%, transparent 0)`;
+                title.textContent = "Chưa xác định";
+                title.className = "font-serif text-xl text-gray-500 mb-2 transition-colors";
+            } else if (total <= 50) {
+                ring.style.background = `conic-gradient(#ff2a93 ${total}%, rgba(255,255,255,0.05) 0)`;
+                title.textContent = "Rủi Ro Khá";
+                title.className = "font-serif text-xl text-pastel-pink mb-2 transition-colors";
+            } else if (total === 75) {
+                ring.style.background = `conic-gradient(white ${total}%, rgba(255,255,255,0.05) 0)`; 
+                title.textContent = "An Sinh Chuẩn";
+                title.className = "font-serif text-xl text-white mb-2 transition-colors";
+            } else {
+                ring.style.background = `conic-gradient(#00e5ff ${total}%, rgba(255,255,255,0.05) 0)`;
+                title.textContent = "360° Hoàn Hảo";
+                title.className = "font-serif text-xl text-baby-blue mb-2 transition-colors drop-shadow-[0_0_10px_rgba(0,229,255,0.3)]";
+            }
+        }
+    </script>
+</body>
+</html>
